@@ -1,0 +1,83 @@
+=============================================
+Setup On MAC
+=============================================
+
+-  Install brew (Homebrew, http://brew.sh/)
+    
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+-  Install Maven
+
+    brew install maven
+
+-  From Jersey website get maven command for the project
+
+    -  Get the command from URL
+    https://jersey.java.net/documentation/latest/user-guide.html#new-webapp
+    1.4. Creating a JavaEE Web Application
+
+    -  Change to your work directory
+    cd /Users/vishalm/desk/github/practice-fun/rest-ws
+
+    -  Initiate the project
+    mvn archetype:generate -DarchetypeArtifactId=jersey-quickstart-webapp \
+                -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false \
+                -DgroupId=com.example -DartifactId=simple-service-webapp -Dpackage=com.example \
+                -DarchetypeVersion=2.22.1
+
+-  Import project in eclipse
+    -  Eclipse > Project Expolorer > Right Click > Import > Others > Maven > Existing Maven Project > 
+       your pom.xml dir
+    -  After the import project builds and there is an error 
+        which is OKAY!
+
+-  Download Tomcat server
+    -  Go to following URL and download Tomcat server (8.0 as per 20160212)
+    http://tomcat.apache.org/
+
+    -  Unzip it and keep it save in a dir
+
+-  Make sure Eclipse shows servers tab:
+    -  If not enable it from Window > Show View > Server (might be in others)
+
+-  Add n Run Tomcat Server
+    -  Eclipse > Server tab > add server > Apache > Tomcat v8.0 Server > 
+        name :- Apache Tomcat v8.0
+        Tomcat Installation Directory :- /Users/vishalm/desk/eclipse_ws/apache-tomcat-8.0.32
+
+    -  Add and Remove
+        Modify the resoures that are configured on the server
+        simple-service-webapp --> add
+
+    -  Start 
+        Eclipse > Server tab > right click and Start
+
+-  Run project
+    
+    Project Explorer > Project > right click and select server
+
+    you should see a page with URL :
+    http://localhost:8080/simple-service-webapp/webapi/myresource
+    and text: 
+    Got it!
+
+-  Look at the code file 
+    Projec Explorer > Java Resources > /src/main/java > com.example  > MyResource.java
+
+!!!!!! ALL Done !!!!!!!!!
+!!!!!! Knock your heads off !!!!!!!!
+
+-  To deploy this as an application 
+    mvn package 
+    -  get the war file and deploy it on the Tomcat server
+
+
+
+
+
+
+
+
+
+
+
