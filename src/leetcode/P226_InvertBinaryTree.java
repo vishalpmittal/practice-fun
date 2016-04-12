@@ -1,17 +1,43 @@
 /*
- * Given a binary tree, find its maximum depth.
+ * Invert a binary tree.
  * 
- * The maximum depth is the number of nodes along the longest path from 
- * the root node down to the farthest leaf node.
- */
+ *      4
+ *    /   \
+ *   2     7
+ *  / \   / \
+ * 1   3 6   9
+ * to
+ *      4
+ *    /   \
+ *   7     2
+ *  / \   / \
+ * 9   6 3   1
+*/
 
 package leetcode;
 
 import leetcode.dependencies.TreeNode;
 
-public class P104_MaximumDepthOfBinaryTree {
-	public static int maxDepth(TreeNode root) {
-		return root == null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+public class P226_InvertBinaryTree {
+	public static TreeNode invertTree(TreeNode root) {
+		if (root != null) {
+			TreeNode tmpNode = root.left;
+			root.left = root.right;
+			root.right = tmpNode;
+
+			invertTree(root.left);
+			invertTree(root.right);
+		}
+		return root;
+	}
+
+	public static TreeNode invertTree_2(TreeNode root) {
+		if (root != null) {
+			TreeNode tmpRight = root.right;
+			root.right = invertTree_2(root.left);
+			root.left = invertTree_2(tmpRight);
+		}
+		return root;
 	}
 
 	public static void main(String[] args) {
@@ -56,7 +82,9 @@ public class P104_MaximumDepthOfBinaryTree {
 		tn7.setLeft(tn13);
 		tn8.setRight(tn14);
 
+		//		System.out.println(TreeNode.printTree(tn1));
+		invertTree_2(tn1);
 		System.out.println(TreeNode.printTree(tn1));
-		System.out.println(maxDepth(tn1));
 	}
+
 }
