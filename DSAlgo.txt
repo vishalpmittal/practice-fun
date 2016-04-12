@@ -1,0 +1,179 @@
+Data Structures
+================================================
+
+-  Arrays
+-  Vectors
+-  LinkedList
+-  Doubly Linked List
+-  HashSet
+-  HashTable
+-  HashMap
+
+-  Tree
+-  Binary Search Tree
+    -  Find
+    -  Insert
+    -  Delete
+    -  Is Balanced?
+
+
+-  B+ Tree
+-  Trie
+
+-  MaxHeap
+    -  Its a datastructure where the root node is always the highest one. 
+    -  Eg. priority queue
+    PriorityQueue<Integer> pqueue = new PriorityQueue<Integer> (k, Collections.reverseOrder());
+
+    In this priority queue highest number will be the first element always. So if the size of the queue is K and we keep inserting elements to it, we can get the kth smallest element by finding out the first element in the queue at the end.
+
+
+-  Graph
+    -  Adjacency List
+    -  Adjacency Matrix
+
+
+-  Hamiltonian Graphs (traverse graph but visit each NODE exactly once)
+    -  A hamiltonian graph is a on where there is some sequence of the vertex that 
+       contains each vertex exactly once and such that consecutive vertices in the 
+       sequence are connected by an edge in the graph. 
+    -  i.e. to visit all vertexes each vertex should be visited only once. No repeatition of any vertex
+
+-  Eulerian Graph (traverse graph but visit each EDGE exactly once)
+    -  traverse the graph visiting each edge exactly once
+    -  Conditions for eulerian graph
+        -  most of the vertices in the graph need to be of even degree in order for there 
+            to be an Eulerian path through this graph. but with two exceptions
+            -  Our starting vertex is allowed to have more outgoing edges than incoming edges
+            -  our ending vertex is allowed to have more incoming edges than outgoing edges.
+
+
+
+-  Queue
+-  Stack
+
+-  Priority Queues
+
+
+
+Algorithms
+================================================
+-  Searching
+    -  Linear Search
+    -  Binary Search
+
+-  Sorting
+    -  Selection Sort
+    -  Insertion Sort
+    -  Bubble Sort
+    -  Merge Sort
+    -  Quick Sort
+    -  Heap sort
+    -  Radix Sort
+    -  Bucket Sort
+
+
+-  Graph search
+    -  BFS
+
+    -  Dijktsra
+
+    -  A* search
+
+-  Graph get N-hop neighbors
+
+-  Graph : Egonet
+    -  For a given node n find all its adjacent components and the edges. Plus any edges between those components that are connected to the center node n.
+
+-  Graph : Strongly Connected Components (SCC)
+    -  The biggest subgraph in a graph where each node can be reached from all other nodes directly or indirectly. 
+
+    -  Do the DFS, take transpose of the graph (reverse all edges), and do BFS again.
+
+-  Tree Traversal
+    -  In-order Traversal
+    -  Pre-order Traversal
+    -  Post-order Traversal
+    -  Level-order Traversal (Breadth-first Search)
+
+
+-  Clustering
+    -  K-means Clustering
+    -  Hierarchical Clustering
+
+
+-  Flesch Score
+206.835 - 1.015 \left( \frac{\text{total words}}{\text{total sentences}} \right) - 84.6 \left( \frac{\text{total syllables}}{\text{total words}} \right).
+
+
+-  Markov Text Generation
+
+
+-  Edit distance of an string
+
+
+-  Traveling Salesperson Problem (TSP)
+    -  Problem: 
+        -  travel the cities of world with minimum cost
+        -  All the cities are connected to all other cities
+        -  these cities and flights between them is a fully connected graph with weightage edges
+        -  After visiting all the cities you have to come back at the origin
+
+    -  Approach : Brute Force
+        -  Find all the paths
+        -  For each path calculate the cost using weights
+        -  Pick the one with lowest cost
+        -  O(n) = n!      (oops...)
+
+    -  Approach : Greedy algorithm (Nearest Neighbor)
+        -  At every node pick the next node connected with lowest weight
+        -  Might not provide the best solution
+        -  O(n) = n^2      (not good either...)
+
+    -  Approach : NP Hard
+
+    -  Heuristics and Approximation Algorithms
+
+
+
+
+OOPS
+================================================
+-  Inheritance
+-  Polymorphism
+-  Abstract
+-  Casting
+-  Abstraction
+
+
+
+
+JAVA
+================================================
+-  Events n Listeners
+-  Generics
+-  Exception
+
+
+
+Parallel Programming
+================================================
+-  Thread
+-  Process
+-  Mutual Exclusion
+-  Mutex
+-  Semaphore
+-  Synchronization
+-  Deadlock
+-  Livelock
+
+
+-  Dining Philosopher's Problem
+-  Too much milk problem
+
+
+
+
+
+
+
