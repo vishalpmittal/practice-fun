@@ -7,18 +7,7 @@
  */
 
 package leetcode;
-
-/**
- * Definition for singly-linked list.
- */
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-	}
-}
+import leetcode.dependencies.ListNode;
 
 public class P002_AddTwoNumbers {
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
