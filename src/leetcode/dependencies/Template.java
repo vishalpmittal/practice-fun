@@ -2,7 +2,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.dependencies;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
@@ -13,17 +13,8 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class Template {
-	/*
-	 * 
-	 */
+	//
 	public static boolean problem_1(int n) {
-		return false;
-	}
-
-	/*
-	 * 
-	 */
-	public static boolean problem_2(int n) {
 		return false;
 	}
 
@@ -44,5 +35,4 @@ public class Template {
 			System.out.println("Failed Test cases" + failure.toString());
 		}
 	}
-
 }
