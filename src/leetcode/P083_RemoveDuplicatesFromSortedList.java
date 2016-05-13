@@ -28,7 +28,7 @@ public class P083_RemoveDuplicatesFromSortedList {
 	public static ListNode deleteDuplicates_rec(ListNode head) {
 		if (head == null || head.next == null)
 			return head;
-		head.next = deleteDuplicates(head.next);
+		head.next = deleteDuplicates_rec(head.next);
 		return head.val == head.next.val ? head.next : head;
 	}
 
