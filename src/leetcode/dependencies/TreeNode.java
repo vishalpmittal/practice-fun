@@ -1,5 +1,7 @@
 package leetcode.dependencies;
 
+import java.util.HashMap;
+
 public class TreeNode {
 	public int val;
 	public TreeNode left;
@@ -60,5 +62,39 @@ public class TreeNode {
 
 			return sb.toString();
 		}
+	}
+
+	// [1,2,3,5]
+	// [[1,2], [3], [], []]
+	public static TreeNode makeMeATree(int[] nodes, int[][] connLoc) {
+		if (nodes == null || nodes.length == 0)
+			return null;
+
+		HashMap<Integer, TreeNode> map = new HashMap<Integer, TreeNode>();
+		TreeNode rn = new TreeNode(nodes[0]);
+		map.put(0, rn);
+
+		for (int i = 0; i < nodes.length; i++) {
+			map.putIfAbsent(i, new TreeNode(nodes[i]));
+
+			try {
+				int left = connLoc[i][0];
+				if (left >= 0) {
+					map.putIfAbsent(left, new TreeNode(nodes[left]));
+					map.get(i).left = map.get(left);
+				}
+			} catch (ArrayIndexOutOfBoundsException aiobe) {
+			}
+			try {
+				int right = connLoc[i][1];
+				if (right >= 0) {
+					map.putIfAbsent(right, new TreeNode(nodes[right]));
+					map.get(i).right = map.get(right);
+				}
+			} catch (ArrayIndexOutOfBoundsException aiobe) {
+			}
+
+		}
+		return rn;
 	}
 }
