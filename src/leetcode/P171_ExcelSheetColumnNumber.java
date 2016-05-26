@@ -1,5 +1,5 @@
 /*
- * Related to question Excel Sheet Column Title
+ * Related to question Excel Sheet Column Title (P168_ExcelSheetColumnTitle)
  * 
  * Given a column title as appear in an Excel sheet, return its corresponding column number.
  * 
@@ -27,12 +27,13 @@ public class P171_ExcelSheetColumnNumber {
 
 	public static int titleToNumber(String s) {
 		int colNum = 0;
-		for (int i = 0; i<s.length(); colNum = colNum *26 + (s.charAt(i)- 'A'+1), i++){}
+		for (int i = 0; i < s.length(); colNum = colNum * 26 + (s.charAt(i) - 'A' + 1), i++) {
+		}
 		return colNum;
 	}
 
 	public static void main(String[] args) {
-		System.out.println("" + titleToNumber("DF"));        //110
+		System.out.println("" + titleToNumber("DF")); //110
 	}
 
 }

@@ -19,30 +19,28 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
-
-public class P278_FirstBadVersion {
-    public int firstBadVersion(int n) {
-    	
-    	
-    	
-    	
-    	return 0;
-    }
-	
-	public static boolean problem_1(int n) {
-		return false;
+class VersionControl {
+	boolean isBadVersion(int version) {
+		return true;
 	}
+}
 
-	public static boolean problem(int n) {
-		return problem_1(n);
+public class P278_FirstBadVersion extends VersionControl {
+	public int firstBadVersion(int n) {
+		int lo = 1, hi = n;
+		while (lo < hi) {
+			int med = lo + (hi - lo) / 2;
+			if (isBadVersion(med)) {
+				hi = med;
+			} else {
+				lo = med + 1;
+			}
+		}
+		return lo;
 	}
 
 	@Test
 	public void test() {
-		assertTrue("Test1", problem(94));
-		assertFalse("Test2", problem(97));
 	}
 
 	public static void main(String[] args) {
