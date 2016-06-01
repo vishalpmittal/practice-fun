@@ -7,7 +7,7 @@
  * Return "100".
  */
 
-package leetcode;
+package leetcode.binaryBits;
 
 import static org.junit.Assert.assertTrue;
 

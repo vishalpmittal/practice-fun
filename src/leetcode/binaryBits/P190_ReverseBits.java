@@ -11,7 +11,7 @@
  * Related problem: Reverse Integer
  */
 
-package leetcode;
+package leetcode.binaryBits;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

@@ -14,7 +14,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.strings;
 
 import java.util.HashMap;
 

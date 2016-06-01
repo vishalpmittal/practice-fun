@@ -18,7 +18,7 @@
 * minStack.getMin();   --> Returns -2.
 */
 
-package leetcode;
+package leetcode.stacksQueues;
 
 import java.util.Stack;
 

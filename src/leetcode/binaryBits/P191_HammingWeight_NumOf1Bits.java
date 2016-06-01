@@ -7,7 +7,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.binaryBits;
 
 public class P191_HammingWeight_NumOf1Bits {
 

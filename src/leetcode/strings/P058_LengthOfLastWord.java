@@ -11,7 +11,7 @@
  * return 5.
  */
 
-package leetcode;
+package leetcode.strings;
 
 import static org.junit.Assert.assertTrue;
 

@@ -18,7 +18,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.stacksQueues;
 
 import java.util.LinkedList;
 import java.util.Queue;
