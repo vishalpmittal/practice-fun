@@ -31,7 +31,7 @@ public class P266_PalindromePermutation {
 		}
 		return set.size() == 0 || set.size() == 1;
 	}
-
+	
 	public static void main(String[] args) {
 		assertTrue("Test1", canPermutePalindrome("aba"));
 		assertTrue("Test1", canPermutePalindrome("carerac"));

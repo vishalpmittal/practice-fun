@@ -48,6 +48,7 @@ public class P293_FlipGame {
 		assertTrue("Test4", generatePossibleNextMoves("+").isEmpty());
 		assertTrue("Test5", generatePossibleNextMoves("--").isEmpty());
 		assertTrue("Test6", generatePossibleNextMoves("-+").isEmpty());
+		assertTrue("Test6", generatePossibleNextMoves("++").size() == 1);
 		assertTrue("Test6", generatePossibleNextMoves("++++").size() == 3);
 		assertTrue("Test7", generatePossibleNextMoves("12345").isEmpty());
 
