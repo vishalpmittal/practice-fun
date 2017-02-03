@@ -4,7 +4,7 @@
  * and the difference between i and j is at most k.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertTrue;
 

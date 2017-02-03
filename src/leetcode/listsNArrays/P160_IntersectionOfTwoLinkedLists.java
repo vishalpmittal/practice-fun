@@ -28,7 +28,7 @@
  * 
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertTrue;
 

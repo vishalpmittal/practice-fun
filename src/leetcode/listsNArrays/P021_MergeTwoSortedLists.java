@@ -3,7 +3,7 @@
  * The new list should be made by splicing together the nodes of the first two lists.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertTrue;
 

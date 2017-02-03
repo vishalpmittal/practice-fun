@@ -14,7 +14,7 @@
  * 
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

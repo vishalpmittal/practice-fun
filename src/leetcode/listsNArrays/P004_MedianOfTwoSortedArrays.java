@@ -4,7 +4,7 @@
  * The overall run time complexity should be O(log (m+n)).
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 public class P004_MedianOfTwoSortedArrays {
 	public double findMedianSortedArrays(int[] nums1, int[] nums2) {

@@ -11,7 +11,7 @@
  * Try to do this in one pass.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import leetcode.dependencies.ListNode;
 

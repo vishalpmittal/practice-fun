@@ -4,7 +4,7 @@
  *  Follow up:
  *  Can you solve it without using extra space?
  */
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

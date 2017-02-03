@@ -8,7 +8,7 @@
  * You may not modify the values in the list, only nodes itself can be changed.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertTrue;
 

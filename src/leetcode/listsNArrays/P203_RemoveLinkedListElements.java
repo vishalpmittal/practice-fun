@@ -7,7 +7,7 @@
  * 
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import leetcode.dependencies.ListNode;
 

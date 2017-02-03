@@ -7,7 +7,7 @@
  * nums1 and nums2 are m and n respectively.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import java.util.Arrays;
 

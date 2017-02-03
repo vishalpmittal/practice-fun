@@ -6,7 +6,7 @@
  * Output: 7 -> 0 -> 8
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 import leetcode.dependencies.ListNode;
 
 public class P002_AddTwoNumbers {

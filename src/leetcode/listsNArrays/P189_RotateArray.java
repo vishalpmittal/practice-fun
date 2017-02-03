@@ -12,7 +12,7 @@
 * Related problem: Reverse Words in a String II
 */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertTrue;
 

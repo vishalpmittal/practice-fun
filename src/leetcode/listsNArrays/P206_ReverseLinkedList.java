@@ -2,7 +2,7 @@
  * Reverse a singly linked list
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import leetcode.dependencies.ListNode;
 

@@ -13,7 +13,7 @@
  * There are many calls to sumRange function.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import static org.junit.Assert.assertTrue;
 

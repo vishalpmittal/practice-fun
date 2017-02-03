@@ -4,7 +4,7 @@
  * in the array, and it should return false if every element is distinct.
  */
 
-package leetcode.lists;
+package leetcode.listsNArrays;
 
 import java.util.Arrays;
 import java.util.HashSet;
