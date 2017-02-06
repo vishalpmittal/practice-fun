@@ -1,18 +1,11 @@
 package leetcode.dependencies;
 
-/** ---------------------------------------------
- * 
- --------------------------------------------- */
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class Template {
-    /*
-     * ---------------------------------------------
-     * 
-     * ---------------------------------------------
-     */
+
     public static boolean problem_1(int n) {
         return false;
     }
