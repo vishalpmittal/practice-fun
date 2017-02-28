@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- takes the ids of the beans below and auto wires them to triangle object -->
+	<!-- the id's should be just the same name as params name in the object 
+		definition -->
+	<!-- autowire can be of three types viz: byName, byType, byConstructor -->
+	<bean id="triangleid" class="javabrains003.Triangle" autowire="byName" />
+
+	<bean id="pointA" class="javabrains003.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointB" class="javabrains003.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="pointC" class="javabrains003.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+
+</beans>

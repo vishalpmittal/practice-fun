@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- This is an example of bean inheritance with list of beans. -->
+<!-- more inheritance in javabrains006 -->
+
+<beans>
+	<bean id="prarenttriangle" class="javabrains004.Triangle"
+		abstract="true">
+		<property name="points">
+			<list>
+				<ref bean="point1ID" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="triangleid" class="javabrains004.Triangle" parent="prarenttriangle">
+		<property name="points">
+			<list merge="true">
+				<ref bean="point2ID" />
+				<ref bean="point3ID" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="point1ID" class="javabrains004.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point2ID" class="javabrains004.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point3ID" class="javabrains004.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+
+</beans>
