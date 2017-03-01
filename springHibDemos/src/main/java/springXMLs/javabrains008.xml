@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="triangleid" class="javabrains008.Triangle">
+		<property name="pointA" ref="point1ID" />
+		<property name="pointB" ref="point2ID" />
+		<property name="pointC" ref="point3ID" />
+	</bean>
+
+	<bean id="point1ID" class="javabrains008.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point2ID" class="javabrains008.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	<bean id="point3ID" class="javabrains008.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+
+	<bean class="javabrains008.DisplayNameBeanPostProcessor" />
+</beans>
