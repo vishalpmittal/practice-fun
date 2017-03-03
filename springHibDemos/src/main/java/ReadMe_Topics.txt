@@ -22,6 +22,7 @@ Basic Spring Terms and respective package
  
  - Introduction to Annotations and the Required Annotation - javabrains011
  - The Autowired Annotation - javabrains012
- 
- 
- 
+ - Some JSR-250 Annotations - javabrains013
+ - Component and Stereotype Annotations - javabrains014 
+ - Using MessageSource To Get Text From Property Files - javabrains015 
+ - Event Handling in Spring - javabrains016
