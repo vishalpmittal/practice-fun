@@ -1,4 +1,4 @@
-package java.concurrent;
+package javaMisc.concurrent.exampleRunnable;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;

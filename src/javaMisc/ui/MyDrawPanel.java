@@ -1,4 +1,4 @@
-package java.ui;
+package javaMisc.ui;
 
 import java.awt.Color;
 import java.awt.GradientPaint;

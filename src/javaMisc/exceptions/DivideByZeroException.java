@@ -1,4 +1,4 @@
-package java.exceptions;
+package javaMisc.exceptions;
 
 public class DivideByZeroException extends Exception{
 	

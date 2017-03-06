@@ -1,4 +1,4 @@
-package java.concurrent;
+package javaMisc.concurrent.exampleRunnable;
 
 class Account{
    int balance = 390;

@@ -1,4 +1,4 @@
-package java.jdbc;
+package javaMisc.jdbc;
 
 import java.io.File;
 import java.io.FileInputStream;

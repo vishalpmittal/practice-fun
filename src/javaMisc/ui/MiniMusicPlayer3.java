@@ -1,4 +1,4 @@
-package java.ui;
+package javaMisc.ui;
 
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.MidiSystem;
