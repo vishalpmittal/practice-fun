@@ -17,6 +17,7 @@ public class CallableTestMain {
         long num = 0;
         try {
             num = clbl.call();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,5 +53,7 @@ public class CallableTestMain {
                 "Calling get method of Future to get result of factorial 20");
         long factorialof20 = result20.get();
         System.out.println("factorial of 20 is : " + factorialof20);
+
+        es.shutdown();
     }
 }

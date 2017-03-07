@@ -6,7 +6,7 @@ package javaMisc;
  * another method with exact same signature except array in place of varargs will result
  * in compiler error.
  */
-class VarargsExample {
+public class VarargsSample {
 
     /* @ return multiplication of all numbers in array
      * - if varargs method accept more than one parameter than varargs arguments

@@ -1,6 +1,6 @@
 package javaMisc;
 
-public class AutoBoxingUnBoxing {
+public class AutoBoxingUnBoxingSample {
 
     public static void changeMe_1(int x) {
         x = 2;
