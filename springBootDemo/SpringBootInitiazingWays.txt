@@ -1,0 +1,10 @@
+Starting a spring Boot App
+ -  Spring Initializer (go to http://start.spring.io)
+
+ -  Spring Boot CLI
+    -  the spring boot command line tool to initiate an application)
+    -  Lets people use Groovy scripts
+
+ -  STS IDE (the eclipse alternative ide)
+ 
+Configuration

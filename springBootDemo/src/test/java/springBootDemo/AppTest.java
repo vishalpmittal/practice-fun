@@ -1,4 +1,4 @@
-package springBootDemo.springBootDemo;
+package springBootDemo;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
