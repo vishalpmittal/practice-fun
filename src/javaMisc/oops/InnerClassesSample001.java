@@ -1,6 +1,6 @@
-package oops;
+package javaMisc.oops;
 
-public class InnerClassesExample {
+public class InnerClassesSample001 {
     public static void main(String[] args) {
         Test t = new Test();
         Test.TestI t1 = t.new TestI();
@@ -8,7 +8,6 @@ public class InnerClassesExample {
         Test.TestS t2 = new Test.TestS();
     }
 }
-
 
 class Test {
     int ival = 100;
@@ -27,15 +26,13 @@ class Test {
         }
     }
 
-
     static class TestS {
         public void m2() {
 
-            //ival = 900;
+            // ival = 900;
             sval = 1000;
         }
     }
-
 
     public void s1() {
         class MethodL1 {
@@ -50,5 +47,3 @@ class Test {
         MethodL1 ml1 = new MethodL1();
     }
 }
-
-

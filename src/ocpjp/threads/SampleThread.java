@@ -36,7 +36,7 @@ public class SampleThread {
 
 class MyThreadA extends Thread {
     public void run() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 200; i++) {
             System.out.println("A");
         }
     }
@@ -45,7 +45,7 @@ class MyThreadA extends Thread {
 class MyThreadB implements Runnable {
 
     public void run() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 200; i++) {
             System.out.println("B");
         }
 

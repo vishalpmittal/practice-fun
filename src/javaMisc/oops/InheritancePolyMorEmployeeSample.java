@@ -1,4 +1,4 @@
-package oops;
+package javaMisc.oops;
 
 class Employee
 {
@@ -24,7 +24,7 @@ class Manager extends Employee
    }
 }
 
-class InheritanceTest 
+public class InheritancePolyMorEmployeeSample 
 {
    public static void main(String arg[])
    {

@@ -1,8 +1,5 @@
 package ocpjp.threads;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ThreadTest {
 
     /**
@@ -23,9 +20,7 @@ public class ThreadTest {
         Thread t = new Thread(mt2);
         t.setName("MyThread2");
         t.start();
-
     }
-
 }
 
 class MyThread1 extends Thread {
@@ -51,7 +46,5 @@ class MyThread2 implements Runnable {
             String currentThreadName = currentThread.getName(); // main
             System.out.println("Count : " + i + " , Name: " + currentThreadName);
         }
-
     }
-
 }

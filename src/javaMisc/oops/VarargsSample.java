@@ -1,4 +1,4 @@
-package javaMisc;
+package javaMisc.oops;
 
 /**
  * Java Program which uses varargs feature to accept variable number of

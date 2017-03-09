@@ -1,6 +1,10 @@
-package ocpjp.unit1;
+package javaMisc.oops;
 
-public class Animal {
+public class RecursiveCallsNConstructorsSample {
+
+}
+
+class Animal {
 
     public Animal(String str) {
         System.out.println("Animal");
@@ -10,6 +14,8 @@ public class Animal {
         // Horse h = new Horse("abc");
     }
 
+    // recusive calls between two methods is allowed
+    // but not allowed between constructors
     public void m1() {
         m2();
     }

@@ -1,4 +1,4 @@
-package javaMisc;
+package javaMisc.oops;
 
 public class AutoBoxingUnBoxingSample {
 

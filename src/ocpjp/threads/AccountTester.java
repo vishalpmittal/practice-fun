@@ -1,15 +1,8 @@
 package ocpjp.threads;
 
-import ocpjp.examples.Student;
-
-import static java.lang.Integer.*;
-import static java.lang.Long.*;
-
 public class AccountTester {
 
     public static void main(String[] args) {
-
-        System.out.println(Long.MAX_VALUE);
 
         Account acc = new Account();
         Withdrawer w1 = new Withdrawer();

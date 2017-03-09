@@ -1,4 +1,4 @@
-package ocpjp.unit1;
+package ocpjp;
 
 public class Student {
 
