@@ -1,13 +1,13 @@
-package ocpjp;
+package javaMisc.oops;
 
-public class Student {
+public class BasicClassVariableNamingSample {
 
+}
+
+class Student {
     public String name = "John"; // Instance variable -> Object reference
-
     public int rollNum = 50; // Instance variable -> primitive data type
-
     public static int sval = 1000; // static variable -> primitive data type
-
     public static String sStr = "xyz"; // static variable -> object reference
 
     public void m1() // instance method
@@ -32,7 +32,5 @@ public class Student {
         Student.s1(); // Accessing static members
         Student.sval = 5000;
         Student.sStr = "123";
-        // TODO Auto-generated method stub
     }
-
 }

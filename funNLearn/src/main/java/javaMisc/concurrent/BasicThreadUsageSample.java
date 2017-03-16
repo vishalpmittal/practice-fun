@@ -1,6 +1,6 @@
-package ocpjp.threads;
+package javaMisc.concurrent;
 
-public class ThreadTest {
+public class BasicThreadUsageSample {
 
     /**
      * @param args

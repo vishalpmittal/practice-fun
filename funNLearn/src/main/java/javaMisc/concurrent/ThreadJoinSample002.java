@@ -1,6 +1,6 @@
-package ocpjp.threads;
+package javaMisc.concurrent;
 
-public class ThreadExample {
+public class ThreadJoinSample002 {
 
     /**
      * @param args
@@ -14,14 +14,13 @@ public class ThreadExample {
         mt1.join();  // NO EFFECT
         System.out.println("In main");
 
-        // mt2.start();
-        /* mt1.join();
-         * 
-         * mt2.join();
-         * for(int i=0;i<5;i++)
-         * {
-         * System.out.println("C");
-         * } */
+        mt2.start();
+        mt1.join();
+
+        mt2.join();
+        for (int i = 0; i < 5; i++) {
+            System.out.println("C");
+        }
 
     }
 

@@ -1,6 +1,6 @@
-package ocpjp.innerclasses;
+package javaMisc.oops;
 
-public class SampleO {
+public class InnerClassesSample004 {
 
     static int ivar = 100;
     static int svar = 200;
@@ -32,11 +32,8 @@ public class SampleO {
                 ivar = 1000;
                 svar = 30000;
             }
-
         }
-
         MethodInner1 mi1 = new MethodInner1();
-
     }
 
     public static void s1() {
@@ -45,9 +42,7 @@ public class SampleO {
                 ivar = 1000;
                 svar = 30000;
             }
-
         }
-
     }
 }
 
@@ -57,7 +52,7 @@ class Tester1 {
          * SampleO.TestI si1 = s0.new TestI();
          * SampleO.TestI si2 = s0.new TestI(); */
 
-        SampleO.TestS ts = new SampleO.TestS();
+        InnerClassesSample004.TestS ts = new InnerClassesSample004.TestS();
 
     }
 }

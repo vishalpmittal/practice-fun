@@ -1,6 +1,6 @@
-package ocpjp.threads;
+package javaMisc.concurrent;
 
-public class SampleThread {
+public class ThreadJoinSample001 {
 
     /**
      * @param args

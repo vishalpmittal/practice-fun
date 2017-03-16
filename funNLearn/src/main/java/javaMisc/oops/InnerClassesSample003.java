@@ -1,6 +1,6 @@
-package ocpjp.innerclasses;
+package javaMisc.oops;
 
-public class Sample {
+public class InnerClassesSample003 {
 
     private static int ivar = 20;
     static int svar = 200;
@@ -29,6 +29,6 @@ public class Sample {
 
 class Tester {
     public static void t1() {
-        Sample.ISample is = new Sample.ISample();
+        InnerClassesSample003.ISample is = new InnerClassesSample003.ISample();
     }
 }

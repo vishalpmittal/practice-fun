@@ -1,9 +1,8 @@
-package ocpjp.threads;
+package javaMisc.concurrent;
 
-public class AccountTester {
+public class ConcurrentAccountWithdrawSample {
 
     public static void main(String[] args) {
-
         Account acc = new Account();
         Withdrawer w1 = new Withdrawer();
         w1.acc = acc;
@@ -38,7 +37,6 @@ class Account {
         // Class cs = Account.class;
         synchronized (obj) {
         }
-
     }
 
     public synchronized void withdraw1(int amount) {
@@ -47,7 +45,6 @@ class Account {
             balance -= amount;
         }
     }
-
 }
 
 class Withdrawer extends Thread {
