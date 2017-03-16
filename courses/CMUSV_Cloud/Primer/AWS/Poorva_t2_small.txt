@@ -1,0 +1,153 @@
+Poorva_t2_small
+=========================================
+ubuntu@ip-172-31-48-28:~$ sysbench --num-threads=8 --test=cpu --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 8
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 20000
+
+
+Test execution summary:
+    total time:                          29.5712s
+    total number of events:              10000
+    total time taken by event execution: 236.4106
+    per-request statistics:
+         min:                                  2.68ms
+         avg:                                 23.64ms
+         max:                                 35.13ms
+         approx.  95 percentile:              31.07ms
+
+Threads fairness:
+    events (avg/stddev):           1250.0000/1.00
+    execution time (avg/stddev):   29.5513/0.01
+
+=========================================
+ubuntu@ip-172-31-48-28:~$ sysbench --num-threads=1 --test=cpu --cpu-max-prime=40000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 40000
+
+
+Test execution summary:
+    total time:                          76.9307s
+    total number of events:              10000
+    total time taken by event execution: 76.9264
+    per-request statistics:
+         min:                                  7.18ms
+         avg:                                  7.69ms
+         max:                                 15.80ms
+         approx.  95 percentile:               7.89ms
+
+Threads fairness:
+    events (avg/stddev):           10000.0000/0.00
+    execution time (avg/stddev):   76.9264/0.00
+
+
+
+=========================================
+
+ubuntu@ip-172-31-48-28:~$ sysbench --num-threads=4 --test=cpu --cpu-max-prime=50000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 4
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 50000
+
+
+Test execution summary:
+    total time:                          104.9645s
+    total number of events:              10000
+    total time taken by event execution: 419.8102
+    per-request statistics:
+         min:                                 25.83ms
+         avg:                                 41.98ms
+         max:                                102.32ms
+         approx.  95 percentile:              46.70ms
+
+Threads fairness:
+    events (avg/stddev):           2500.0000/0.00
+    execution time (avg/stddev):   104.9525/0.00
+=========================================
+sysbench --test=fileio --file-total-size=20G prepare
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+128 files, 163840Kb each, 20480Mb total
+Creating files for the test...
+
+=========================================
+sysbench --test=fileio --file-total-size=20G --file-test-mode=rndrw --init-rng=on --max-time=300 --max-requests=0 run
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from timer.
+
+
+Extra file open flags: 0
+128 files, 160Mb each
+20Gb total file size
+Block size 16Kb
+Number of random requests for random IO: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Threads started!
+Time limit exceeded, exiting...
+Done.
+
+Operations performed:  243388 Read, 162258 Write, 519168 Other = 924814 Total
+Read 3.7138Gb  Written 2.4759Gb  Total transferred 6.1897Gb  (21.127Mb/sec)
+ 1352.15 Requests/sec executed
+
+Test execution summary:
+    total time:                          300.0013s
+    total number of events:              405646
+    total time taken by event execution: 155.6795
+    per-request statistics:
+         min:                                  0.00ms
+         avg:                                  0.38ms
+         max:                                 16.32ms
+         approx.  95 percentile:               0.77ms
+
+Threads fairness:
+    events (avg/stddev):           405646.0000/0.00
+    execution time (avg/stddev):   155.6795/0.00
+
+ubuntu@ip-172-31-48-28:~$ 
+
+
+=========================================
+
+
+ssh -i 15619_demo.pem ubuntu@
+
+
+
+
+
+

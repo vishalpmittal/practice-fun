@@ -1,0 +1,191 @@
+# create an RDD
+In [1]: integer_RDD = sc.parallelize(range(10),3)
+
+# like a reducer get all the data
+In [3]: integer_RDD.collect()
+Out[3]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# see how data is partitioned
+In [5]: integer_RDD.glom().collect()
+Out[5]: [[0, 1, 2], [3, 4, 5], [6, 7, 8, 9]]
+
+# create from a local file
+In [6]: text_RDD=sc.textFile("file:///home/cloudera/testfile1")
+
+# Create from HDFS File
+In [7]: textH_RDD=sc.textFile("/user/cloudera/Archive/testfile1")
+
+# print the first line
+In [8]: textH_RDD=sc.textFile("/user/cloudera/Archive/testfile1")
+Out[8]: [u'A long time ago in a galaxy far far away']
+
+################################################################
+# Word Count in spark
+################################################################
+# -----------Mapper-----------
+In [9]: def split_words(line):
+   ...:     return line.split()
+   ...:
+
+In [10]: def create_pair(word):
+   ....:     return(word, 1)
+   ....:
+
+In [11]: pairs_RDD=text_RDD.flatMap(split_words).map(create_pair)
+In [12]: pairs_RDD.collect()
+Out[12]:
+[(u'A', 1),
+ (u'long', 1),
+ (u'time', 1),
+ (u'ago', 1),
+ (u'in', 1),
+ (u'a', 1),
+ (u'galaxy', 1),
+ (u'far', 1),
+ (u'far', 1),
+ (u'away', 1)]
+
+# -----------Reducer-----------
+In [13]: def sum_counts(a, b):
+   ....:     return a+b
+   ....:
+
+In [14]: wordcounts_RDD = pairs_RDD.reduceByKey(sum_counts)
+
+In [15]: wordcounts_RDD.collect()
+Out[15]:
+[(u'A', 1),
+ (u'ago', 1),
+ (u'far', 2),
+ (u'away', 1),
+ (u'in', 1),
+ (u'long', 1),
+ (u'a', 1),
+ (u'time', 1),
+ (u'galaxy', 1)]
+
+################################################################
+
+################################################################
+# lower the letter case
+################################################################
+In [16]: def lower(line):
+   ....:     return line.lower()
+   ....:
+
+In [17]: lower_text_RDD = text_RDD.map(lower)
+
+In [19]: lower_text_RDD.collect()
+Out[19]: [u'a long time ago in a galaxy far far away']
+
+################################################################
+
+################################################################
+# flatmap : takes one input and return many output
+            the output is flattened in a list though
+################################################################
+In [20]: def split_words(line):
+   ....:     return line.split()
+   ....:
+
+In [21]: words_RDD=text_RDD.flatMap(split_words)
+
+In [22]: words_RDD.collect()
+Out[22]:
+[u'A',
+ u'long',
+ u'time',
+ u'ago',
+ u'in',
+ u'a',
+ u'galaxy',
+ u'far',
+ u'far',
+ u'away']
+
+################################################################
+
+In [23]: def starts_with_a(word):
+   ....:     return word.lower().startswith("a")
+   ....:
+
+In [25]: words_RDD.filter(starts_with_a).collect()
+Out[25]: [u'A', u'ago', u'a', u'away']
+
+################################################################
+
+# glom() turns contents of an partition into an array
+In [26]: sc.parallelize(range(10),4).glom().collect()
+Out[26]: [[0, 1], [2, 3], [4, 5], [6, 7, 8, 9]]
+
+################################################################
+
+# coalesce() reduces the number of partitions
+# keeps the data on local nodes
+In [28]: sc.parallelize(range(10),4).coalesce(2).glom().collect()
+Out[28]: [[0, 1, 2, 3], [4, 5, 6, 7, 8, 9]]
+
+################################################################
+
+# repartition() reduces the number of partitions
+# moves the data across nodes and changes the partitions
+In [28]: sc.parallelize(range(10),4).repartition(2).glom().collect()
+Out[28]: [[0, 1, 2, 3], [4, 5, 6, 7, 8, 9]]
+
+################################################################
+groupByKey() groups data based on key
+
+In [31]: pairs_RDD.collect()
+
+Out[31]:
+[(u'A', 1),
+ (u'long', 1),
+ (u'time', 1),
+ (u'ago', 1),
+ (u'in', 1),
+ (u'a', 1),
+ (u'galaxy', 1),
+ (u'far', 1),
+ (u'far', 1),
+ (u'away', 1)]
+
+In [32]: pairs_RDD.groupByKey().collect()
+
+Out[32]:
+[(u'A', <pyspark.resultiterable.ResultIterable at 0x160b150>),
+ (u'ago', <pyspark.resultiterable.ResultIterable at 0x160b190>),
+ (u'far', <pyspark.resultiterable.ResultIterable at 0x160b1d0>),
+ (u'away', <pyspark.resultiterable.ResultIterable at 0x160b210>),
+ (u'in', <pyspark.resultiterable.ResultIterable at 0x160b250>),
+ (u'long', <pyspark.resultiterable.ResultIterable at 0x160b290>),
+ (u'a', <pyspark.resultiterable.ResultIterable at 0x160b2d0>),
+ (u'time', <pyspark.resultiterable.ResultIterable at 0x160b310>),
+ (u'galaxy', <pyspark.resultiterable.ResultIterable at 0x160b350>)]
+
+In [33]: for k,v in pairs_RDD.groupByKey().collect():
+   ....:     print "Key:", k, ", Values:",list(v)
+   ....:
+
+Key: A , Values: [1]
+Key: ago , Values: [1]
+Key: far , Values: [1, 1]
+Key: away , Values: [1]
+Key: in , Values: [1]
+Key: long , Values: [1]
+Key: a , Values: [1]
+Key: time , Values: [1]
+Key: galaxy , Values: [1]
+
+################################################################
+
+
+
+
+
+
+
+
+
+
+
+

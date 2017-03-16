@@ -1,0 +1,84 @@
+- MapGraph is a directed graph, 
+	so, each pair of nodes on a two-way street will have two edges between them: 
+	one in each direction.
+	
+- Vertices in a MapGraph are GeographicPoints (latitude, longitude pairs)
+ 
+- edges are the road segments between these intersections
+
+- 
+
+-----------------------------------
+TO DOs
+-----------------------------------
+- Add additional classes to the roadgraph package
+- Add additional methods (usually private, but perhaps public as well) to the MapGraph class
+- Add member variables to the MapGraph class
+
+-----------------------------------
+Methods
+-----------------------------------
+-  public MapGraph()
+-  public boolean addVertex(GeographicPoint location) 
+	-  Returns true if the vertex was successfully added
+	-  Returns false, if the vertex representing location was already in the graph 
+	
+-  public void addEdge(GeographicPoint end1, GeographicPoint end2, 
+		String roadName, String roadType, double length)
+
+	-  end1 and end2 are already in the graph
+	-  should throw an IllegalArgumentException 
+		-  if either of the two points are not in the graph already
+		-  if any of the arguments is null, or 
+		-  if length is less than 0.
+		
+-  public int getNumVertices() 
+-  public Set<GeographicPoint> getVertices()
+	-  return a HashSet
+-  public int getNumEdges() 
+-  public List<GeographicPoint> bfs(GeographicPoint start, 
+		GeographicPoint goal, Consumer<GeographicPoint> nodeSearched)
+	-  returns a list of geographic points along the shortest (unweighted) path from start to goal
+	-  list should include both the start and the goal points
+	-  should be ordered from start to goal.
+	-  Every time you explore from a node, report that node to the consumer using the following instruction
+		nodeSearched.accept(next);
+	
+-----------------------------------
+Hints
+-----------------------------------
+-  Decide whether you will want to use an adjacency list or adjacency matrix representation
+-  You'll probably want to include a printGraph method
+-  public List<GeographicPoint> bfs(GeographicPoint start, GeographicPoint goal) to debug your BFS algorithm without UI
+
+----------------------------------------------------------------------
+- MapGraph
+	HashMap<GeographicPoint, MapNode>
+
+- MapNode
+	GeographicPoint location
+	List<MapEdge> edges
+	
+- MapEdge
+	location start
+	location end
+	String streetName
+	double distance
+
+----------------------------------------------------------------------
+
+- MapGraph
+	HashMap<GeographicPoint, MapNode>
+
+- MapNode
+	GeographicPoint location
+	List<MapEdge> inEdges
+	List<MapEdge> outEdges
+
+- MapEdge
+	MapNode otherEnd
+	String streetName
+	double distance
+
+
+

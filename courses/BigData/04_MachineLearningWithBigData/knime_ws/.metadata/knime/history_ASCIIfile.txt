@@ -1,0 +1,8 @@
+file:/Users/vishalm/desk/github/vishalrepo/courses/BigData/04_MachineLearningWithBigData/datasets/bank_data_Example.csv
+knime://knime.workflow/data.all
+file:/Users/vishalm/desk/github/vishalrepo/courses/BigData/04_MachineLearningWithBigData/datasets/iris.data
+file:/Users/vishalm/desk/github/vishalrepo/courses/BigData/04_MachineLearningWithBigData/datasets/adult.data
+file:/Users/vishalm/desk/github/vishalrepo/courses/BigData/04_MachineLearningWithBigData/datasets/supermarketdataset.csv
+knime://knime.workflow/../shoppingList.csv
+file:/Users/vishalm/desk/github/vishalrepo/courses/BigData/04_MachineLearningWithBigData/datasets/shoppingList.csv
+knime://knime.workflow/data/shuttle.data

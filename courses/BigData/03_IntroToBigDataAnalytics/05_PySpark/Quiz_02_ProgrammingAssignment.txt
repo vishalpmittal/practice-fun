@@ -1,0 +1,152 @@
+Programming Assignment: DataFrame Analytics
+==============================================
+
+Question :1
+---------------------
+Start the PySpark console with CSV support (see the video lessons for the syntax).
+
+Load the Yelp dataset used in the video lessons, using:
+
+yelp_df = sqlCtx.load(
+    source='com.databricks.spark.csv',
+    header = 'true',
+    inferSchema = 'true',
+    path = 'file:///usr/lib/hue/apps/search/examples/collections/solr_configs_yelp_demo/index_data.csv'
+    )
+
+Answer the following questions by running analytics functions on this DataFrame.
+
+What is the mean of the "cool" column across all of the dataset?
+
+Solution: 1
+---------------------
+yelp_df.agg({"cool": "mean"}).collect()
+Out[]: 
+[Row(AVG(cool#1)=0.998)]
+
+
+==============================================
+
+Question :2
+---------------------
+Using again the Yelp dataset, take into consideration only the records with a "review count" of 10 or more.
+
+What is the average of the "cool" column for venues with 4 "stars"? (Hint: use grouping)
+
+Solution: 2
+---------------------
+yelp_df.groupBy("stars").avg("cool").show() 
+Out[]:
+1     0.2
+2     0.4418604651162791
+3     0.9972677595628415
+4     1.0411449016100178
+5     1.1481481481481481
+
+Choose the closest answer
+0.985
+1.067   <-- answer
+1.095
+1.078
+
+==============================================
+
+Question :3
+---------------------
+Using again the Yelp dataset, take into consideration only the records with a "review count" of 10 or more and only records for which the venue is still open (see the "open" column).
+
+What is the average of the "cool" column for venues with 5 "stars"?
+
+Solution: 3
+---------------
+
+yelp_filt_df = yelp_df.filter(
+    yelp_df.review_count >= 10
+    ).filter(
+    yelp_df.open == "True"
+    )
+
+yelp_filt_df.groupBy("stars").avg("cool").show() 
+Out[]:
+stars AVG(cool#1)
+2     0.5714285714285714
+3     1.0456140350877192
+4     1.0774193548387097
+5     2.25
+
+Choose the closest answer
+2.34
+2.32
+2.28      <-- Answer
+2.24   
+
+==============================================
+
+Question :4
+---------------------
+Using again the Yelp dataset, take into consideration only the records with a "review count" of 10 or more and only records for which the venue is still open (see the "open" column).
+
+Count the records for each "state", which state has the 3rd highest number of reviews?
+
+Solution: 4
+---------------------
+from pyspark.sql.functions import asc, desc
+
+yelp_filt_df = yelp_df.filter(
+    yelp_df.review_count >= 10
+    ).filter(
+    yelp_df.open == "True"
+    )
+
+yelp_filt_df.groupBy("state").count().orderBy(desc("count")).show()
+Out[]:
+state count
+AZ    538
+LA    53
+CO    43
+GA    33
+NY    27
+CA    20
+TX    20
+MN    19
+OR    19
+WA    4
+ID    3
+
+Answer --> CO
+
+==============================================
+
+Question :5
+---------------------
+Using again the Yelp dataset, but taking into consideration the complete dataset, what is the maximum number of reviews per venue (identified by "business_id")?
+
+Solution: 5
+---------------------
+
+yelp_df.groupBy("business_id").count().orderBy(desc("count")).show()
+Out[]:
+business_id          count
+SMpL3z4FLF07bRA6-... 6
+rZbHg4ACfN3iShdsT... 6
+uEJQSIjWui-TDWXaG... 4
+JhupPnWfNlMJivnWB... 4
+L9UYbtAUOcfTgZFim... 4
+1NZLxU5WvB5roPFzn... 4
+QnAzW6KMSciUcuJ20... 4
+3n9mSKySEv3G03Yjc... 4
+6oRAC4uyJCsJl1X0W... 4
+V1nEpIRmEa1768oj_... 4
+qjmCVYkwP-HDa35jw... 4
+hW0Ne_HTHEAgGF1rA... 4
+2ceeU8e3nZjaPfGmL... 4
+IuAPYzf3NSyfyXYgT... 3
+P5uC-zfGG6yqoQDUy... 3
+zp713qNhx8d9KCJJn... 3
+YQvg0JCGRFUkb6reM... 3
+c1yGkETheht_1vjda... 3
+Hdi7jkB7pHiM1nyPH... 3
+AqbgC7Gul5Es1rRzG... 3
+
+
+Answer --> 6

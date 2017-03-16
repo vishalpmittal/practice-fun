@@ -1,0 +1,9 @@
+file = open("pagecounts-20150801-000000_bkp","r")
+count = 0
+for line in file:
+    line = line.rstrip('\n')
+    elements = line.split(' ')
+    element_int = int(elements[2])
+    if element_int> 2500:
+        count = count+1
+print count

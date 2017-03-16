@@ -1,0 +1,12 @@
+Situation:
+I worked on a project at a leading virtual appliance company. We were developing an infrastructure and orchestration to install/configure and manage virtual appliances on designated servers. My team,  was working on the connecting driver part which was needed to parallely execute the tasks assigned by the user. For ex. a user can deploy 1 to 2000 copies of same vitual machine or a user can configure/stop/start/delete etc. all those virtual machine. The user must be able to select all these virtual machines at once and kick off the task for all of them.
+
+My teams Task were:
+So we needed to figure out how to create a driver infrastructure where no tasks overlap. Also any future improvement tasks can be pluged in, and for any task running we should be able get the current status. 
+
+Actions: 
+I started browsing the design patterns for solving this problem. I knew we could try builder, command and facade patterns for this. But they will not combinly solve the problem. So back to white board we arranged discussion meetings and came up with this solution. 
+
+
+Result: 
+For big virtual datacenters we were able to reduce the deployment time from 12 hours to about 1.5 hour. The reason was we were finishing each task independently before and waiting for it to finish before we kicked off another task. Which took most of the time. But now with this solution we kick off all the tasks together with priority based tasks and it was all managed through a driver to finish all the tasks. 

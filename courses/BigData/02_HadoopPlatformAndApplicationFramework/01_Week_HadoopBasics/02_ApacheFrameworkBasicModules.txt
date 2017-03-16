@@ -1,0 +1,44 @@
+So let's talk about Apache framework,
+its basic components. There's four basic
+components to the framework. Hadoop common,
+Hadoop Distributed File System or often called HDFS, and
+the Hadoop MapReduce. Hadoop YARN is kind of a newer
+addition to this basic stack. However, Since the Hadoop 2.0, we can eventually use this as one
+of the basic components as well. Hadoop Common contains libraries and
+utilities needed by other Hadoop modules. Hadoop Distributed File System is
+a distributed file system that stores data on a commodity machine. Providing very high aggregate
+bandwidth across the entire cluster. Hadoop YARN is a resource management
+platform responsible for managing compute resources in the cluster and using them in
+order to schedule users and applications. And in Hadoop MapReduce
+is a programming model that scales data across a lot
+of different processes. So we've talked about reliability and we talked about how all of the modules
+within the Hadoop framework are designed with the fundamental assumption
+that hardware fails. If you look at the HDFS, YARN,
+MapReduce and really the entire platform as a whole, they all
+consist of numerous applications and each one of these applications take
+into consideration this reliability. So we have different applications, like Apache PIG, Apache Hive,
+HBase, and others. For the end users,
+through the MapReduce Java code, we can access any of these applications. And we can build many
+different kinds of systems. We can even talk about
+the streaming systems. And implement these map and reduce
+jobs to accomplish the task at hand. A patch of PIG and Hive, among other
+related projects allow us to expose high level interfaces, like the PIG Latin or
+sequel and be able to access the data through the kinds of user interfaces
+that we might be more familiar with. The Hadoop framework itself is mostly
+written in Java programming language and it has some applications in native C and command line utilities that
+are written in shell scripts. So there is many pieces
+to the Apache ecosystem. So in the next couple of slides, we're
+gonna go through each one of these and take a look at what are the differences
+between the original Hadoop, the Hadoop 2.0, and
+all of these applications and services, they're on top of the basic map
+produced system in the HDFS, and how we can use them and
+utilize them for various jobs. In our previous class we
+talked a little bit about high level architecture of Hadoop. We talked about the Hadoop one point
+something version and we talked about two major pieces of it that Hadoop Distribute
+the File System and the MapReduce. Which is our parallel processing
+framework that will map and reduce data. These are both open source. And they are both inspired by
+the technologies developed at Google. If we talk about this high
+level infrastructure, we start talking about things like
+TaskTrackers and JobTrackers, the NameNodes and DataNodes and we're
+gonna dig deeper into these terminology, both in this class and
+the next class in the specialization. [BLANK AUDIO]

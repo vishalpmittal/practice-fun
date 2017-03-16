@@ -1,0 +1,52 @@
+Hi everybody, welcome back. We're so glad to have you back in our
+second class of this specialization. So let's talk about
+the big data Hadoop Stack. So far we have talked about basic
+concepts needed to understand big data from both technical and
+business side. However, in this class, we're gonna spend a lot more time on
+diving deeper into the technical issues, and truly understanding how
+does a Hadoop Stack work? What does the architecture look like? And what kinds of things can
+we do with this framework? So just as a reminder, we talked
+a little bit about the Hadoop, but let's talk about what Hadoop is. It's an Apache open source software
+framework, for storage and large scale processing of the datasets and
+clusters, on commodity hardware. It is licensed under the Apache license,
+and it's open source, and
+we're all free to use it. So, Hadoop was created by Doug Cutting and
+Mike Cafarella in 2005. That's a long time ago. It was originally developed to support
+distribution of the Nutch search engine project. Doug, who was working at Yahoo at
+the time, who is now actually a chief architect at Caldera, has named this
+project after his son's elephant, Hadoop. I've found out recently that you're
+supposed to accent the front of the word, Hadoop. Anyhow, his son called
+his elephant Hadoop, and Doug used this name to name
+the project after him. So let's look at what makes Hadoop so
+interesting, so scalable, and so usable. If you think about it, Hadoop started out
+as a simple batch processing framework. MapReduce allows people to perform
+computations of big datasets. Computations we can't easily perform
+without this kind of architecture. It's a very simple, but
+powerful computing framework. It is very efficient. The idea behind Hadoop, is that instead of moving data to
+computation, we move computation to data. Hadoop MapReduce provides the share and
+integrated foundation, where we can bring additional tools and
+build up this framework, to do all kinds of cool things,
+as we will see in this class. Now we talked about scalability
+many times in the previous class. Just keep in mind, scalability's,
+at its core, of a Hadoop system. We have cheap compute and
+storage we can contribute and scale across very easily in
+a very cost effective manner. All the modules in Hadoop are designed
+with a fundamental assumption that hardware fails. Unfortunately, that is true. If we think about an individual machine,
+or rack of machines, or large cluster, or supercomputer, they all fail
+at some point of time, or some of their components will fail. These failures are so common that we have
+to account for them ahead of the time. And all of these are actually handled
+within the Hadoop framework system. So the Apache Hadoop MapReduce and
+HTFS components where originally derived from the Google's MapReduce and
+Google's File System. Another very interesting thing that
+Hadoop brings is a new approach to data. A new approach is,
+we can keep all the data that we had, and we can take that data, and
+analyze it in the new interesting ways. We can do something that's
+called schema on read style. So, I can read the data and
+create the schema as I'm reading, instead of, spending hours and days and
+months creating the schema, trying to fit the data within the schema I've created
+earlier, like we did in the old days. Now we can afford to keep all
+of the data in a rough format, and then project in into the schema
+on the fly, as we're reading it in. And, we can actually allow new analysis. We can bring more data into simple
+algorithms, which has shown that with more granularity you can actually
+achieve often better results, than taking a small amount of data, and
+doing some really complex analytics on it.

@@ -1,0 +1,38 @@
+Angular terms
+====================================
+
+-  ng-app: <html lang="en" ng-app>
+
+-  expressions : {{....}}
+
+-  ng-init :
+    <div class="row row-content" ng-init="
+                 dish=
+                 {
+                   name:'Uthapizza',
+                   image: 'images/uthapizza.png',
+                   category: 'mains',
+                   label:'Hot', 
+                   price:'4.99',
+                   description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+                   comment: ''
+                }">
+                
+-  ng-model:
+    <input type="text" ng-model="dish.comment"></p>
+
+-  ng-repeat:
+    
+-  ng-src:
+    <img class="media-object img-thumbnail" ng-src={{dish.image}} alt="Uthappizza">
+    
+-  module and ng-controller:
+    var app = angular.module('confusionApp', []);
+    app.controller('menuController', function(){
+    
+    });
+
+
+
+
+

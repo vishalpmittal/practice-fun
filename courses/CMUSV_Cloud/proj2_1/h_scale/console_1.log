@@ -1,0 +1,230 @@
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+Creating Security group
+===============
+Launching LG instance...
+Waiting for instance to be in running statem Instance ID: i-35437396
+===============
+Launching Base DC instance...
+Waiting for instance to be in running statem Instance ID: i-064474a5
+===============
+
+Adding submission password to LG...
+password sumbission response 
+<!DOCTYPE html><html><head><title>MSB Load Generator</title></head><body>You have entered your submission password<br> Click <a href='/'>here</a> to return to the homepage.</body></html>
+===============
+adding DC ec2-54-86-7-194.compute-1.amazonaws.comto LG ec2-54-172-198-192.compute-1.amazonaws.com
+load generatorr added base DC DNS 
+<!DOCTYPE html><html><head><title>MSB Load Generator</title></head><body><a href='/log?name=test.1443248284562.log'>Test</a> launched.</body></html>
+===============
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+Traceback (most recent call last):
+  File "hscale_v4.py", line 121, in <module>
+    test_result="http://"+lg_inst_dns+"/log?name=test.1443248284562.log"
+NameError: name 'lg_inst_dns' is not defined
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ python hscale_v4.py $sub_passwd 
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+[Minute 4]
+ec2-54-86-7-194.compute-1.amazonaws.com=708.70
+
+[Minute 5]
+ec2-54-86-7-194.compute-1.amazonaws.com=712.90
+
+[Minute 6]
+ec2-54-86-7-194.compute-1.amazonaws.com=713.06
+
+
+Waiting for instance to be in running statem Instance ID: i-364b7b95
+load generatorr added DC DNS <!DOCTYPE html><html><head><title>MSB Load Generator</title></head><body></body></html>
+SLEEPING.....ZZZZZZ
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+[Minute 4]
+ec2-54-86-7-194.compute-1.amazonaws.com=708.70
+
+[Minute 5]
+ec2-54-86-7-194.compute-1.amazonaws.com=712.90
+
+[Minute 6]
+ec2-54-86-7-194.compute-1.amazonaws.com=713.06
+
+[Minute 7]
+ec2-54-86-7-194.compute-1.amazonaws.com=696.93
+
+[Minute 8]
+ec2-54-86-7-194.compute-1.amazonaws.com=703.28
+
+[Minute 9]
+ec2-54-86-7-194.compute-1.amazonaws.com=714.21
+
+
+tests-MacBook-Pro:pyAPI poorvamittal$ 

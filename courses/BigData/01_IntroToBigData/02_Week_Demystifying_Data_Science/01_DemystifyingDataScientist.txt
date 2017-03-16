@@ -1,0 +1,86 @@
+Welcome back, everybody. Today, we're going to talk about
+demystifying the data scientist, the whole area and
+discipline of data science, as well as all the other influencers that
+have made this new area become so popular. We're gonna try and cut through that hype
+and learn more about what it really is, how does it work, What can you do with it? What is actually the value
+of the big data? How can we compute our
+way to better decision coming out of these large
+information systems? Anywhere from providing forefront
+support to maybe your customers all the way to being able to
+create predictive models and provide data driven decisions for
+the upper management. Computer systems are very no
+longer deterministic machines. They are not even always
+physically available to you. We're talking about clouds and
+virtual worlds and the dialogs between people are often
+happening throughout this digital world, and there's a lot of opportunity
+to improve many of these different aspects of our
+lives through computing. So why is Big Data fueling Data Science,
+you might ask yourself? Are they related? How does one influence the other? And really, what data scientists are
+trying to do, or what this new discipline of data science has started forming
+around it are really fueled by big data. Big data challenges are certainly
+something that have inspired, motivated, and challenged the data sciences to bring
+in all of these technologies together and be able to find some meaning
+in this chaos of large, fast-moving, uncertain data that we
+have present around us these days. So, now we're talking about going
+beyond relational databases. If you think about maybe even
+ten years ago, the majority of the data was stored in relational
+databases, maybe where warehouse. If you think about it we saw that
+picture about what happens in sixty seconds on the internet,
+there's a lot of clickstreams happening. People are searching for different things, people are exploring,
+people are buying different things. Now we have this constant stream of
+the quick clicking around the Internet and maybe we can do something
+interesting with that. A lot of enterprises are already a lot
+of interesting things with them. If you think about the rational databases,
+we're going beyond rational data bases for many reasons. Those four Vs describe those
+reasons pretty well, but if you think about machine data,
+machine data is very fast, it is not necessarily humanly understandable, but
+that can give you a lot of information and a lot of insight into both how
+your enterprises are working, it can help IT system
+optimize into things, it can help security guides predict and
+detect potential intrusion and so on. On top of all of that,
+we have a lot of streaming data. There's sensors everywhere. This is why we're starting to talk
+about IoT, or Internet of Things. All these devices are getting
+connected throughout the world. They're starting to talk to each other, they're starting to omit information
+back to the data sources, and there is exponentially growing number of censors
+being deployed everywhere in the world. That data is coming in
+at extremely fast pace. With the variety,
+veracity, and uncertainty. Now, we're talking about structure, we have been used to structured data sets,
+traditional database schemas. And we're talking about raw,
+complex, unstructured wild data coming to us in various formats and
+we need to do something about it. Now the traditional warehouses
+are not disappearing, they might not even go away for
+quite a long time, cause they still have a purpose and
+they are good at what they do. These additional challenges
+that big data is bringing to us are now bringing on all of these
+new technologies, new platforms. One of them being the Hadoop, or
+HDFS, Hadoop Data File System. Now, we're able to use these
+distributed low-cost systems that can address some needs that we have, they're brought upon by big data,
+processing data, really fast. Being able to do ETL, or extract,
+transform, and load data, really fast. Maybe do some quick summaries, and extract
+some interesting pieces of information, or use maybe some of the advanced analytics
+and gain deeper insight into our data set. So, not only do we have warehouse now,
+we have this whole new set of big data technologies that we have seen a little
+bit about in the previous lecture and we're gonna go deeper and
+learn a lot more about these different technologies based
+on the distributed file system. Talking about data warehouse. Now, we're talking about going beyond
+the warehouse not only in the size of the data, not only in the structure, but
+how we actually Interact with that data. Can't we use SQL anymore? Possibly. There are some tools that mimic
+the way the SQL works and can help you access your data. How do you retrieve that data,
+how do you analyze it and summarize it becomes a little different,
+and we will go into a lot more details in that
+once we start talking about HBase and Hive and Pig and all these other tools
+that sit on top of the Hadoop platform. Now we're talking about
+expanded views of the data. We're not only getting purchase data
+information about our customers. We're now exposed to a whole lot new data. A whole new world of data. We're now talking about behavioral data,
+social media data, multiple sources of data. Integration of the data
+becomes a large challenge, cuz we oftentimes wanna have that one
+unified look on our data where we can apply all these different analytics and
+maybe deploy some deep learning tools and extract some information from
+hat data in some automated way. We're talking about online data,
+quick data, streaming data,
+interaction between the data. Here we are now, collecting
+observational data, consumption, demographics, we're looking
+at preferences of the people. People who are openly telling us
+about what they like and dislike, what they're interested in. We can look at social interactions. We can look at groupings of people. We can look at what they
+do in their free time. There's a lot of new resources today
+that have never existed before.

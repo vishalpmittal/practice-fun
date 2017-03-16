@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<favoritenodes>
+<personals/>
+<frequents>
+<favorite frequency="1" nodeid="org.knime.base.node.viz.property.color.ColorManager2NodeFactory"/>
+<favorite frequency="1" nodeid="org.knime.base.node.preproc.partition.PartitionNodeFactory"/>
+<favorite frequency="1" nodeid="org.knime.base.node.io.filereader.FileReaderNodeFactory"/>
+<favorite frequency="1" nodeid="org.knime.base.node.mine.scorer.accuracy.AccuracyScorerNodeFactory"/>
+</frequents>
+<lastused>
+<favorite nodeid="org.knime.base.node.viz.property.color.ColorManager2NodeFactory"/>
+<favorite nodeid="org.knime.base.node.io.filereader.FileReaderNodeFactory"/>
+<favorite nodeid="org.knime.base.node.preproc.partition.PartitionNodeFactory"/>
+<favorite nodeid="org.knime.base.node.mine.scorer.accuracy.AccuracyScorerNodeFactory"/>
+</lastused>
+</favoritenodes>

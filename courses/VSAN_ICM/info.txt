@@ -1,0 +1,16 @@
+First RDP Connection
+--------------------------
+Host: vdc-kudu-a.vmeduc.com
+username : vmeduc\kudu04b (01-08 POD; a-for student a or b - for student b)
+password: P@ssw0rd
+
+Second RDP Connection
+--------------------------
+Host: vm-kudu04b.vmeduc.com   (01-08 POD)
+username : vclass\administrator
+password: VMware1!
+
+
+POD1 1
+Student A : Abid
+Student B : Caleb

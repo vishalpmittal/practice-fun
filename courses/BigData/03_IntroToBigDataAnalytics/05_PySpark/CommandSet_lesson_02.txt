@@ -1,0 +1,149 @@
+==============================================
+SQL: Filtering
+==============================================
+
+--------------------------
+yelp_df = sqlCtx.load( 
+    source='com.databricks.spark.csv', 
+    header = 'true', 
+    inferSchema = 'true', 
+    path = 'file:///usr/lib/hue/apps/search/examples/collections/solr_configs_yelp_demo/index_data.csv')
+
+yelp_df.registerTempTable("yelp")
+
+filtered_yelp = sqlCtx.sql("SELECT * FROM yelp WHERE useful >= 1")
+
+filtered_yelp
+Out[]:
+Out[45]: DataFrame[business_id: string, cool: int, date: string, funny: int, id: string, stars: int, text: string, type: string, useful: int, user_id: string, name: string, full_address: string, latitude: double, longitude: double, neighborhoods: string, open: string, review_count: int, state: string]
+
+filtered_yelp.count()
+Out[]: 601L
+
+yelp_df.filter(yelp_df.useful >= 1).count() 
+Out[]: 601L
+
+
+==============================================
+SQL: aggregation
+==============================================
+sqlCtx.sql("SELECT MAX(useful) AS max_useful FROM yelp").collect()
+Out[]: 
+[Row(max_useful)=28)] 
+
+yelp_df.agg({"useful":"max"}).collect() 
+Out[]: 
+[Row(MAX(useful#267)=28)]
+
+==============================================
+SQL: Join - select - show
+==============================================
+
+useful_perc_data = yelp_df.select(
+    yelp_df["id"].alias("uid"),
+    (yelp_df.useful/28*100).cast("int").alias("useful_perc")
+    ).orderBy(desc("useful_perc"))
+
+useful_perc_data.join( 
+    yelp_df, 
+    yelp_df.id == useful_perc_data.uid, 
+    "inner" 
+).select(
+    useful_perc_data.uid, 
+    "useful_perc", 
+    "review_count"
+)
+
+useful_perc_data.registerTempTable("useful_perc_data")
+
+sqlCtx.sql("""SELECT useful_perc_data.uid, useful_perc, review_count
+    FROM useful_perc_data
+    INNER JOIN yelp
+    ON useful_perc_data.uid=yelp.id"""
+)
+
+
+
+==============================================
+Hive
+==============================================
+
+customers_df = sqlCtx.sql("SELECT * FROM customers")
+customers_df.show()
+
+customers_df.printSchema()
+root
+ |-- customer_id: integer (nullable = true)
+ |-- customer_fname: string (nullable = true)
+ |-- customer_lname: string (nullable = true)
+ |-- customer_email: string (nullable = true)
+ |-- customer_password: string (nullable = true)
+ |-- customer_street: string (nullable = true)
+ |-- customer_city: string (nullable = true)
+ |-- customer_state: string (nullable = true)
+ |-- customer_zipcode: string (nullable = true)
+
+
+sqlCtx.sql(
+    """select c.category_name, count(order_item_quantity) as count 
+    from order_items oi inner join products p 
+    on oi.order_item_product_id = p.product_id inner join categories c 
+    on c.category_id = p.product_category_id 
+    group by c.category_name 
+    order by count desc 
+    limit 10"""
+).show()
+
+Out[]:
+category_name        count
+Cleats               24551
+Men's Footwear       22246
+Women's Apparel      21035
+Indoor/Outdoor Games 19298
+Fishing              17325
+Water Sports         15540
+Camping & Hiking     13729
+Cardio Equipment     12487
+Shop By Sport        10984
+Electronics          3156
+
+sqlCtx.sql(
+    """select p.product_id, p.product_name, r.revenue 
+    from products p inner join 
+        (select oi.order_item_product_id, sum(cast(oi.order_item_subtotal as float)) as revenue 
+            from order_items oi inner join orders o 
+            on oi.order_item_order_id = o.order_id 
+            where o.order_status <> 'CANCELED' and o.order_status <> 'SUSPECTED_FRAUD' 
+            group by order_item_product_id) r 
+        on p.product_id = r.order_item_product_id order by r.revenue desc limit 10"""
+).show()
+
+Out[]:
+product_id product_name         revenue
+1004       Field & Stream Sp... 6637668.282318115
+365        Perfect Fitness P... 4233794.3682899475
+957        Diamondback Women... 3946837.004547119
+191        Nike Men's Free 5... 3507549.2067337036
+502        Nike Men's Dri-FI... 3011600.0
+1073       Pelican Sunstream... 2967851.6815185547
+1014       O'Brien Men's Neo... 2765543.314743042
+403        Nike Men's CJ Eli... 2763977.4868011475
+627        Under Armour Girl... 1214896.220287323
+565        adidas Youth Germ... 63490.0
+
+
+
+
+==============================================
+Save DataFrames to Hive
+==============================================
+
+yelp_df.saveAsTable("yelp_reviews")
+
+sqlCtx.sql("SELECT * FROM yelp").show()
+Fails....
+
+sqlCtx.sql("SELECT * FROM yelp_reviews").show()
+data...
+
+

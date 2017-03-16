@@ -1,0 +1,126 @@
+sudo easy_install numpy
+
+PYSPARK_DRIVER_PYTHON=ipython pyspark
+
+
+import numpy as np
+
+-  Arrays
+x = np.array([1,2,3,4])
+x[0]
+Out[]: 1
+
+-  Array of Arrays
+x = np.array([[1,2],[3,4]])
+x[0]
+Out[]: array([1,2])
+
+X[:,1]
+Out[]: array([2,4])
+
+-  Vectors
+from pyspark.mllib.linalg import Vectors
+x = Vectos.dense([1,2,3,4])
+x[0]
+Out[]: 1
+
+-  RDD of Vectos
+x = [Vectors.dense([1,2,3,4]),
+    Vectors.dense([5,6,7,8])]
+xrdd = sc.parallelize(x)
+xrdd
+Out[]: <Python RDD ....>
+
+-  Labeled Points 
+from pyspark.mllib.regression import LabeledPoint my_pt
+
+my_pt = LabeledPoint(1.0, Vectors.dense([1.0, 0.0, 3.0])
+
+my_pt.label
+ 
+Out[]: 1.0
+my_pt.features
+Out[]: [1.0, 0.0, 3.0]
+
+-  Naive Bayes
+from pyspark.mllib.classification import NaiveBayes
+
+my_nbmodel = NaiveBayes.train(data_rdd)
+
+test_pred = my_nbmodel.predict(test_point.features)
+ 
+my_nbmodel.theta
+my_nbmodel.pi
+
+   -  example
+
+
+
+
+Naive Bayes: Conf.Mat. and Per Corr
+[[ 3.  2.]
+ [ 0.  9.]]
+0.857142857143
+
+
+Naive Bayes: Conf.Mat. and Per Corr
+[[ 3.  2.]
+ [ 0.  9.]]
+0.857142857143
+
+
+Decision Tree: Conf.Mat. and Per Corr
+[[ 5.  0.]
+ [ 2.  7.]]
+
+Decision Tree: Conf.Mat. and Per Corr
+[[ 5.  0.]
+ [ 2.  7.]]
+0.857142857143
+
+
+
+In [7]: dt_model
+Out[7]: DecisionTreeModel classifier of depth 3 with 9 nodes
+
+
+
+In [8]: dir(dt_model)
+Out[8]: 
+['__class__',
+ '__del__',
+ '__delattr__',
+ '__dict__',
+ '__doc__',
+ '__format__',
+ '__getattribute__',
+ '__hash__',
+ '__init__',
+ '__module__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_java_loader_class',
+ '_java_model',
+ '_load_java',
+ '_sc',
+ 'call',
+ 'depth',
+ 'load',
+ 'numNodes',
+ 'predict',
+ 'save',
+ 'toDebugString']
+
+
+newpoint  = np.array([1,0,0,68,79,0,1])
+
+
+
+

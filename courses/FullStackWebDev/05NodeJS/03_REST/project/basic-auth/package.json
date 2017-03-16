@@ -1,0 +1,25 @@
+{
+  "name": "basic-auth",
+  "version": "1.0.0",
+  "description": "authentication project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jsonwebtoken": "^5.7.0",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "serve-index": "^1.7.3",
+    "serve-static": "^1.10.2",
+    "session-file-store": "^0.2.0"
+  }
+}

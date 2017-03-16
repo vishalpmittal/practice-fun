@@ -1,0 +1,33 @@
+Welcome to the Big Data Analytics Course
+=============================================
+
+Advanced: Test your knowledge
+-----------------------------
+
+For those who want to go deeper, ponder the following question. The answer is in the next reading (the following item).
+One issue that comes up with big data and exploratory analysis is that some meaningful results can appear just by chance. And the more you iterate over samples and comparisons, the higher the probability of finding something that appears 'significant'.
+Here's a thought experiment: Suppose you have data on the success of 1000 sports fans picking winners from 1,000,000 games. If you take a small sample of 5 games, you might find that many fans picked all the winners perfectly.
+If you want to confirm that these fans make perfect predictions, the obvious thing to do is take a larger sample.
+What is a reasonable strategy to find the (approximate) smallest sample size that would confirm if there are fans who make perfect predictions?
+Here's a hint:
+If you know that all sport fans are randomly picking winners by flipping a coin, then you would be correct to think that you need something greater than 1024 (because 2^10 is 1024 combinations, so that in a sample of this size there would possibly still be a perfect guesser).
+The important point about this question is that it is expensive to sample across rows, but at the same time, you might not know if a fan will make perfect predictions until you test all the predictions.
+
+Answer Option 1: 
+Scale the samples: take the perfect fans, and redo the test with a sample of N=10 and if there are still perfect predictors, than take N*2, and repeat (where N is number of games)
+
+Answer Option 2: 
+Redo the test with one different small sample of 5 games.
+Do you have your answer?
+-----------------------------
+
+
+The answer is #1: 
+Scale the samples: take the perfect fans, and redo the test with a sample of N=10 and if there are still perfect predictors, than take N*2, and repeat (where N is number of games).
+
+Why?
+If sampling is expensive then you could scale your samples. The optimal scaling rate would depend on the how fast the cost of retrieving data increases versus the cost of processing that data. In this case it is easy to check for perfect predictors, but other kinds of analysis it could be expensive. At some point, as N grows you might need to switch to N+some-large-number as a way to scale sample size.
+
+Why is #2 not correct?
+This might work, but the total number of winner combinations is still way too small.
+-----------------------------

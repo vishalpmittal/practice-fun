@@ -1,0 +1,133 @@
+Hi, welcome back. So let's talk about several
+different tools that we're gonna use on top of the Hadoop framework. With the evolution of computing
+technology, it is now possible to manage immense volumes of data that we previously
+could only handle by super computers. And it would be very,
+very expensive to do. So prices in systems have dropped and
+the results in new techniques for distributed computing can come along, and
+actually kind of became a mainstream. So the real breakthrough happened when
+the companies like Yahoo and Google and Facebook came to the realization
+that they needed to do something to monetize these massive amounts
+of data they were collecting. So this is where all of these applications
+have evolved over time as we have seen through numerous of these organizations. So let's talk about the Apache Sqoop. Sqoop stands for SQL to Hadoop. It is a straightforward command line tool
+that has several different capabilities. It lets us import individual tables or
+entire databases into our HDF system. And it generates Java classes
+to allow us to interact and import data,
+with all the data that we imported. It provides the ability to import
+sequel databases straight into the high data warehouse which sits
+within the HDFS system. After setting up an import drop and scoop, which we will do at the exercise at the
+end of this module, you can get started. You can get started to work with the SQL
+databased backed data within your Hadoop environment and use Map Reduce to
+launch all kinds of fun jobs on this data. So next up is Hbase. Hbase is a key component of the Hadoop
+stack, as its design caters to applications that require really fast
+random access to significant data set. Hbase if you remember we talked about it
+earlier is based on Google's big table and it can handle massive data
+tables combining billion and billions of rows and millions of columns. So next stop let's talk about pig. It's a scripting language,
+it's really a high level platform for creating MapReduce programs using Hadoop. This language is called Pig Latin, and it excels at describing data
+analysis problems as data flows. Pig is complete in that you
+can do all the required manipulation within
+The Apache Hadoop just by using pig. In addition, for the user defined
+functions, facilities in the pig, you can actually have pig in both
+code of many different languages, like JRuby, JPython, and Java. And conversely, you can execute
+PIG scripts in other languages. So the result is really that you can use
+PIG as a component to build much larger, much more complex applications that can
+tackle some real business problems. Again, we're gonna play with that
+in the next couple of exercises and the experience kinds of
+things we can do with Pig. A good example of PIG applications is
+ETL transaction model that describes how a process will extract data from a source,
+transporting according to the rules set that we specify, and
+then load it into a data store. PIG can ingest data from files,
+streams, or any other sources using the UDF or
+what we mentioned previously. A user-defined functions
+that we can write ourselves. When it has all the data it can perform,
+select, iterate and do kinds of transformations. Over that data, again the UDF
+features can allow us passing data to more complex algorithms for
+more complex transformations, and it can take all of these transformations
+and store it back on the data file system. So next let us talk
+a little bit about Hive. The Apache Hive data warehouse
+software facilitates querying and managing large datasets residing
+in our distributed file storage. It actually provides a mechanism
+to project structure on top of all of this data and
+allow us to use SQL like queries to access the data that we have
+stored in this data warehouse. This query language is called Hive QL. At the same time this language also allows
+us traditional man produced programs to park inside the custom mappers and
+reducers when it is inconvenient or to complex or really inefficient to
+express the logic we would like to express in processing our data
+within the Hive in language. Now let us talk about Oozie. Oozie's a workflow schedule system that
+manages all of our Apache Hadoop jobs. Oozie workflow jobs are what we
+call DAGs or Directed Graphs. Oozie coordinator jobs are recurrent
+Oozie workflow jobs that are triggered by frequency or data availability. It's integrated with
+the rest of the Hadoop stack supporting several different
+Hadoop jobs right out of the box. You can bring in Java MapReduce,
+you can bring in streaming MapReduce. You can run Pig and Hive and Sqoop and many other specific jobs
+on the system itself. It's very scalable and reliable and
+a quite extensible system. Next up is the Zookeeper. Well we have the large zoo of crazy wild
+animals and we've got to keep them in and keep them somehow organized. Well that's kind of what
+the Zookeeper does, a patch Zookeeper provides operational
+services for the Hadoop cluster. It provides a distributed
+configuration service and synchronization service so
+he can synchronize all these jobs and a naming registry for
+the entire distributed system. Distributed applications use
+the zookeeper to store immediate updates to important configuration
+information On the cluster itself. And last but not least, flume is a
+distributed and reliable available service for efficiently collecting aggregating and
+moving large amounts of data. It has a simple and very flexible architecture
+based on streaming data flows. It's quite robust and fall tolerant,
+and it's really tunable to enhance the reliability mechanisms,
+fail over, recovery, and all the other mechanisms that keep
+the cluster safe and reliable. It uses simple extensible
+data model that allows us to apply all kinds of online
+analytic applications. We have talked a little bit about
+Hadoop Cloudera components and we have just covered the majority of them. There's many more. We feel that these are the basic ones that
+will enable us to do most of the jobs and applications that we would like
+to perform on this particular. There's two other little pieces, little components of the Cloudera Hadoop I
+would still like to bring up, although maybe you wouldn't necessarily
+consider it one of the core components. First one is Impala. Cloudera, Impala was designed
+specifically at Cloudera, and it's a query engine that runs
+on top of the Apache Hadoop. The project was officially announced I
+think in, at kind of the end of 2012, and became a publicly available,
+open source distribution. Impala brings scalable parallel
+database technology to Hadoop. And allows users to submit low latencies
+queries to the data that's stored within the HTFS or the Hbase without acquiring
+a ton of data movement and manipulation. Impala is integrated with Hadoop, and
+it works within the same power system, within the same format metadata, all
+the security and reliability resources and management workflows. It brings that scalable parallel database
+technology on top of the Hadoop. It actually allows us to
+submit SQL like queries at much faster speeds
+with a lot less latency. So the additional component we
+haven't mentioned yet is Spark. Although Hadoop captures the most
+attention for distributed data analytics, there are now a number of
+alternatives that provide some kind of interesting advantages over
+the traditional Hadoop platform. Spark is one of them. Spark is a scalable data analytics
+platform that incorporates primitives for in-memory computing and therefore,
+is allowing to exercise some different performance advantages over traditional
+Hadoop's cluster storage system approach. And it's implemented and supports
+something called Scala language, and provides unique environment for
+data processing. Spark is Is really great for
+more complex kinds of analytics, and it's great at supporting
+machine learning libraries. We're gonna see more of that
+in our Machine Learning for Big Data class coming up
+in a couple of months. It is yet again another open source
+computing frame work and it was originally developed at MP labs at the University
+of California Berkeley and it was later donated to the Apache software foundation
+where it remains today as well. In contrast to Hadoop's two stage
+disk base mac produce paradigm Spark is a multi stage in
+memory primitive that provides up to 100 times faster performance
+on certain applications. By allowing user to load data
+into clusters memory and querying it repeatedly,
+Spark is really well suited for these machined learning kinds of
+applications that oftentimes have iterative sorting in memory
+kinds of computation. Spark requires a cluster management and
+a distributed storage system. So for the cluster management, Spark
+supports standalone native Spark clusters, or you can actually run Spark on top of
+a Hadoop yarn, or via patching mesas. For distributor storage, Spark can
+interface with any of the variety of storage systems,
+including the HDFS, Amazon S3, or some IB custom solution at your
+organization is willing to invest into. So, now that we have a good
+understanding of the entire stack and all the applications that we have sitting
+on top of a typical HADOOP stack. Let's take a tour of
+the Cloudera's Quick Start VM. And understand how each one
+of these applications relate. To kinds of things we have offered within
+the VM, and kinds of jobs we can run inside the Cloudera's Quick
+Start Virtual Machines. So, next up, let's take the tour
+of Cloudera's Quick Start VM and run some fun exercises
+within the environment. See you soon.

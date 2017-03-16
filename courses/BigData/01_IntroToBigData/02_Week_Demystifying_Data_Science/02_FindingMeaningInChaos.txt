@@ -1,0 +1,48 @@
+So how do we find meaning in the chaos? Well there's a lot of different
+techniques that can be applied. There's techniques for integration,
+transformation, and load of this data. They're a set of techniques
+that bring all of this data and allow us to integrate it together. And then there is techniques for
+analytics. We can talk about simple analytics. We can talk about statistical analysis. And then we'll later on start
+talking about advanced analytics and predictive analytics using
+the many different techniques. Again, big data is moving
+us beyond traditional business intelligence tools, beyond
+traditional dashboards and warehouses. That's not to say that we're
+not gonna use the iTools and we're not gonna use dashboards. These days you start seeing
+a lot of predictive dashboards. You can see the dashboards where you show
+the predicted value and the actual value. You can show what your systems thinks will
+happen in the next minute, hour, or day. All of these tools are now
+coming out in scalable, and distributed versions, where you
+can work on a very large data set. Many machine learning algorithms
+have been parallelized, and distributed, and optimized, to be able
+to work on these new platforms, and be able to deal with these
+very large data sets. Typically, in predictive analysis,
+in the olden days, we used to talk about taking
+a sample of the data. Running some machine
+learning algorithms on it. Coming up with some predictive models. And then maybe scoring the larger
+set of data on those models. It's a lot harder to do that today and
+maybe you don't need to do that today. For certain purposes, you really do want
+to take and ingest the entire data set and run predictive models on it. That sample of the data is exploding. If you have zettaytes of data,
+what is an appropriate sample to take? You're still talking about at least
+petabytes or maybe even zettabytes. At that point of time, that's really not necessarily helpful
+when we start talking about sample sizes. That's still challenges a lot
+of traditional techniques and resources and technologies. Another point I'd like to bring up as
+we start to talk about the big data, something that often gets a lot of
+discussion in the area of machinery. As these techniques, both analytics and predictive analytics have
+become more popular and more widely used, we start talking
+about correlation versus causality. Just because our predictive
+algorithm has found some correlation between our variables and maybe
+particular values of those variables, that does not necessarily
+explain causality. So, we will dig deeper into this interesting aspect of
+predictive analytics. But just keep in mind that correlation
+doesn't imply causality and inferring causality from predictive
+models is a whole other area we will talk about in more depth
+later in our classes. Another interest way the big data
+has been fueling data sans and in the area of machine learning in
+general in the research community, is that there is new methods that
+are coming up from the research community. The latest that has gotten a lot
+of attention is deep learning. So, now the traditional machine learning
+methods have in the past operated on a flat file basis. Now you have this flood of a lot of data,
+lots of varieties. Very, very fast moving,
+and you need to gain some deeper insight into this very
+large volume of complex data. There is new algorithms coming out,
+deep learning being one of them, and we'll mention that later

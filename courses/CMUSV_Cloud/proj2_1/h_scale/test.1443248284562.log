@@ -1,0 +1,82 @@
+; 2015-09-26T06:18:04+0000
+; Horizontal Scaling Test
+; isTestingThroughCode=true
+; Test launched. Please check every minute for update.
+; Your goal is too achieve rps=4000 in 30 min
+; Minimal interval of adding instances is 100 sec
+[Test]
+type=horizontal
+testId=1443248284562
+testFile=test.1443248284562.log
+
+[Minute 1]
+ec2-54-86-7-194.compute-1.amazonaws.com=545.51
+
+[Minute 2]
+ec2-54-86-7-194.compute-1.amazonaws.com=709.50
+
+[Minute 3]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.41
+
+[Minute 4]
+ec2-54-86-7-194.compute-1.amazonaws.com=708.70
+
+[Minute 5]
+ec2-54-86-7-194.compute-1.amazonaws.com=712.90
+
+[Minute 6]
+ec2-54-86-7-194.compute-1.amazonaws.com=713.06
+
+[Minute 7]
+ec2-54-86-7-194.compute-1.amazonaws.com=696.93
+
+[Minute 8]
+ec2-54-86-7-194.compute-1.amazonaws.com=703.28
+
+[Minute 9]
+ec2-54-86-7-194.compute-1.amazonaws.com=714.21
+
+[Minute 10]
+ec2-54-86-7-194.compute-1.amazonaws.com=711.20
+ec2-54-209-126-46.compute-1.amazonaws.com=541.57
+
+[Minute 11]
+ec2-54-86-7-194.compute-1.amazonaws.com=713.60
+ec2-54-209-126-46.compute-1.amazonaws.com=713.38
+
+[Minute 12]
+ec2-54-86-7-194.compute-1.amazonaws.com=714.61
+ec2-54-209-126-46.compute-1.amazonaws.com=713.33
+
+[Minute 13]
+ec2-54-86-7-194.compute-1.amazonaws.com=713.87
+ec2-54-209-126-46.compute-1.amazonaws.com=715.88
+
+[Minute 14]
+ec2-54-86-7-194.compute-1.amazonaws.com=715.90
+ec2-54-209-126-46.compute-1.amazonaws.com=713.88
+
+[Minute 15]
+ec2-54-86-7-194.compute-1.amazonaws.com=649.99
+ec2-54-209-126-46.compute-1.amazonaws.com=717.11
+
+[Minute 16]
+ec2-54-86-7-194.compute-1.amazonaws.com=575.08
+ec2-54-209-126-46.compute-1.amazonaws.com=712.96
+
+[Minute 17]
+ec2-54-86-7-194.compute-1.amazonaws.com=716.07
+ec2-54-209-126-46.compute-1.amazonaws.com=713.94
+
+[Minute 18]
+ec2-54-86-7-194.compute-1.amazonaws.com=714.68
+ec2-54-209-126-46.compute-1.amazonaws.com=713.41
+
+[Minute 19]
+ec2-54-86-7-194.compute-1.amazonaws.com=715.18
+ec2-54-209-126-46.compute-1.amazonaws.com=712.77
+
+[Minute 20]
+ec2-54-86-7-194.compute-1.amazonaws.com=713.38
+ec2-54-209-126-46.compute-1.amazonaws.com=713.21
+

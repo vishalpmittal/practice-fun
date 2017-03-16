@@ -1,0 +1,67 @@
+Well, hello, everybody, welcome back. Have you ever heard about Gartner's
+Hype Cycle for Emerging Technologies? Well, if you haven't,
+you're in for a treat. We'll take a look at it. Are you curious about
+where the Big Data stand? We talk a lot about the hype. We talk a lot about the motivation. Why do we have these challenges? Where's data coming from, but let's look
+at how it compares to other technologies. So Gartner has released, Gartner actually
+every year releases a different hype cycle for the emerging technologies,
+and this one came in 2014. There is not one for 2015 yet. We will update it as soon as it comes out. And we wanted to see how
+does the Big Data move through this cycle of innovation, when it was triggered, when it started,
+and things were really excited. And then they typically reached the sort
+of peak on inflated expectations, and then you go down through this,
+this illusionment. And there is a little slope of
+enlightenment, and then you kinda reach that plateau, and maybe that
+technology's even become obsolete. So, where does the Big Data rate here? As you can see in this hype cycle, the data science is projected to reach
+the plateau in about two to five years. And it looks like it's more of
+a discipline than a technology. However, it seems like the Big Data
+is still considered to be five to ten years away from reaching its
+stage of the disillusionment. And while the interest in the Big Data
+still seems to be undiminished, it has moved through the peak
+because of the market and so many companies that have settled to kind
+of reasonable approaches to technologies. There's not wild and crazy, completely new
+and innovative technologies coming out, and so it seems like the market
+is kind of settling a little bit. So one of the interesting
+things to point out here is, what is at the very top of this peak? Internet of Things. So what is Internet of Things? Well, let's find out. I'm sure everybody has heard
+of Internet of Things. It is connecting things on the Internet,
+putting them all in a cloud, and having them talk to each other and
+then talking back to them, right? That's the definition, well sort of. That's a pretty good indication of your
+understanding of Internet of Things, so you can see that we have spent many,
+many years trying to index the world, collect data about the world,
+bring that world online. The Internet came. Then we were trying to kind of take
+control over things that we had and be able to organize and integrate them. Then we wanted things to
+start talking to each other, computers to start talking to each other. Now we have sensors starting
+talking to each other, things on the Internet starting
+to talk to each other, and then now we want those things to not
+only talk to each other, but actually be intelligent about the conversation and
+the actions they can take, right. So this is what brings this new approach
+to Big Data to the Internet of Things. And we'll start exploring to learn a bit
+more how is there any kind of overlap? Is there one that motivate each other? Do they drive each other's technologies? Are they maybe challenging
+each other's technologies? So, the idea behind
+the Internet of Things is that you have a lot of
+networks full of sensors. You wanna connect and enable those
+sensors in efforts to talk to each other, be able to report on their status, collect
+their data into several or one large data store, be able to do some analytics
+and perform analytics on that data. And then have that feedback
+control loop and send that back. So, the idea of the Internet of Things is
+not only to improve our everyday lives, although there's a lot of new technologies
+and companies and businesses being started based on that idea, but
+it really is to help overall industry. And one of the applications that's gaining
+a lot of popularity is instrumenting industrial machines, extracting
+information about that system or the machine or the storage that's
+involved with that machine. Being able to take that data,
+send it to the Big Data analytics, be able to then remotely or in a centralized
+manner do something with that information. Share that data. Send it back and be able to work in
+this iterative loop through a secure, hopefully, cloud-based network where
+you can take these physical and human networks and be able to incorporate all of
+this data together in an intelligent way. So today's scientists
+are talking about yottabytes. So we have talked about gigabytes,
+terabytes, petabytes, exabytes. Now we are talking about yottabytes. And then we're talking
+about brontobytes as well. And that is a lot of information,
+and a large amount of that information is produced and
+driven by the idea of Internet of Things, by the technologies and
+sensors employed in those architectures. So if you're interested in comparing
+the sizes of kilobytes, megabytes and gigabytes, here is your pyramid. The point we're trying to make is
+that the Internet of Things is gonna grow more data, more variety of data,
+data coming faster to us. So the variety, complexity, and volume are just gonna increase
+with the Internet of Things. And it's going to make Big Data
+technologies even more important and more applicable to the kind of
+solutions we will wanna deploy.

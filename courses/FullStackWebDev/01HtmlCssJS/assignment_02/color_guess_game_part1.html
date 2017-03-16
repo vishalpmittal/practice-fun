@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <title>JavaScript Color Guessing Game Part1</title>
+    <meta name="author" content="Vishal Mittal">
+</head>
+<body onload="do_game()">
+    <script>
+        var color_arr = ["aqua","blue","cyan","gold","gray","green","magenta","orange","red","white","yellow"]
+
+        var target;
+        var guess_input_text;
+        var finished = false;
+
+        function do_game() {
+            var rand_color_indx = Math.random() * color_arr.length;
+            rand_color_indx = Math.floor(rand_color_indx);
+            target = color_arr[rand_color_indx];
+
+            alert("The color I am thinking is: " + target);
+            console.log("The color I am thinking is: "+ target)
+            
+            while (!finished) {
+                guess_input_text = prompt("I am thinking of one of these colors: \n\""
+                                 + color_arr.toString() 
+                                 + "\"\n\nWhat color am I thinking of?");
+                if (guess_input_text == target) {
+                   finished = true;
+                }
+            }
+            alert("You got it!! The color I was thinking is: " + target);
+        }
+
+    </script>
+</body>
+</html>

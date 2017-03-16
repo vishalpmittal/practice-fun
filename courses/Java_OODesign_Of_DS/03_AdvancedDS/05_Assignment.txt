@@ -1,0 +1,7 @@
+Shortest vs. Fastest
+
+A lot of times a user might not want the shortest but the fastest route between locations. As my new plugin impletementation I implemented the functionality for user to be able to select whether he wants the shortest or the fastest route. These two route might or might not be same in certain cases, but still user can specifically say which one is the priority.
+
+Fistly, I created a file that has the speed limits for various types of roads eg. 50mph for primary, 45 mph for secondary, 25 mph for residential, etc. When the program loads it reads this file and stores the speed limit data in a hashmap. A utility function was then added to find out the time between two geo locations. If the road is unclassified then an average speed of 35 mph is selected.  
+
+The three search methods were overloaded with an additional boolean parameter called "boolean shortestTime". If this parameter is true when the method is called, the new utility method is used to find out the nearness of two geo locations rather than the distance. All three algorithms BFS, Dijkstra and AStar works in the similar fashion but the decision is taken based on time. Also in case of AStar while finding out the travel time of curr to goal I used an average speed of 25 mph to find out the time. 

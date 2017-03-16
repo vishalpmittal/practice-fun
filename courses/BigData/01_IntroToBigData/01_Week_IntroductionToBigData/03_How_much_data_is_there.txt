@@ -1,0 +1,49 @@
+Data is moving in from
+a variety of sources. The question is, are we keeping up? Although each data source can be
+independently managed and searched, the challenge today is how the companies
+make sense of all of this data? How do you find intersection, and
+incorporate, and find insight for multiple data sets, and
+multiple types of data. Yes, big data is making the world go
+around but using it is the hardest part. It is really not a single technology. We should all think about big
+data as a combination of the old. And new technologies that help companies
+gain additional insight from the data. Did you know that over 90% of world's data
+has been created in the last two years? That is tremendous. Data growth has just been unbelievable. In 2009 estimates,
+we had about 0.8 Zetabyes. In 2020, the estimates are we're
+gonna go up to 35 Zetabytes. And those estimates are growing larger,
+and larger, as well. New York Times actually
+estimates that by 2020, the size of digital universe
+will be 40 Trillion Gigabytes. So, what is changing in
+the land of the Big Data? This data is growing very rapidly, but
+what are the differences from maybe ten years ago when data was
+still growing pretty rapidly for the technologies we had at the time. Well, the data growth is these
+days driven by unstructured data. It is really changing the way
+people work within organizations. Now different departments
+are starting to work together. Business and
+IT leaders need to come together and realize the potential of all data. As you can see here,
+88% of the data is unstructured data, and that is the sector that's growing
+the fastest and the largest. Big data is being generated
+everywhere around us, at all times. From structured, to mobile phones,
+to points of sale, to GPS satellite data,
+all the way to the customer, who are these days emitting
+about a terabyte of data, a day. All the way to the social network data,
+smart meters, customer data. In order to extract meaningful
+information from big data, we need optimal processes and
+the right kind of analytics. We've talked a lot about Zettabytes and
+Exabytes and, did you know that a Zettabyte
+is 1024 times larger than the Exabyte which is 1024 times
+larger than the Petabyte, and then we talk about tiny little
+Terabytes and Gigabytes. So, there's a lot of motivations for
+why we are talking about big data. We know data is coming from everywhere, but I bet you everyone one of you has
+spent a little bit of time on Internet. Do you have any idea what happens
+in one minute on the Internet? A lot of things happen in
+one minute on the Internet. I'll give you a moment to
+analyze this slide, and take a look at what happens
+in a short amount of time. The amount information collected. It's tremendous. The reason we're talking about all of
+this, the reason you're taking this course is, that we believe this is
+just a tip of the Iceberg. That the big data we see, contains
+a tremendous amount of information and insight, underneath the piles of big data,
+where we can use these tools and then nowadays to gain insight, and
+gain a better understanding of our data. And enable data driven decisions. So let's see how that
+works in our next lecture. We're gonna look into the details about
+the big data and characteristics, and some tools, and techniques, that we
+can utilize to analyze the big data.

@@ -1,0 +1,86 @@
+Hi, welcome back. In this module we're gonna talk
+about the emerging big data stack. We will cover basic concepts you need to
+gain full understanding of the big data, the technologies, the frameworks and the architecture supporting all
+of the analysis of big data. We will cover some of the technology
+foundation, as well as both business and technical aspects of how
+do we deal with big data? How do we analyze it and
+gain that insight we're working for? So let's talk about functional
+requirements for big data. When we have big data, we need to talk
+about how do we capture, organize, integrate, analyze, and
+act on that data set. So we need to gain, gather
+a collection of appropriate data set. Then we wanna spend some time trying
+to integrate that data, organize it. Maybe match it to particular internal
+data sets that we have and once this phase is successfully implemented,
+we can actually start analyzing the data. We can perform simple analytics. We can perform more statistical or more
+advanced, deeper, predictive analytics. Once those analytics have
+provided us some insight, we're gonna bring this data
+up to our management, and hopefully they're gonna take action
+based on the outcome of this analysis. For example, if you're buying a book
+on Amazon.com about data science, maybe they will offer you
+a book about big data. So building a successful big data
+management stack is very important. When we talk about the big data stack,
+typically we think about managing that fast data, being able to put some
+analytics on top of that data and then being able to offer some focused services
+on top of those analytics and the data. When we talk about these kinds
+of aspects of the big data, we really want to think
+about that speed and scale. So there's many tools that provide
+us fast scalable access to the data, push that up to the analytic stack so
+we can perform predictive analytics, deep analytics, summary analytics, whatever it
+is that we need to perform our data set. And then we offer those
+as focused services. So let's look at the big data landscape. A big data management architecture must
+include a variety of services that will enable companies to use a myriad of these
+data sources in fast and effective manner. If you look at this
+chart it's very crowded. There's many, many different areas
+of these booming new technologies. New companies are coming
+on market constantly and space is getting a little crowded. If you look at this there is big data companies that perform
+in the analytics space. There 's big data companies that are
+providing architecture, analytics tools. There is open source tools, there's
+companies that take open source tools and provide services on top of them. There are tools that are providing
+underlying architecture. And maybe you would like to
+perform this big data analytics on the cloud versus on an internal set
+of hardware and software resources. You can make a pick. Bottom line is it is a crowded and
+diverse space. Even more, most of the marketing
+companies have taken this technology and adopted it really early and really fast,
+because as we have seen in our early topics, even the small increase in
+an upworth model can bring very large ROI. So marketing companies
+are at the forefront, running ahead with these technologies. And if we look at the landscape
+of marketing technologies, you can see that they are more
+than doubled in a one year period, tremendous grown and a lot of variety
+of differentials and technologies. So what is driving all of this? What are the needs that we have? If we have understood the big data
+challenges, we see the motivations, the data is fast, there's a lot it,
+there's a large variety. But what they really want to do
+is provide real-time, scalable, high-performance computing and analytics
+on this very large complex data set. So while big data has dominated
+the headlines over the past year, large computing problems have existed for
+a long time. And each time a new, faster, bigger,
+higher capacity computer would come along and try to solve some of the problems
+that have been challenging the industry. However in the recent years, most of
+the systems are just not large enough to handle very large data sets and the expanded computation that
+needs to be performed on them. In the meantime, all call area
+networks have become more popular and usable and researchers have
+thought about this concept of bringing the storage capacity and
+the computational capacity together. So this is really about Monte Vista Hadoop
+and what brought Hadoop to the existence. The Apache Hadoop Software Project really
+develops the open-source software for reliable, scalable, distributed computing. The Apache Hadoop Software Library
+is a framework that allows the distributed processing
+of a large data set across a cluster of computers using very
+simple programming models. These clusters are typically commodity
+servers, they're cheap, and scalable. Hadoop is our solution to
+problems that are too big to solve on your regular old desktop. It is designed to scale from a single
+server to thousands of machines in a very high scalable
+fault tolerant way. So let's talk about Hadoop features. Why is Hadoop so popular? Well, one of the important aspects of
+Hadoop, is that it's very low cost. Commodity servers are connected
+in a parallel way. They can radically reduce
+the cost of storing, modeling and processing very large complex data sets. It is scalable. Adding new service to the resources
+to the existing cluster is very easy. You don't have to disturb any of
+the existing analytics work, and any of the existing applications. You can just add new nodes as needed. Fault-tolerant. When one load goes down, the system
+automatically will redirect work and continue processing without
+missing a beat, and it's a very flexible environment. Hadoop is scheme free. It can manage structured data. It can manage unstructured
+data with no problems. You can join and
+aggregate multiple sources. And perform any kind of deep analytics
+that will solve your business problems and provide you additional
+insight into your data. There are many different
+distributions of Hadoop. The original open source Hadoop
+software comes out of apache.org. However, there's many other
+companies as you can see here, who deploy open source software and
+might charge for some of the services and support on top of that software.

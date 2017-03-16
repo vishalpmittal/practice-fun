@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="boxPlotInternals">
+<entry key="numberOf" type="xint" value="3"/>
+<config key="colSpec0">
+<entry key="column_name" type="xstring" value="age"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+</config>
+<config key="column_domain">
+<config key="lower_bound">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<config key="org.knime.core.data.def.IntCell">
+<entry key="IntCell" type="xint" value="17"/>
+</config>
+</config>
+<config key="upper_bound">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<config key="org.knime.core.data.def.IntCell">
+<entry key="IntCell" type="xint" value="90"/>
+</config>
+</config>
+</config>
+<config key="column_properties"/>
+</config>
+<config key="colSpec1">
+<entry key="column_name" type="xstring" value="education-num"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+</config>
+<config key="column_domain">
+<config key="lower_bound">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<config key="org.knime.core.data.def.IntCell">
+<entry key="IntCell" type="xint" value="1"/>
+</config>
+</config>
+<config key="upper_bound">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<config key="org.knime.core.data.def.IntCell">
+<entry key="IntCell" type="xint" value="16"/>
+</config>
+</config>
+</config>
+<config key="column_properties"/>
+</config>
+<config key="colSpec2">
+<entry key="column_name" type="xstring" value="hours-per-week"/>
+<config key="element_names">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="column_type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+</config>
+<config key="column_domain">
+<config key="lower_bound">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<config key="org.knime.core.data.def.IntCell">
+<entry key="IntCell" type="xint" value="1"/>
+</config>
+</config>
+<config key="upper_bound">
+<entry key="datacell" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<config key="org.knime.core.data.def.IntCell">
+<entry key="IntCell" type="xint" value="99"/>
+</config>
+</config>
+</config>
+<config key="column_properties"/>
+</config>
+<config key="statsage">
+<entry key="array-size" type="xint" value="7"/>
+<entry key="0" type="xdouble" value="35.0"/>
+<entry key="1" type="xdouble" value="35.0"/>
+<entry key="2" type="xdouble" value="37.0"/>
+<entry key="3" type="xdouble" value="40.0"/>
+<entry key="4" type="xdouble" value="43.0"/>
+<entry key="5" type="xdouble" value="45.0"/>
+<entry key="6" type="xdouble" value="45.0"/>
+</config>
+<config key="mildrowage"/>
+<config key="mildage">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="extremerowage"/>
+<config key="extremeage">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="statseducation-num">
+<entry key="array-size" type="xint" value="7"/>
+<entry key="0" type="xdouble" value="1.0"/>
+<entry key="1" type="xdouble" value="3.0"/>
+<entry key="2" type="xdouble" value="9.0"/>
+<entry key="3" type="xdouble" value="10.0"/>
+<entry key="4" type="xdouble" value="13.0"/>
+<entry key="5" type="xdouble" value="16.0"/>
+<entry key="6" type="xdouble" value="16.0"/>
+</config>
+<config key="mildroweducation-num">
+<config key="mildroweducation-num0">
+<entry key="array-size" type="xint" value="10"/>
+<entry key="0" type="xstring" value="Row28395"/>
+<entry key="1" type="xstring" value="Row32432"/>
+<entry key="2" type="xstring" value="Row24558"/>
+<entry key="3" type="xstring" value="Row32224"/>
+<entry key="4" type="xstring" value="Row32035"/>
+<entry key="5" type="xstring" value="Row22167"/>
+<entry key="6" type="xstring" value="Row21794"/>
+<entry key="7" type="xstring" value="Row22531"/>
+<entry key="8" type="xstring" value="Row3592"/>
+<entry key="9" type="xstring" value="Row25652"/>
+</config>
+<config key="mildroweducation-num1">
+<entry key="array-size" type="xint" value="35"/>
+<entry key="0" type="xstring" value="Row17445"/>
+<entry key="1" type="xstring" value="Row8498"/>
+<entry key="2" type="xstring" value="Row27845"/>
+<entry key="3" type="xstring" value="Row18854"/>
+<entry key="4" type="xstring" value="Row1913"/>
+<entry key="5" type="xstring" value="Row26774"/>
+<entry key="6" type="xstring" value="Row1139"/>
+<entry key="7" type="xstring" value="Row1634"/>
+<entry key="8" type="xstring" value="Row30841"/>
+<entry key="9" type="xstring" value="Row2671"/>
+<entry key="10" type="xstring" value="Row11982"/>
+<entry key="11" type="xstring" value="Row20509"/>
+<entry key="12" type="xstring" value="Row32044"/>
+<entry key="13" type="xstring" value="Row17384"/>
+<entry key="14" type="xstring" value="Row5090"/>
+<entry key="15" type="xstring" value="Row28008"/>
+<entry key="16" type="xstring" value="Row8886"/>
+<entry key="17" type="xstring" value="Row9018"/>
+<entry key="18" type="xstring" value="Row9998"/>
+<entry key="19" type="xstring" value="Row2817"/>
+<entry key="20" type="xstring" value="Row10714"/>
+<entry key="21" type="xstring" value="Row18905"/>
+<entry key="22" type="xstring" value="Row12619"/>
+<entry key="23" type="xstring" value="Row31518"/>
+<entry key="24" type="xstring" value="Row30804"/>
+<entry key="25" type="xstring" value="Row4303"/>
+<entry key="26" type="xstring" value="Row29685"/>
+<entry key="27" type="xstring" value="Row31242"/>
+<entry key="28" type="xstring" value="Row5877"/>
+<entry key="29" type="xstring" value="Row27072"/>
+<entry key="30" type="xstring" value="Row2861"/>
+<entry key="31" type="xstring" value="Row7730"/>
+<entry key="32" type="xstring" value="Row14246"/>
+<entry key="33" type="xstring" value="Row21509"/>
+<entry key="34" type="xstring" value="Row2581"/>
+</config>
+</config>
+<config key="mildeducation-num">
+<entry key="array-size" type="xint" value="2"/>
+<entry key="0" type="xdouble" value="1.0"/>
+<entry key="1" type="xdouble" value="2.0"/>
+</config>
+<config key="extremeroweducation-num"/>
+<config key="extremeeducation-num">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="statshours-per-week">
+<entry key="array-size" type="xint" value="7"/>
+<entry key="0" type="xdouble" value="1.0"/>
+<entry key="1" type="xdouble" value="25.0"/>
+<entry key="2" type="xdouble" value="40.0"/>
+<entry key="3" type="xdouble" value="40.0"/>
+<entry key="4" type="xdouble" value="50.0"/>
+<entry key="5" type="xdouble" value="65.0"/>
+<entry key="6" type="xdouble" value="99.0"/>
+</config>
+<config key="mildrowhours-per-week">
+<config key="mildrowhours-per-week0">
+<entry key="array-size" type="xint" value="23"/>
+<entry key="0" type="xstring" value="Row24889"/>
+<entry key="1" type="xstring" value="Row20066"/>
+<entry key="2" type="xstring" value="Row21166"/>
+<entry key="3" type="xstring" value="Row22167"/>
+<entry key="4" type="xstring" value="Row17466"/>
+<entry key="5" type="xstring" value="Row23820"/>
+<entry key="6" type="xstring" value="Row24265"/>
+<entry key="7" type="xstring" value="Row1529"/>
+<entry key="8" type="xstring" value="Row25111"/>
+<entry key="9" type="xstring" value="Row26410"/>
+<entry key="10" type="xstring" value="Row31944"/>
+<entry key="11" type="xstring" value="Row4606"/>
+<entry key="12" type="xstring" value="Row26210"/>
+<entry key="13" type="xstring" value="Row11578"/>
+<entry key="14" type="xstring" value="Row7009"/>
+<entry key="15" type="xstring" value="Row30495"/>
+<entry key="16" type="xstring" value="Row13810"/>
+<entry key="17" type="xstring" value="Row4640"/>
+<entry key="18" type="xstring" value="Row1244"/>
+<entry key="19" type="xstring" value="Row5389"/>
+<entry key="20" type="xstring" value="Row5455"/>
+<entry key="21" type="xstring" value="Row1680"/>
+<entry key="22" type="xstring" value="Row12165"/>
+</config>
+<config key="mildrowhours-per-week1">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row20642"/>
+</config>
+<config key="mildrowhours-per-week2">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row15721"/>
+</config>
+<config key="mildrowhours-per-week3">
+<entry key="array-size" type="xint" value="41"/>
+<entry key="0" type="xstring" value="Row16473"/>
+<entry key="1" type="xstring" value="Row22458"/>
+<entry key="2" type="xstring" value="Row29909"/>
+<entry key="3" type="xstring" value="Row19147"/>
+<entry key="4" type="xstring" value="Row15422"/>
+<entry key="5" type="xstring" value="Row17646"/>
+<entry key="6" type="xstring" value="Row26035"/>
+<entry key="7" type="xstring" value="Row22771"/>
+<entry key="8" type="xstring" value="Row26274"/>
+<entry key="9" type="xstring" value="Row28450"/>
+<entry key="10" type="xstring" value="Row10678"/>
+<entry key="11" type="xstring" value="Row30468"/>
+<entry key="12" type="xstring" value="Row7666"/>
+<entry key="13" type="xstring" value="Row3042"/>
+<entry key="14" type="xstring" value="Row6432"/>
+<entry key="15" type="xstring" value="Row5780"/>
+<entry key="16" type="xstring" value="Row19063"/>
+<entry key="17" type="xstring" value="Row830"/>
+<entry key="18" type="xstring" value="Row9161"/>
+<entry key="19" type="xstring" value="Row23759"/>
+<entry key="20" type="xstring" value="Row18011"/>
+<entry key="21" type="xstring" value="Row20124"/>
+<entry key="22" type="xstring" value="Row8142"/>
+<entry key="23" type="xstring" value="Row16363"/>
+<entry key="24" type="xstring" value="Row22206"/>
+<entry key="25" type="xstring" value="Row8663"/>
+<entry key="26" type="xstring" value="Row22862"/>
+<entry key="27" type="xstring" value="Row22240"/>
+<entry key="28" type="xstring" value="Row21351"/>
+<entry key="29" type="xstring" value="Row21396"/>
+<entry key="30" type="xstring" value="Row28741"/>
+<entry key="31" type="xstring" value="Row2559"/>
+<entry key="32" type="xstring" value="Row31915"/>
+<entry key="33" type="xstring" value="Row12669"/>
+<entry key="34" type="xstring" value="Row11911"/>
+<entry key="35" type="xstring" value="Row14924"/>
+<entry key="36" type="xstring" value="Row30497"/>
+<entry key="37" type="xstring" value="Row13954"/>
+<entry key="38" type="xstring" value="Row4687"/>
+<entry key="39" type="xstring" value="Row21948"/>
+<entry key="40" type="xstring" value="Row19690"/>
+</config>
+<config key="mildrowhours-per-week4">
+<entry key="array-size" type="xint" value="19"/>
+<entry key="0" type="xstring" value="Row17298"/>
+<entry key="1" type="xstring" value="Row15483"/>
+<entry key="2" type="xstring" value="Row16078"/>
+<entry key="3" type="xstring" value="Row17201"/>
+<entry key="4" type="xstring" value="Row17403"/>
+<entry key="5" type="xstring" value="Row10718"/>
+<entry key="6" type="xstring" value="Row11614"/>
+<entry key="7" type="xstring" value="Row27281"/>
+<entry key="8" type="xstring" value="Row10398"/>
+<entry key="9" type="xstring" value="Row12454"/>
+<entry key="10" type="xstring" value="Row5972"/>
+<entry key="11" type="xstring" value="Row6059"/>
+<entry key="12" type="xstring" value="Row3493"/>
+<entry key="13" type="xstring" value="Row6673"/>
+<entry key="14" type="xstring" value="Row2042"/>
+<entry key="15" type="xstring" value="Row13484"/>
+<entry key="16" type="xstring" value="Row31361"/>
+<entry key="17" type="xstring" value="Row6393"/>
+<entry key="18" type="xstring" value="Row17790"/>
+</config>
+<config key="mildrowhours-per-week5">
+<entry key="array-size" type="xint" value="6"/>
+<entry key="0" type="xstring" value="Row27803"/>
+<entry key="1" type="xstring" value="Row13645"/>
+<entry key="2" type="xstring" value="Row14468"/>
+<entry key="3" type="xstring" value="Row21164"/>
+<entry key="4" type="xstring" value="Row21670"/>
+<entry key="5" type="xstring" value="Row17956"/>
+</config>
+<config key="mildrowhours-per-week6">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xstring" value="Row8097"/>
+<entry key="1" type="xstring" value="Row6427"/>
+<entry key="2" type="xstring" value="Row760"/>
+<entry key="3" type="xstring" value="Row30090"/>
+<entry key="4" type="xstring" value="Row1922"/>
+</config>
+<config key="mildrowhours-per-week7">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row10018"/>
+</config>
+<config key="mildrowhours-per-week8">
+<entry key="array-size" type="xint" value="113"/>
+<entry key="0" type="xstring" value="Row20810"/>
+<entry key="1" type="xstring" value="Row26759"/>
+<entry key="2" type="xstring" value="Row18854"/>
+<entry key="3" type="xstring" value="Row3119"/>
+<entry key="4" type="xstring" value="Row11823"/>
+<entry key="5" type="xstring" value="Row29235"/>
+<entry key="6" type="xstring" value="Row32128"/>
+<entry key="7" type="xstring" value="Row32249"/>
+<entry key="8" type="xstring" value="Row7045"/>
+<entry key="9" type="xstring" value="Row6196"/>
+<entry key="10" type="xstring" value="Row7042"/>
+<entry key="11" type="xstring" value="Row16031"/>
+<entry key="12" type="xstring" value="Row18296"/>
+<entry key="13" type="xstring" value="Row17530"/>
+<entry key="14" type="xstring" value="Row17378"/>
+<entry key="15" type="xstring" value="Row2716"/>
+<entry key="16" type="xstring" value="Row23131"/>
+<entry key="17" type="xstring" value="Row22682"/>
+<entry key="18" type="xstring" value="Row16208"/>
+<entry key="19" type="xstring" value="Row23251"/>
+<entry key="20" type="xstring" value="Row32355"/>
+<entry key="21" type="xstring" value="Row14704"/>
+<entry key="22" type="xstring" value="Row29189"/>
+<entry key="23" type="xstring" value="Row11952"/>
+<entry key="24" type="xstring" value="Row4066"/>
+<entry key="25" type="xstring" value="Row13057"/>
+<entry key="26" type="xstring" value="Row2560"/>
+<entry key="27" type="xstring" value="Row3770"/>
+<entry key="28" type="xstring" value="Row8592"/>
+<entry key="29" type="xstring" value="Row20754"/>
+<entry key="30" type="xstring" value="Row19762"/>
+<entry key="31" type="xstring" value="Row17620"/>
+<entry key="32" type="xstring" value="Row28996"/>
+<entry key="33" type="xstring" value="Row15724"/>
+<entry key="34" type="xstring" value="Row20190"/>
+<entry key="35" type="xstring" value="Row3468"/>
+<entry key="36" type="xstring" value="Row5889"/>
+<entry key="37" type="xstring" value="Row14638"/>
+<entry key="38" type="xstring" value="Row32224"/>
+<entry key="39" type="xstring" value="Row8907"/>
+<entry key="40" type="xstring" value="Row30842"/>
+<entry key="41" type="xstring" value="Row32347"/>
+<entry key="42" type="xstring" value="Row4790"/>
+<entry key="43" type="xstring" value="Row21837"/>
+<entry key="44" type="xstring" value="Row24324"/>
+<entry key="45" type="xstring" value="Row27712"/>
+<entry key="46" type="xstring" value="Row15732"/>
+<entry key="47" type="xstring" value="Row25135"/>
+<entry key="48" type="xstring" value="Row17635"/>
+<entry key="49" type="xstring" value="Row2812"/>
+<entry key="50" type="xstring" value="Row17519"/>
+<entry key="51" type="xstring" value="Row25373"/>
+<entry key="52" type="xstring" value="Row4956"/>
+<entry key="53" type="xstring" value="Row5812"/>
+<entry key="54" type="xstring" value="Row3756"/>
+<entry key="55" type="xstring" value="Row481"/>
+<entry key="56" type="xstring" value="Row241"/>
+<entry key="57" type="xstring" value="Row13159"/>
+<entry key="58" type="xstring" value="Row3592"/>
+<entry key="59" type="xstring" value="Row5255"/>
+<entry key="60" type="xstring" value="Row7553"/>
+<entry key="61" type="xstring" value="Row29726"/>
+<entry key="62" type="xstring" value="Row14881"/>
+<entry key="63" type="xstring" value="Row20998"/>
+<entry key="64" type="xstring" value="Row32451"/>
+<entry key="65" type="xstring" value="Row31360"/>
+<entry key="66" type="xstring" value="Row20453"/>
+<entry key="67" type="xstring" value="Row969"/>
+<entry key="68" type="xstring" value="Row15143"/>
+<entry key="69" type="xstring" value="Row16750"/>
+<entry key="70" type="xstring" value="Row30139"/>
+<entry key="71" type="xstring" value="Row27000"/>
+<entry key="72" type="xstring" value="Row2632"/>
+<entry key="73" type="xstring" value="Row3965"/>
+<entry key="74" type="xstring" value="Row4017"/>
+<entry key="75" type="xstring" value="Row6317"/>
+<entry key="76" type="xstring" value="Row5580"/>
+<entry key="77" type="xstring" value="Row18098"/>
+<entry key="78" type="xstring" value="Row8461"/>
+<entry key="79" type="xstring" value="Row27898"/>
+<entry key="80" type="xstring" value="Row16528"/>
+<entry key="81" type="xstring" value="Row27134"/>
+<entry key="82" type="xstring" value="Row15717"/>
+<entry key="83" type="xstring" value="Row30529"/>
+<entry key="84" type="xstring" value="Row12328"/>
+<entry key="85" type="xstring" value="Row29421"/>
+<entry key="86" type="xstring" value="Row5357"/>
+<entry key="87" type="xstring" value="Row621"/>
+<entry key="88" type="xstring" value="Row29827"/>
+<entry key="89" type="xstring" value="Row32032"/>
+<entry key="90" type="xstring" value="Row18113"/>
+<entry key="91" type="xstring" value="Row21921"/>
+<entry key="92" type="xstring" value="Row24516"/>
+<entry key="93" type="xstring" value="Row17147"/>
+<entry key="94" type="xstring" value="Row22335"/>
+<entry key="95" type="xstring" value="Row28436"/>
+<entry key="96" type="xstring" value="Row7900"/>
+<entry key="97" type="xstring" value="Row10510"/>
+<entry key="98" type="xstring" value="Row31455"/>
+<entry key="99" type="xstring" value="Row32545"/>
+<entry key="100" type="xstring" value="Row4076"/>
+<entry key="101" type="xstring" value="Row31053"/>
+<entry key="102" type="xstring" value="Row31295"/>
+<entry key="103" type="xstring" value="Row13183"/>
+<entry key="104" type="xstring" value="Row14161"/>
+<entry key="105" type="xstring" value="Row19698"/>
+<entry key="106" type="xstring" value="Row26028"/>
+<entry key="107" type="xstring" value="Row27359"/>
+<entry key="108" type="xstring" value="Row3709"/>
+<entry key="109" type="xstring" value="Row12824"/>
+<entry key="110" type="xstring" value="Row10887"/>
+<entry key="111" type="xstring" value="Row14321"/>
+<entry key="112" type="xstring" value="Row21923"/>
+</config>
+<config key="mildrowhours-per-week9">
+<entry key="array-size" type="xint" value="7"/>
+<entry key="0" type="xstring" value="Row20562"/>
+<entry key="1" type="xstring" value="Row4576"/>
+<entry key="2" type="xstring" value="Row7730"/>
+<entry key="3" type="xstring" value="Row10096"/>
+<entry key="4" type="xstring" value="Row1629"/>
+<entry key="5" type="xstring" value="Row9779"/>
+<entry key="6" type="xstring" value="Row24332"/>
+</config>
+<config key="mildrowhours-per-week10">
+<entry key="array-size" type="xint" value="7"/>
+<entry key="0" type="xstring" value="Row14040"/>
+<entry key="1" type="xstring" value="Row23810"/>
+<entry key="2" type="xstring" value="Row28549"/>
+<entry key="3" type="xstring" value="Row11575"/>
+<entry key="4" type="xstring" value="Row7399"/>
+<entry key="5" type="xstring" value="Row16804"/>
+<entry key="6" type="xstring" value="Row15580"/>
+</config>
+<config key="mildrowhours-per-week11">
+<entry key="array-size" type="xint" value="2"/>
+<entry key="0" type="xstring" value="Row12505"/>
+<entry key="1" type="xstring" value="Row15848"/>
+</config>
+<config key="mildrowhours-per-week12">
+<entry key="array-size" type="xint" value="41"/>
+<entry key="0" type="xstring" value="Row8054"/>
+<entry key="1" type="xstring" value="Row827"/>
+<entry key="2" type="xstring" value="Row9201"/>
+<entry key="3" type="xstring" value="Row15783"/>
+<entry key="4" type="xstring" value="Row22114"/>
+<entry key="5" type="xstring" value="Row16755"/>
+<entry key="6" type="xstring" value="Row23220"/>
+<entry key="7" type="xstring" value="Row24410"/>
+<entry key="8" type="xstring" value="Row25540"/>
+<entry key="9" type="xstring" value="Row26475"/>
+<entry key="10" type="xstring" value="Row15505"/>
+<entry key="11" type="xstring" value="Row26055"/>
+<entry key="12" type="xstring" value="Row4629"/>
+<entry key="13" type="xstring" value="Row194"/>
+<entry key="14" type="xstring" value="Row10854"/>
+<entry key="15" type="xstring" value="Row2595"/>
+<entry key="16" type="xstring" value="Row12699"/>
+<entry key="17" type="xstring" value="Row14698"/>
+<entry key="18" type="xstring" value="Row410"/>
+<entry key="19" type="xstring" value="Row773"/>
+<entry key="20" type="xstring" value="Row20729"/>
+<entry key="21" type="xstring" value="Row6054"/>
+<entry key="22" type="xstring" value="Row29916"/>
+<entry key="23" type="xstring" value="Row19378"/>
+<entry key="24" type="xstring" value="Row21597"/>
+<entry key="25" type="xstring" value="Row21015"/>
+<entry key="26" type="xstring" value="Row27116"/>
+<entry key="27" type="xstring" value="Row19417"/>
+<entry key="28" type="xstring" value="Row24124"/>
+<entry key="29" type="xstring" value="Row21132"/>
+<entry key="30" type="xstring" value="Row3954"/>
+<entry key="31" type="xstring" value="Row360"/>
+<entry key="32" type="xstring" value="Row13415"/>
+<entry key="33" type="xstring" value="Row6446"/>
+<entry key="34" type="xstring" value="Row2289"/>
+<entry key="35" type="xstring" value="Row7677"/>
+<entry key="36" type="xstring" value="Row7731"/>
+<entry key="37" type="xstring" value="Row20859"/>
+<entry key="38" type="xstring" value="Row12343"/>
+<entry key="39" type="xstring" value="Row147"/>
+<entry key="40" type="xstring" value="Row14563"/>
+</config>
+<config key="mildrowhours-per-week13">
+<entry key="array-size" type="xint" value="5"/>
+<entry key="0" type="xstring" value="Row9550"/>
+<entry key="1" type="xstring" value="Row31268"/>
+<entry key="2" type="xstring" value="Row23792"/>
+<entry key="3" type="xstring" value="Row1447"/>
+<entry key="4" type="xstring" value="Row28487"/>
+</config>
+<config key="mildrowhours-per-week14">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row20465"/>
+</config>
+<config key="mildrowhours-per-week15">
+<entry key="array-size" type="xint" value="7"/>
+<entry key="0" type="xstring" value="Row20128"/>
+<entry key="1" type="xstring" value="Row27813"/>
+<entry key="2" type="xstring" value="Row29700"/>
+<entry key="3" type="xstring" value="Row29208"/>
+<entry key="4" type="xstring" value="Row6042"/>
+<entry key="5" type="xstring" value="Row18594"/>
+<entry key="6" type="xstring" value="Row19375"/>
+</config>
+<config key="mildrowhours-per-week16">
+<entry key="array-size" type="xint" value="103"/>
+<entry key="0" type="xstring" value="Row18454"/>
+<entry key="1" type="xstring" value="Row16433"/>
+<entry key="2" type="xstring" value="Row26114"/>
+<entry key="3" type="xstring" value="Row5823"/>
+<entry key="4" type="xstring" value="Row3368"/>
+<entry key="5" type="xstring" value="Row10179"/>
+<entry key="6" type="xstring" value="Row14773"/>
+<entry key="7" type="xstring" value="Row29758"/>
+<entry key="8" type="xstring" value="Row6082"/>
+<entry key="9" type="xstring" value="Row23813"/>
+<entry key="10" type="xstring" value="Row20546"/>
+<entry key="11" type="xstring" value="Row27217"/>
+<entry key="12" type="xstring" value="Row24105"/>
+<entry key="13" type="xstring" value="Row28545"/>
+<entry key="14" type="xstring" value="Row27299"/>
+<entry key="15" type="xstring" value="Row1630"/>
+<entry key="16" type="xstring" value="Row11955"/>
+<entry key="17" type="xstring" value="Row14308"/>
+<entry key="18" type="xstring" value="Row31144"/>
+<entry key="19" type="xstring" value="Row7337"/>
+<entry key="20" type="xstring" value="Row29627"/>
+<entry key="21" type="xstring" value="Row18554"/>
+<entry key="22" type="xstring" value="Row20997"/>
+<entry key="23" type="xstring" value="Row21045"/>
+<entry key="24" type="xstring" value="Row2929"/>
+<entry key="25" type="xstring" value="Row22773"/>
+<entry key="26" type="xstring" value="Row20511"/>
+<entry key="27" type="xstring" value="Row30714"/>
+<entry key="28" type="xstring" value="Row30799"/>
+<entry key="29" type="xstring" value="Row13666"/>
+<entry key="30" type="xstring" value="Row22808"/>
+<entry key="31" type="xstring" value="Row9160"/>
+<entry key="32" type="xstring" value="Row238"/>
+<entry key="33" type="xstring" value="Row30669"/>
+<entry key="34" type="xstring" value="Row25253"/>
+<entry key="35" type="xstring" value="Row28123"/>
+<entry key="36" type="xstring" value="Row30429"/>
+<entry key="37" type="xstring" value="Row6901"/>
+<entry key="38" type="xstring" value="Row4442"/>
+<entry key="39" type="xstring" value="Row14644"/>
+<entry key="40" type="xstring" value="Row14401"/>
+<entry key="41" type="xstring" value="Row6064"/>
+<entry key="42" type="xstring" value="Row9295"/>
+<entry key="43" type="xstring" value="Row18378"/>
+<entry key="44" type="xstring" value="Row25104"/>
+<entry key="45" type="xstring" value="Row15786"/>
+<entry key="46" type="xstring" value="Row17845"/>
+<entry key="47" type="xstring" value="Row27884"/>
+<entry key="48" type="xstring" value="Row27003"/>
+<entry key="49" type="xstring" value="Row2625"/>
+<entry key="50" type="xstring" value="Row13647"/>
+<entry key="51" type="xstring" value="Row1387"/>
+<entry key="52" type="xstring" value="Row4496"/>
+<entry key="53" type="xstring" value="Row974"/>
+<entry key="54" type="xstring" value="Row12393"/>
+<entry key="55" type="xstring" value="Row18374"/>
+<entry key="56" type="xstring" value="Row23855"/>
+<entry key="57" type="xstring" value="Row15035"/>
+<entry key="58" type="xstring" value="Row17733"/>
+<entry key="59" type="xstring" value="Row25874"/>
+<entry key="60" type="xstring" value="Row10817"/>
+<entry key="61" type="xstring" value="Row11119"/>
+<entry key="62" type="xstring" value="Row2127"/>
+<entry key="63" type="xstring" value="Row14347"/>
+<entry key="64" type="xstring" value="Row7499"/>
+<entry key="65" type="xstring" value="Row25908"/>
+<entry key="66" type="xstring" value="Row17052"/>
+<entry key="67" type="xstring" value="Row4380"/>
+<entry key="68" type="xstring" value="Row21401"/>
+<entry key="69" type="xstring" value="Row8674"/>
+<entry key="70" type="xstring" value="Row25602"/>
+<entry key="71" type="xstring" value="Row9523"/>
+<entry key="72" type="xstring" value="Row1757"/>
+<entry key="73" type="xstring" value="Row22293"/>
+<entry key="74" type="xstring" value="Row28793"/>
+<entry key="75" type="xstring" value="Row30913"/>
+<entry key="76" type="xstring" value="Row6779"/>
+<entry key="77" type="xstring" value="Row5965"/>
+<entry key="78" type="xstring" value="Row14435"/>
+<entry key="79" type="xstring" value="Row29139"/>
+<entry key="80" type="xstring" value="Row13222"/>
+<entry key="81" type="xstring" value="Row6132"/>
+<entry key="82" type="xstring" value="Row16291"/>
+<entry key="83" type="xstring" value="Row956"/>
+<entry key="84" type="xstring" value="Row18245"/>
+<entry key="85" type="xstring" value="Row16740"/>
+<entry key="86" type="xstring" value="Row22222"/>
+<entry key="87" type="xstring" value="Row19699"/>
+<entry key="88" type="xstring" value="Row27635"/>
+<entry key="89" type="xstring" value="Row23038"/>
+<entry key="90" type="xstring" value="Row8327"/>
+<entry key="91" type="xstring" value="Row7629"/>
+<entry key="92" type="xstring" value="Row6429"/>
+<entry key="93" type="xstring" value="Row31960"/>
+<entry key="94" type="xstring" value="Row28283"/>
+<entry key="95" type="xstring" value="Row14328"/>
+<entry key="96" type="xstring" value="Row29400"/>
+<entry key="97" type="xstring" value="Row29488"/>
+<entry key="98" type="xstring" value="Row14325"/>
+<entry key="99" type="xstring" value="Row10762"/>
+<entry key="100" type="xstring" value="Row11173"/>
+<entry key="101" type="xstring" value="Row9492"/>
+<entry key="102" type="xstring" value="Row32130"/>
+</config>
+<config key="mildrowhours-per-week17">
+<entry key="array-size" type="xint" value="26"/>
+<entry key="0" type="xstring" value="Row25822"/>
+<entry key="1" type="xstring" value="Row16239"/>
+<entry key="2" type="xstring" value="Row29029"/>
+<entry key="3" type="xstring" value="Row10208"/>
+<entry key="4" type="xstring" value="Row17608"/>
+<entry key="5" type="xstring" value="Row1224"/>
+<entry key="6" type="xstring" value="Row32320"/>
+<entry key="7" type="xstring" value="Row5521"/>
+<entry key="8" type="xstring" value="Row11047"/>
+<entry key="9" type="xstring" value="Row5562"/>
+<entry key="10" type="xstring" value="Row29979"/>
+<entry key="11" type="xstring" value="Row11285"/>
+<entry key="12" type="xstring" value="Row24900"/>
+<entry key="13" type="xstring" value="Row15651"/>
+<entry key="14" type="xstring" value="Row23473"/>
+<entry key="15" type="xstring" value="Row11806"/>
+<entry key="16" type="xstring" value="Row5709"/>
+<entry key="17" type="xstring" value="Row9516"/>
+<entry key="18" type="xstring" value="Row30888"/>
+<entry key="19" type="xstring" value="Row32432"/>
+<entry key="20" type="xstring" value="Row10288"/>
+<entry key="21" type="xstring" value="Row29227"/>
+<entry key="22" type="xstring" value="Row7258"/>
+<entry key="23" type="xstring" value="Row13212"/>
+<entry key="24" type="xstring" value="Row32271"/>
+<entry key="25" type="xstring" value="Row8282"/>
+</config>
+<config key="mildrowhours-per-week18">
+<entry key="array-size" type="xint" value="22"/>
+<entry key="0" type="xstring" value="Row16032"/>
+<entry key="1" type="xstring" value="Row20212"/>
+<entry key="2" type="xstring" value="Row9199"/>
+<entry key="3" type="xstring" value="Row8881"/>
+<entry key="4" type="xstring" value="Row17343"/>
+<entry key="5" type="xstring" value="Row19334"/>
+<entry key="6" type="xstring" value="Row24983"/>
+<entry key="7" type="xstring" value="Row26524"/>
+<entry key="8" type="xstring" value="Row27950"/>
+<entry key="9" type="xstring" value="Row27641"/>
+<entry key="10" type="xstring" value="Row16407"/>
+<entry key="11" type="xstring" value="Row1037"/>
+<entry key="12" type="xstring" value="Row13439"/>
+<entry key="13" type="xstring" value="Row2667"/>
+<entry key="14" type="xstring" value="Row12700"/>
+<entry key="15" type="xstring" value="Row5534"/>
+<entry key="16" type="xstring" value="Row13610"/>
+<entry key="17" type="xstring" value="Row265"/>
+<entry key="18" type="xstring" value="Row29701"/>
+<entry key="19" type="xstring" value="Row2183"/>
+<entry key="20" type="xstring" value="Row7670"/>
+<entry key="21" type="xstring" value="Row22969"/>
+</config>
+<config key="mildrowhours-per-week19">
+<entry key="array-size" type="xint" value="2"/>
+<entry key="0" type="xstring" value="Row32364"/>
+<entry key="1" type="xstring" value="Row19140"/>
+</config>
+<config key="mildrowhours-per-week20">
+<entry key="array-size" type="xint" value="3"/>
+<entry key="0" type="xstring" value="Row4724"/>
+<entry key="1" type="xstring" value="Row29975"/>
+<entry key="2" type="xstring" value="Row20509"/>
+</config>
+<config key="mildrowhours-per-week21">
+<entry key="array-size" type="xint" value="2"/>
+<entry key="0" type="xstring" value="Row1411"/>
+<entry key="1" type="xstring" value="Row15384"/>
+</config>
+</config>
+<config key="mildhours-per-week">
+<entry key="array-size" type="xint" value="22"/>
+<entry key="0" type="xdouble" value="12.0"/>
+<entry key="1" type="xdouble" value="13.0"/>
+<entry key="2" type="xdouble" value="14.0"/>
+<entry key="3" type="xdouble" value="15.0"/>
+<entry key="4" type="xdouble" value="16.0"/>
+<entry key="5" type="xdouble" value="17.0"/>
+<entry key="6" type="xdouble" value="18.0"/>
+<entry key="7" type="xdouble" value="19.0"/>
+<entry key="8" type="xdouble" value="20.0"/>
+<entry key="9" type="xdouble" value="21.0"/>
+<entry key="10" type="xdouble" value="22.0"/>
+<entry key="11" type="xdouble" value="23.0"/>
+<entry key="12" type="xdouble" value="24.0"/>
+<entry key="13" type="xdouble" value="66.0"/>
+<entry key="14" type="xdouble" value="67.0"/>
+<entry key="15" type="xdouble" value="68.0"/>
+<entry key="16" type="xdouble" value="70.0"/>
+<entry key="17" type="xdouble" value="72.0"/>
+<entry key="18" type="xdouble" value="75.0"/>
+<entry key="19" type="xdouble" value="76.0"/>
+<entry key="20" type="xdouble" value="77.0"/>
+<entry key="21" type="xdouble" value="78.0"/>
+</config>
+<config key="extremerowhours-per-week">
+<config key="extremerowhours-per-week0">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row5632"/>
+</config>
+<config key="extremerowhours-per-week1">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row30200"/>
+</config>
+<config key="extremerowhours-per-week2">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row18966"/>
+</config>
+<config key="extremerowhours-per-week3">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row27754"/>
+</config>
+<config key="extremerowhours-per-week4">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row23729"/>
+</config>
+<config key="extremerowhours-per-week5">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row24299"/>
+</config>
+<config key="extremerowhours-per-week6">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row21707"/>
+</config>
+<config key="extremerowhours-per-week7">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row28356"/>
+</config>
+<config key="extremerowhours-per-week8">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row31476"/>
+</config>
+<config key="extremerowhours-per-week9">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row32157"/>
+</config>
+<config key="extremerowhours-per-week10">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row14767"/>
+</config>
+<config key="extremerowhours-per-week11">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row32476"/>
+</config>
+<config key="extremerowhours-per-week12">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row21859"/>
+</config>
+<config key="extremerowhours-per-week13">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row24869"/>
+</config>
+<config key="extremerowhours-per-week14">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row6390"/>
+</config>
+<config key="extremerowhours-per-week15">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row32402"/>
+</config>
+<config key="extremerowhours-per-week16">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row30205"/>
+</config>
+<config key="extremerowhours-per-week17">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row29263"/>
+</config>
+<config key="extremerowhours-per-week18">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row19160"/>
+</config>
+<config key="extremerowhours-per-week19">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row29775"/>
+</config>
+<config key="extremerowhours-per-week20">
+<entry key="array-size" type="xint" value="1"/>
+<entry key="0" type="xstring" value="Row31699"/>
+</config>
+</config>
+<config key="extremehours-per-week">
+<entry key="array-size" type="xint" value="21"/>
+<entry key="0" type="xdouble" value="1.0"/>
+<entry key="1" type="xdouble" value="2.0"/>
+<entry key="2" type="xdouble" value="3.0"/>
+<entry key="3" type="xdouble" value="4.0"/>
+<entry key="4" type="xdouble" value="5.0"/>
+<entry key="5" type="xdouble" value="6.0"/>
+<entry key="6" type="xdouble" value="7.0"/>
+<entry key="7" type="xdouble" value="8.0"/>
+<entry key="8" type="xdouble" value="10.0"/>
+<entry key="9" type="xdouble" value="80.0"/>
+<entry key="10" type="xdouble" value="81.0"/>
+<entry key="11" type="xdouble" value="84.0"/>
+<entry key="12" type="xdouble" value="85.0"/>
+<entry key="13" type="xdouble" value="86.0"/>
+<entry key="14" type="xdouble" value="88.0"/>
+<entry key="15" type="xdouble" value="89.0"/>
+<entry key="16" type="xdouble" value="90.0"/>
+<entry key="17" type="xdouble" value="91.0"/>
+<entry key="18" type="xdouble" value="92.0"/>
+<entry key="19" type="xdouble" value="96.0"/>
+<entry key="20" type="xdouble" value="99.0"/>
+</config>
+</config>

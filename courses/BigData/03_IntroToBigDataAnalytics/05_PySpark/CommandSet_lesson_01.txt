@@ -1,0 +1,502 @@
+==============================================
+Setup
+==============================================
+For Spark DataFrames to work correctly and access tables stored in Hive, it is necessary to copy the Hive configuration file hive-site.xml to the spark configuration folder:
+
+sudo cp /etc/hive/conf.dist/hive-site.xml /usr/lib/spark/conf/
+
+--------------------------
+Open Spark
+
+PYSPARK_DRIVER_PYTHON=ipython pyspark
+
+--------------------------
+Check this is working by opening the PySpark shell and executing:
+
+sqlCtx.createDataFrame([("somekey", 1)])
+
+--------------------------
+This should print logging messages and then:
+
+Out[]: DataFrame[_1: string, _2: bigint]
+
+==============================================
+Data used
+==============================================
+
+Data used in this module are already available in the Cloudera VM, see the path mentioned in the lessons.
+
+A copy of those data is also available on Github: https://github.com/cloudera/hue/tree/master/apps/search/examples/collections
+
+
+==============================================
+Tabular Datasets RDDs
+==============================================
+
+Create a tabular RDD
+
+students = sc.parallelize([ [100, "Alice", 8.5, "Computer Science"], [101, "Bob", 7.1, "Engineering"], [102, "Carl", 6.2, "Engineering"] ])
+
+--------------------------
+
+Mean of a column
+
+def extract_grade(row):
+    return row[2]
+
+students.map(extract_grade).mean()
+
+--------------------------
+
+Group by column
+
+def extract_degree_grade(row): 
+    return (row[3], row[2])
+
+degree_grade_RDD = students.map(extract_degree_grade) 
+degree_grade_RDD.collect()
+
+Out[]: 
+[('Computer Science', 8.5), ('Engineering', 7.0999999999999996), ('Engineering', 6.2000000000000002)]
+
+
+degree_grade_RDD.reduceByKey(max).collect()
+Out[]: 
+[('Engineering', 7.0999999999999996), ('Computer Science', 8.5)]
+
+--------------------------
+
+
+==============================================
+Data Frames
+==============================================
+
+students_df = sqlCtx.createDataFrame(students, ["id", "name", "grade", "degree"])
+
+students_df.printSchema()
+root
+ |-- id: long (nullable = true)
+ |-- name: string (nullable = true)
+ |-- grade: double (nullable = true)
+ |-- degree: string (nullable = true)
+
+--------------------------
+Mean of a column
+
+students_df.agg({"grade": "mean"}).collect() 
+Out[]: 
+[Row(AVG(grade#2)=7.2666666666666666)]
+
+--------------------------
+
+Group by column
+
+students_df.groupBy("degree").max("grade").collect()
+Out[]:
+[Row(degree=u'Computer Science', MAX(grade#2)=8.5), Row(degree=u'Engineering', MAX(grade#2)=7.0999999999999996)]
+--------------------------
+
+Pretty print with show
+
+students_df.groupBy("degree").max("grade").show()
+
+Out[]:
+degree            MAX(grade#30) 
+Computer Science  8.5 
+Engineering       7.1
+
+==============================================
+Find all available operations:
+==============================================
+
+>>> from pyspark.sql import functions as F
+>>> dir(F)
+['AutoBatchedSerializer', 'Column', 'ListConverter', 'PickleSerializer', 'SparkContext', 'StringType', 'UserDefinedFunction', '__all__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '_create_function', '_functions', '_prepare_for_python_RDD', '_test', '_to_java_column', 'abs', 'approxCountDistinct', 'asc', 'avg', 'col', 'column', 'count', 'countDistinct', 'desc', 'first', 'imap', 'last', 'lit', 'lower', 'max', 'mean', 'min', 'sqrt', 'sum', 'sumDistinct', 'udf', 'upper']
+
+==============================================
+Specify a Schema
+==============================================
+
+from pyspark.sql.types import * 
+
+schema = StructType([ 
+    StructField("id", LongType(), True), 
+    StructField("name", StringType(), True), 
+    StructField("grade", DoubleType(), True), 
+    StructField("degree", StringType(), True) ])
+
+students_df = sqlCtx.createDataFrame(students, schema)
+students_df.collect()
+Out[]:
+[Row(id=100, name=u'Alice', grade=8.5, degree=u'Computer Science'), Row(id=101, name=u'Bob', grade=7.0999999999999996, degree=u'Engineering'), Row(id=102, name=u'Carl', grade=6.2000000000000002, degree=u'Engineering')]
+
+==============================================
+JSON file Support
+==============================================
+
+students_json = [ 
+    '{"id":100, "name":"Alice", "grade":8.5, "degree":"Computer Science"}', 
+    '{"id":101, "name":"Bob", "grade":7.1, "degree":"Engineering"}'] 
+
+with open("students.json", "w") as f: 
+    f.write("\n".join(students_json))
+
+--------------------------
+
+Create Dataframe with Json File
+
+sqlCtx.jsonFile("file:///home/cloudera/students.json").show() 
+Out[]:
+degree           grade id  name
+Computer Science 8.5   100 Alice
+Engineering      7.1   101 Bob
+
+
+
+==============================================
+Dataframe from CSV
+==============================================
+
+Install CSV packages :
+
+PYSPARK_DRIVER_PYTHON=ipython pyspark --packages com.databricks:spark-csv_2.10:1.3.0
+
+--------------------------
+yelp_df = sqlCtx.load( 
+    source="com.databricks.spark.csv", 
+    header = 'true', 
+    inferSchema = 'true', 
+    path = 'file:///usr/lib/hue/apps/search/examples/collections/solr_configs_yelp_demo/index_data.csv')
+
+--------------------------
+
+yelp_df.printSchema()
+root
+ |-- business_id: string (nullable = true)
+ |-- cool: integer (nullable = true)
+ |-- date: string (nullable = true)
+ |-- funny: integer (nullable = true)
+ |-- id: string (nullable = true)
+ |-- stars: integer (nullable = true)
+ |-- text: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- useful: integer (nullable = true)
+ |-- user_id: string (nullable = true)
+ |-- name: string (nullable = true)
+ |-- full_address: string (nullable = true)
+ |-- latitude: double (nullable = true)
+ |-- longitude: double (nullable = true)
+ |-- neighborhoods: string (nullable = true)
+ |-- open: string (nullable = true)
+ |-- review_count: integer (nullable = true)
+ |-- state: string (nullable = true)
+
+--------------------------
+
+Filtering: 
+Following three commands provide same output
+
+yelp_df.filter(yelp_df.useful >= 1).count()
+
+yelp_df.filter(yelp_df["useful"] >= 1).count()
+
+yelp_df.filter("useful >= 1").count() 
+
+Out[]: 
+601L
+
+--------------------------
+
+Select 
+
+yelp_df["useful"].agg({"useful":"max"}).collect() 
+Out[]: 
+AttributeError: 'Column' object has no attribute 'agg' 
+
+yelp_df.select("useful") 
+Out[]: 
+DataFrame[useful: int] 
+
+yelp_df.select("useful").agg({"useful":"max"}).collect() 
+Out[]: 
+[Row(MAX(useful#267)=28)]
+
+
+==============================================
+Create a modified DataFrame
+==============================================
+
+Rescale the useful column from 0-28 to 0-100.
+
+yelp_df.select("id", "useful").take(5) 
+Out[]:
+[Row(id=u'fWKvX83p0-ka4JS3dc6E5A', useful=5), 
+Row(id=u'IjZ33sJrzXqU-0X6U8NwyA', useful=0), 
+Row(id=u'IESLBzqUCLdSzSqm0eCSxQ', useful=1), 
+Row(id=u'G-WvGaISbqqaMHlNnByodA', useful=2), 
+Row(id=u'1uJFq2r5QfJG_6ExMRCaGw', useful=0)]
+--------------------------
+
+Modify column 
+yelp_df.select("id", yelp_df.useful/28*100).show(5)
+
+Out[]:
+id                   ((useful / 28) * 100)
+fWKvX83p0-ka4JS3d... 17.857142857142858
+IjZ33sJrzXqU-0X6U... 0.0
+IESLBzqUCLdSzSqm0... 3.571428571428571
+G-WvGaISbqqaMHlNn... 7.142857142857142
+1uJFq2r5QfJG_6ExM... 0.0
+--------------------------
+
+Cast (truncate) to integer yelp_df.
+
+yelp_df.select("id", (yelp_df.useful/28*100).cast("int")).show(5)
+
+Out[]:
+id                   CAST(((useful / 28) * 100), IntegerType)
+fWKvX83p0-ka4JS3d... 17
+IjZ33sJrzXqU-0X6U... 0
+IESLBzqUCLdSzSqm0... 3
+G-WvGaISbqqaMHlNn... 7
+1uJFq2r5QfJG_6ExM... 0
+
+--------------------------
+
+Save as new dataframe
+
+useful_perc_data = yelp_df.select(
+    "id", (yelp_df.useful/28*100).cast("int")
+    ) 
+
+useful_perc_data.columns 
+Out[]: 
+[u'id', u'CAST(((useful / 28) * 100), IntegerType)']
+
+--------------------------
+
+Alias - rename a column
+
+useful_perc_data = yelp_df.select(
+    "id", (yelp_df.useful/28*100).cast("int").alias("useful_perc")
+    )
+
+useful_perc_data.columns 
+Out[]: 
+[u'id', u'useful_perc']
+
+--------------------------
+
+alias - rename also id
+
+useful_perc_data = yelp_df.select(
+    yelp_df["id"].alias("uid"),
+    (yelp_df.useful/28*100).cast("int").alias("useful_perc")
+)
+
+useful_perc_data.columns 
+Out[]: 
+[u'uid', u'useful_perc']
+
+==============================================
+Ordering
+==============================================
+
+Ordering by column
+
+Import functions for ascending/descending order: 
+
+from pyspark.sql.functions import asc, desc
+
+useful_perc_data = yelp_df.select(
+    yelp_df["id"].alias("uid"),
+    (yelp_df.useful/28*100).cast("int").alias("useful_perc")
+    ).orderBy(desc("useful_perc"))
+
+useful_perc_data.show(2) 
+
+Out[]:
+uid                  useful_perc
+RqwFPp_qPu-1h87pG... 100
+YAXPKM-Hck6-mjF74... 82
+
+==============================================
+Joins
+==============================================
+
+Join -> select -> show
+
+useful_perc_data.join( 
+    yelp_df, 
+    yelp_df.id == useful_perc_data.uid, 
+    "inner" 
+).select(useful_perc_data.uid, 
+    "useful_perc", 
+    "review_count"
+).show(5)
+
+Out[]:
+uid                  useful_perc review_count
+WRBYytJAaJI1BTQG5... 71          362
+GXj4PNAi095-q9ynP... 3           76
+1sn0-eY_d1Dhr6Q2u... 0           9
+MtFe-FuiOmo0vlo16... 0           7
+EMYmuTlyeNBy5QB9P... 7           19
+
+==============================================
+Cache in memory
+==============================================
+
+useful_perc_data.join(
+    yelp_df,
+    yelp_df.id == useful_perc_data.uid,
+    "inner"
+).cache().select(
+    useful_perc_data.uid, 
+    "useful_perc", 
+    "review_count"
+).show(5)
+
+
+Run it Again !!!!!!!!
+
+
+==============================================
+Log analytics: Load HTTP logs as Dataframes
+==============================================
+
+File location: /usr/lib/hue/apps/search/examples/collections/solr_configs_log_analytics_demo/index_data.csv
+
+--------------------------
+
+Start PySpark
+
+PYSPARK_DRIVER_PYTHON=ipython pyspark --packages com.databricks:spark-csv_2.10:1.X.X
+
+--------------------------
+
+Read logs CSV
+
+logs_df = sqlCtx.load(
+    source="com.databricks.spark.csv",
+    header = 'true',
+    inferSchema = 'true',
+    path = 'file:///usr/lib/hue/apps/search/examples/collections/solr_configs_log_analytics_demo/index_data.csv')
+
+logs_df.count()
+
+should give 0L because of lot of parsing errors as the data is from windows machines
+--------------------------
+
+Access Hadoop configuration
+
+Spark relies on Hadoop functionality for reading data.
+sc._jsc.hadoopConfiguration()
+
+Change the line ending to windows type line ending
+sc._jsc.hadoopConfiguration().set('textinputformat.record.delimiter', '\r\n')
+
+--------------------------
+
+Rerun the same command as above for loading logs csv
+
+logs_df = sqlCtx.load(
+    source="com.databricks.spark.csv",
+    header = 'true',
+    inferSchema = 'true',
+    path = 'file:///usr/lib/hue/apps/search/examples/collections/solr_configs_log_analytics_demo/index_data.csv')
+
+logs_df.count()
+Out[]:
+9410L
+
+logs_df.printSchema()
+logs_df.show(2)
+
+
+==============================================
+Log analytics: Count the log events by HTTP code
+==============================================
+
+logs_df.groupBy("code").count().show()
+
+Out[]:
+code count
+500  2
+301  71
+302  1943
+502  6
+304  117
+400  1
+200  7235
+401  10
+404  11
+408  14
+
+--------------------------
+from pyspark.sql.functions import asc, desc 
+
+logs_df.groupBy("code").count().orderBy(desc("count")).show()
+Out[]:
+code count
+200  7235
+302  1943
+304  117
+301  71
+408  14
+404  11
+401  10
+502  6
+500  2
+400  1
+
+
+==============================================
+Log analytics: Mean, Min, Max by code
+==============================================
+
+Compute average
+
+logs_df.groupBy("code").avg("bytes").show() 
+
+Out[]:
+code AVG(bytes#47)
+500  4684.5
+301  424.61971830985914
+302  415.6510550694802
+502  581.0
+.............
+
+-------------------------
+
+
+import pyspark.sql.functions as F
+
+logs_df.groupBy("code").agg( 
+    logs_df.code, 
+    F.avg(logs_df.bytes), 
+    F.min(logs_df.bytes), 
+    F.max(logs_df.bytes) 
+).show()
+
+Out[]:
+code AVG(bytes#47)      MIN(bytes#47) MAX(bytes#47)
+500  4684.5             422           8947
+301  424.61971830985914 331           499
+302  415.6510550694802  304           1034
+502  581.0              581           581
+304  185.26495726495727 157           204
+400  0.0                0             0
+200  41750.03759502419  0             9045352
+401  12472.8            8318          28895
+404  17872.454545454544 7197          23822
+408  440.57142857142856 0             514
+
+==============================================
+
+==============================================
+
+
+
+
+

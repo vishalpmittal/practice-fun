@@ -1,0 +1,80 @@
+So let's talk about
+Basic Hadoop Components. As we have mentioned before, the key to Hadoop's capability is bringing
+the data and processing together. The two basic components
+are Hadoop Distributed File System, or famously known as HDFS,
+which is our data. This is where our data is stored. It is stored in a distributed file system. And then we wanna do some
+processing on that data. That processing in the Hadoop framework is done through
+the Hadoop MapReduce framework. This is a model that is
+allowing programming for large scale data processing
+in a distributed manner. So, here we have the original
+version of the Hadoop 1.0. You can see that we have
+data at the bottom, HDFS, which is a redundant,
+scalable, reliable storage. And on top of that sits MapReduce,
+this is our processing. We're using this cost to resource
+management to process our data. On top we can put all kinds
+of different applications. Pig and Hive, and
+all these other funny sounding names, but those are really just applications
+they're allowing us to manipulate the data through the MapReduce processes
+on this distributed file system. So what is HDFS? HDFS is where we store the data. It is a Distributed File system that
+provides built in redundancy and fault tolerance for
+all of the Hadoop processing. Now, let's talk about that processing. That processing is done through
+the Map Reduce framework. We're trying to bring
+compute to where data is. We're trying to minimize the communication
+and movement of the data. And we're trying to access and
+utilize that local area network. So what are the two major steps
+of the MapReduce process? Well, they're the Map and the Reduce. Pretty simple isn't it? So, let's look and how they actually work. Map Step is the master process that
+divides problem into smaller sub problems and distributes them to
+the slave nodes as a map task. The Reduce Step processes data from
+the slave nodes and outputs from this Map task serves as an input to the Reduce task
+to form the final and ultimate output. Map procedure often takes processes
+like filtering and sorting and processes that data in that queue before merging
+it and sending it to the final output. But don't worry. If you don't completely
+understand what it does, we have a whole course that you're we're
+gonna teach you how MapReduce works. You're gonna learn exactly
+how to submit MapReduce jobs. And we're gonna have homework where
+you're gonna have to do it on your own. So don't worry. All the details are coming
+up in the next course. We just want you to
+understand the high level. How does the MapReduce process work? And why is it so powerful? So scalable and so
+great to use on big data challenges? The entire Hadoop Stack has gone
+through several transitions. The MapReduce has undergone
+a complete overhaul and we now have something
+called the Hadoop 2.0. We have more flexibility
+with something called YARN. It's a resource management
+system that allows us more flexibility in
+the way we submit jobs. We're not stuck in the map and reduce. We can submit jobs that map to multiple
+nodes and reduce for multiple nodes. We can perform certain iterations and other more complex task that don't fit
+really well into just the map and reduce. And we'll talk more about
+it later in the course and look into how other applications and services might be able to utilize this
+new flexibility and functionalities. So, why is the ecosystem growing so fast? Why do we have so many applications? If you look at
+the Apache Hadoop Ecosystem, there new tools coming out very often. Now that we have the data and that we
+have the processing done in the scalable, low cost effective way. We want to come up with the tools and
+applications that will allow us to move that data, to analyze that, to process it,
+so we have things like Pig. We have things like a Mahout, a library that allows us to apply
+machine learning algorithms. We have Hive that provides a SQL-like
+connectivity and querying to our data. We have HBASE which provides
+us columnar store that reminds you of maybe a database and
+you can take all of these tools that allow you more flexibility,
+more analytical tools, more things you can do to your big
+data to come up with better insight. All of these tools are gonna be
+covered in our specializations in the next three courses. Now, the entire ecosystem
+is growing even more. There is more tools you can do. There is more things that natively
+work in the Hadoop system. Things like graph networks. Things like in-memory analytics. Things like Spark and Shark and streaming. These are all the tools
+that enable you to do more with your data to gain deeper insight. And do additional analytics and
+analysis on your data. We're gonna cover both Spark as well as
+graph networking in this specialization, and provide you tools and insight into how
+you can submit these kinds of jobs and analyze your data in a deeper level. In order to complete this specialization,
+you will deploy MapReduce and Spark jobs. We're going to do some basis analytics
+as well as deep machine learning analytics both in the MapReduce
+framework as well as the Spark Jobs. We're gonna compare the jobs. We're gonna do some
+scalability analysis and see which one might work better for one
+sort of applications rather than other. So we've talked a lot about big data
+technologies and architectures and tools and applications so
+why are you here. Why are we talking about all of this? The problem with big data is that there
+is a lot of challenges with big data. Industry needs talent. Industry needs people who
+know how to install Hadoop. People who know how to
+utilize analytics on Hadoop. People who can understand the tools and
+the platforms. Gathering the data from
+different sources is not simple. Integrating, organizing, and
+performing analytics on these large, vast, complex data set is tough. This is why you're here. We're gonna help teach you the tools,
+the platforms, and create a new talent and pool of people who are able to
+attack the challenge of big data.

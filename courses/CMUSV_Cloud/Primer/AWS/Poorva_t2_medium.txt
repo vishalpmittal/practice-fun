@@ -1,0 +1,161 @@
+Poorva_t2_medium
+=========================================
+sudo apt-get update --fix-missing
+sudo apt-get install sysbench
+=========================================
+sysbench --num-threads=8 --test=cpu --cpu-max-prime=20000 run
+
+ubuntu@ip-172-31-63-213:~$ sysbench --num-threads=8 --test=cpu --cpu-max-prime=20000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 8
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 20000
+
+
+Test execution summary:
+    total time:                          14.7905s
+    total number of events:              10000
+    total time taken by event execution: 118.0990
+    per-request statistics:
+         min:                                  2.78ms
+         avg:                                 11.81ms
+         max:                                 31.02ms
+         approx.  95 percentile:              15.04ms
+
+Threads fairness:
+    events (avg/stddev):           1250.0000/19.72
+    execution time (avg/stddev):   14.7624/0.03
+
+
+
+=========================================
+sysbench --num-threads=1 --test=cpu --cpu-max-prime=40000 run
+
+ubuntu@ip-172-31-63-213:~$ sysbench --num-threads=1 --test=cpu --cpu-max-prime=40000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 40000
+
+
+Test execution summary:
+    total time:                          76.7652s
+    total number of events:              10000
+    total time taken by event execution: 76.7622
+    per-request statistics:
+         min:                                  7.08ms
+         avg:                                  7.68ms
+         max:                                  8.39ms
+         approx.  95 percentile:               7.85ms
+
+Threads fairness:
+    events (avg/stddev):           10000.0000/0.00
+    execution time (avg/stddev):   76.7622/0.00
+
+
+
+
+=========================================
+sysbench --num-threads=4 --test=cpu --cpu-max-prime=50000 run
+
+ubuntu@ip-172-31-63-213:~$ sysbench --num-threads=4 --test=cpu --cpu-max-prime=50000 run
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 4
+
+Doing CPU performance benchmark
+
+Threads started!
+Done.
+
+Maximum prime number checked in CPU test: 50000
+
+
+Test execution summary:
+    total time:                          52.1960s
+    total number of events:              10000
+    total time taken by event execution: 208.7613
+    per-request statistics:
+         min:                                 10.35ms
+         avg:                                 20.88ms
+         max:                                 34.61ms
+         approx.  95 percentile:              26.55ms
+
+Threads fairness:
+    events (avg/stddev):           2500.0000/0.71
+    execution time (avg/stddev):   52.1903/0.00
+
+=========================================
+sysbench --test=fileio --file-total-size=20G prepare
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+128 files, 163840Kb each, 20480Mb total
+Creating files for the test...
+
+=========================================
+sysbench --test=fileio --file-total-size=20G --file-test-mode=rndrw --init-rng=on --max-time=300 --max-requests=0 run
+
+sysbench 0.4.12:  multi-threaded system evaluation benchmark
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from timer.
+
+
+Extra file open flags: 0
+128 files, 160Mb each
+20Gb total file size
+Block size 16Kb
+Number of random requests for random IO: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Threads started!
+Time limit exceeded, exiting...
+Done.
+
+Operations performed:  240240 Read, 160160 Write, 512386 Other = 912786 Total
+Read 3.6658Gb  Written 2.4438Gb  Total transferred 6.1096Gb  (20.854Mb/sec)
+ 1334.66 Requests/sec executed
+
+Test execution summary:
+    total time:                          300.0021s
+    total number of events:              400400
+    total time taken by event execution: 148.4717
+    per-request statistics:
+         min:                                  0.00ms
+         avg:                                  0.37ms
+         max:                                 32.71ms
+         approx.  95 percentile:               0.88ms
+
+Threads fairness:
+    events (avg/stddev):           400400.0000/0.00
+    execution time (avg/stddev):   148.4717/0.00
+
+
+=========================================
+
+ssh -i ec2-52-3-93-179.compute-1.amazonaws.com
+
+ssh -i 15619_demo.pem ubuntu@ec2-52-21-144-62.compute-1.amazonaws.com
+
+ec2-52-21-144-62.compute-1.amazonaws.com
+

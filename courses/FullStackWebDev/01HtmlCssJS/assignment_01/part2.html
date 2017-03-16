@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dating Website Part2</title>
+    <meta name="author" content="Vishal Mittal">
+</head>
+
+<style type="text/css">
+    fieldset{
+        background: lightyellow ;
+        border: 10px solid yellow ;
+        margin-bottom: 10px ; 
+        width: 720px
+    }
+    label{
+        width: 180px ;
+        display: inline-block ;
+        vertical-align: top ;
+        text-align: right;
+    }
+    .choiceLabel {
+        width: auto;
+    }
+
+    .rangeLabelLow {
+        width: 50px ;
+        text-align: center;
+        background: red;
+    }
+    .rangeLabelHigh {
+        width: 50px ;
+        text-align: center;
+        background: purple;
+    }
+    textarea {
+        width:360px;
+        height:50px;
+    }
+</style>
+
+
+<body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+
+    <form action="" method="post">
+
+        <fieldset>
+            <legend>Your Face</legend>
+            <label for="picUpload">Your image:</label>
+                <input type="file" name="fileToUpload" id="picUpload" required>  <br><br>
+            <label for="preview">Image Preview:</label>
+                <img src="" id="preview" name="imgpreview">
+        </fieldset> <br>
+
+        <fieldset>
+            <legend>Your General Details</legend>
+            <label for="fullName">Name:</label>
+                <input type="text" name="fullName" id="fullName" value="Your full name" required> <br>
+                <div id="gender">
+                    <label for="gender">Gender:</label>
+                    <input type="radio" name="sex" id="male" value="male" required> 
+                        <label for="male" class="choiceLabel">Male</label>
+                    <input type="radio" name="sex" id="female" value="female">
+                        <label for="female" class="choiceLabel">Female</label>
+                </div>
+            <label for="age">Age:</label>
+                <input type="number" min="0" max="99" step="1" value="18" id="age" name="age" required><br>
+            <label for="birthday">Date of birth:</label>
+                <input type="date" id="birthday" name="birthday"><br>
+            <label for="color">Favorite color:</label>
+                <input type="color" id="color" name="color"> <br>
+            <label for="country">Which country:</label>
+                <select name="country" id="country">
+                    <option value="noval"></option>
+                    <option value="usa">United States of America</option>
+                    <option value="china">China</option>
+                    <option value="russia">Russia</option>
+                    <option value="india">India</option>
+                    <option value="aus">Australia</option>
+                </select>
+        </fieldset> <br>
+
+        <fieldset>
+            <legend>Your Indicators</legend>
+            <label for="height">Height:</label>
+                <label for="height" class="rangeLabelLow">Short</label>
+                <input type="range" min="0" max="100" step="5" value="50" id="height" name="height">
+                <label for="height" class="rangeLabelHigh">Tall</label> <br>
+            <label for="salary">Salary:</label>
+                <label for="salary" class="rangeLabelLow">Poor</label>
+                <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary">
+                <label for="salary" class="rangeLabelHigh">Rich</label> <br>
+        </fieldset> <br>
+
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br>
+            <label for="usermob">Mobile:</label>
+                <input type="tel" name="usermob" id="usermob"> <br>
+            <label for="address">Address:</label>
+                <textarea name="address" id="address"> </textarea> <br>
+            <div id="contactMethodId">
+                <label for="contactMethodId">Method to contact you:</label>
+                <input type="checkbox" name="contMethod" id="cemail" value="email">
+                    <label for="cemail" class="choiceLabel">Email</label>
+                <input type="checkbox" name="contMethod" id="cwhtsapp" value="whatsapp">
+                    <label for="cwhtsapp" class="choiceLabel">Whatsapp</label>
+                <input type="checkbox" name="contMethod" id="cinappchat" value="inappchat">
+                    <label for="cinappchat" class="choiceLabel">In-app chat</label> <br>
+            </div>
+        </fieldset> <br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

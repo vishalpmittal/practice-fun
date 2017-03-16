@@ -1,0 +1,44 @@
+Welcome back. So far we have covered a lot of
+different aspects of Big Data. We looked at why we have Big Data,
+we looked at potential architectures, technologies. We looked at how Big Data
+correlates to Internet of Things. We have looked at how predictive
+analytics can benefit a lot of in finding a lot
+of insight from big data. Now, let's talk a little bit about
+what is, what do you need to do to execute a successful big,
+small or medium data project? What would be the basic rules
+you would wanna think about and follow as you embark on
+this Big Data journey? Well, my first advice is don't start
+without understanding the actual value. What will be the ROI that's gonna come
+out of this particular experiment? A lot of people get really excited about
+the technologies and that's great, I get excited about technologies as well. And it's really fun to bring in new
+architectures and new tools and try and figure out how to use them, but
+do start with a business question and a business problem you're trying to solve. Don't start without understanding
+the potential value that this new set of technologies
+will bring to your business. Don't ignore the wider Enterprise story. There is so many organizations. They are so silent. And they take this Big Data project and
+they just kind of push them in the corner of an IT
+department or some other department. And really truly, in order to have
+a successful Big Data project, you really need to integrate data
+that comes across the organization, merge the data from different departments. Bring together the HR and the sales and the marketing team together with the IT
+teams to really come together and be able to demonstrate the value
+across the organization. As well as create a stronger team that
+will create a more successful project that will receive the visibility it needs
+to be successful across the organization. Build the bridges, not the walls. So as excited as we all get
+about these new technologies, it's really not about trying out new
+technologies and having fun with the data. Big Data has received a lot of hype and
+people get really excited about it. And that's great. But it really is about business change. Improving business process, it's bringing
+insight and the value to organization. So let's start this
+Big Data Journey today. Companies are always dealing with big data
+and lots of data and lots of formats. The change that big data brings to us,
+is that now this information can be processed in much faster speeds and
+provide us that insight almost instantly. But we have to keep in mind that the older
+technologies, older tools are there to help us solve business problems and
+to be able to react to the opportunity. With the Big Data, were gonna
+look in to analyzing large data, trying to find patterns. We're going to look into managing
+larger amounts of data and applying them to the specific business
+needs that our organization have. Those needs can vary from managing a city, to preventing a failure,
+to be able to enhance a product quality. Or to maybe just keep our brand name in
+a great shape and improving over time. All of these emerging technologies and
+tools are the heart of the Big Data technologies we're gonna cover for
+the rest of this specialization. We're gonna spend time understanding them. Learning them in a hands-on way
+where we're gonna do exercises and really be able to utilize these
+techniques to their fullest potential. So let's have fun.

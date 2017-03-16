@@ -1,0 +1,12 @@
+
+mapper.py
+reducer.py
+----------
+s3://emr-pm/pm_input/
+s3://cmucc-datasets/wikipediatraf/201508/
+----------
+s3://emr-pm/output/
+s3://emr-pm/logs/
+----------
+-files s3://emr-pm/python/mapper.py,s3://emr-pm/python/reducer.py
+----------

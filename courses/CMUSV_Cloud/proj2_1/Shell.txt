@@ -1,0 +1,22 @@
+aws ec2 run-instances --image-id ami-d05e75b8 --count 1 --instance-type t2.micro --key-name project1.1 --security-groups default --query 'Instances[0].InstanceId'
+
+aws ec2 describe-instances --query 'Reservations[0].Instances[2].PublicIpAddress'
+
+
+aws ec2 terminate-instances --instance-ids i-dd4d1908
+
+--dry-run
+
+aws s3 mb s3://videodemo123
+
+aws s3 ls s3://videodemo123
+
+echo "abcd">text.txt
+
+aws s3 cp text.txt s3://videodemo123
+
+aws s3 cp s3://videodemo123/text.txt .
+
+aws s3 rm s3://videodemo123/text.txt
+
+ aws s3 rb s3://videodemo123 --force

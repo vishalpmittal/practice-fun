@@ -1,0 +1,56 @@
+Hi, welcome. This is the Introduction
+to Big Data course. In this part, we will explain the concept
+you will need for full understanding of the big data, both from the technical
+as well as the business perspective. We will also introduce you to major
+concepts and major components, so you can hold your own in a meaningful
+conversation about big data. So what we're trying to
+do is predict the future, based on the historic data in order to
+solve tomorrow's business challenges. We're talking about big data, so in this module we will talk about basic
+concepts that we need to understand about the big data, both the technical
+as well as the business. We're gonna talk about the architecture,
+the motivations, and reasons why we're even talking about these
+concepts, technologies and architectures. So as I mentioned, we're designing this
+course both for technical and business professionals who need to understand the
+different types of big data components, and the underlying technology, and
+the concepts that support big data. In this module, we're gonna take a look
+at the concepts that help us understand different components of the infrastructure
+that make the big data more practical and usable. Later in big data specializations, we will focus more on the details of
+the different data management and specific platform and analysis options for
+emerging technologies. Things like MapReduce, Spark and other technologies that
+support big data ecosystem. In this course, we are going to
+start out with a high level overview just to understand what these components
+are and how they work together. So throughout our first
+introductory lecture, we are going to try and
+answer a couple of different questions. How do you analyze the massive
+amounts of data that become part of your big data infrastructure? How can we get deeper insight
+from different types of data? How can we find the real
+meaning from the data and enable those data driven decisions and
+actions? We're gonna look at the couple of use
+cases and examples of how companies are beginning to use big data and
+transform their businesses and operations. So managing and analyzing data has
+always been the challenge across many organizations of different
+sizes across all industries. Businesses have always struggled
+to find a pragmatic approach to capture information about their
+customers, their product, their services. When the company only had a handful of
+customers who bought a few of their items, that was not that difficult. It was not as big of a challenge. But over time,
+companies in the markets started growing. Things have become more complicated. Now we have branding Information,
+social media. We have things that are sold and
+bought over the Internet. We need to come up with
+different solutions. Web development, organizations, pricing,
+social networks, segmentations. There's a lot of different data that
+we're dealing with that brings a lot more complexity when it comes to dealing,
+managing, organizing and
+trying to gain some insight from the data. Big data is important because it enables
+organizations to gather, store, and manipulate vast amounts of data at
+the right speed at the right time. As you can see here, we believe there's some amount of
+untapped value in the big data. Data is coming from satellite images,
+eCommerce, TV, video sensors and we're trying
+to correlate all of this data. Use analytics and
+predictive analytics, deep analytics, deeper insight from our data, in order to
+come up with answers, in order to improve the return of investment, in order to
+maybe predict extreme weather conditions. Maybe we're just looking
+at biodiversity trends, or maybe we're really trying to understand
+our customers and learn their habits, and predict their future behaviors. The idea is that untapped
+value of the big data is what is bringing all of this hype and
+interest into technologies and tools that we can use to
+gain insight into our data.

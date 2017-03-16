@@ -1,0 +1,22 @@
+sudo apt-get update
+sudo apt-get install apache2
+cd /var/www/html/
+pwd
+ls
+sudo apt-get install apache2-utils
+ab
+cp index.html index.html.back
+sudo vi index.html 
+
+
+A3: 442.98Kb    27.69 Requests/sec executed
+
+A2 284.68Kb/    17.79 Requests/sec executed
+
+A1 309.27Kb/sec)
+   19.33 Requests/sec executed
+
+
+   A1 310
+   A2 284
+   A3 443

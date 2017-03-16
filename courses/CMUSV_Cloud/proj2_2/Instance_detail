@@ -1,0 +1,29 @@
+aws cloudwatch put-metric-data --metric-name PageViewCount --namespace "MyService" --value 2 --timestamp 2014-02-14T12:00:00.000z
+
+i-09ee01ab   
+i-d8ef007a--
+i-58907ffa
+i-20917e82---
+i-91927d33
+
+Stopped:
+P2.2-reliability-part2(5) (ami-930970f6)
+P2.2-reliability-part2(3) (ami-83166fe6)
+P2.2-reliability-part2 (ami-dd176eb8)
+
+Running
+P2.2-reliability-part2(2) (ami-17087172)
+P2.2-reliability-part2(4) (ami-b70871d2)
+
+
+
+
+
+Stopped
+P2.2-reliability-part1(5) (ami-b92158dc)
+P2.2-reliability-part1(3) (ami-cf2e57aa)
+P2.2-reliability-part1(2) (ami-01215864)
+
+Running
+P2.2-reliability-part1(4) (ami-e72f5682)
+P2.2-reliability-part1 (ami-f12c5594

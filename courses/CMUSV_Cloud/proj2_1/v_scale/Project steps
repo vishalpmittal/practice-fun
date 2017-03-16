@@ -1,0 +1,54 @@
+1. load generator: m3.medium AMI (ID: ami-4389fb26
+    - allow incoming and outgoing requests on all ports for all traffic for all protocols and all source
+
+2. MSB Data Center VM : ami-abb8cace, t2.small
+    - allow incoming and outgoing requests on all ports for all traffic for all protocols and all source
+
+3. open DC UI and LG UI 
+4. DC > UI 
+    -  Lookup a random user or look up username in the data center 
+    Password for username 3capvidxyz45 is sammy98
+    Password for username 8pSD57vsjq is xLCwRebGUz
+    Password for username acuk54 is packard
+    Password for username 3qdog is 4matty
+    Password for username 10toad is 8675309
+    -  refresh few times
+
+5. LG UI > "Enter your submission password"
+
+6. DC t2.small > EC2 web console > monitor > enable detailed monitoring
+
+7. LG > http://[your-load-generator-instance-dns-name]/test/vertical > Activate
+    -  Enter DC DNS  > submit
+    -  or use REST GET request
+    http://[your-load-generator-instance-dns-name]/test/vertical?dns=[your-instance-dns-name]
+    -  Click 'Visit Log"
+
+8. EC2 > DC > Monitor CPU Usage
+    -  Enlarge CPU utilization box
+
+9.  Generate several requests
+    http://[your-load-generator-instance-dns-name]/log?name=test.[test-number].log
+    -  Verify RPS ( requests per second)
+    -  calculate average RSP
+
+===================
+t2.medium: 
+Password for username 26vK is elisabet
+Password for username adil_r89 is 160289
+Password for username AdamB03 is awbt1981
+Password for username afibert is 21369nd
+Password for username 1211 is 31811
+
+========================
+t2.large
+
+Password for username 68iaSLdbqg is beky8ori
+Password for username 87179486 is 2430776
+Password for username 82nat is 090182n
+Password for username 11111111 is eviled
+Password for username AgabbyWon is newton
+
+
+
+

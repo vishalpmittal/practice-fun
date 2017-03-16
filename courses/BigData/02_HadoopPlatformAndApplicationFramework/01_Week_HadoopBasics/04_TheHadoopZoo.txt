@@ -1,0 +1,64 @@
+We have talked about the bottom
+of the frame work, of the stack. We've talked about HDFS and we talked
+about yarn or map reduce version 2.0. As you can see on top of these things
+are several pieces of architecture. And they have evolved over time. So let's look at the history and look at how the entire ecosystem
+has evolved and grown over time. As you might have noticed, a lot of these applications have
+different kinds of funny names. And so,
+how can we figure out the entire zoo, and how can we figure out which one
+of these applications does what? What is it used for? Is it a SQL-like environment? Is it where we submit jobs? Is it how we access our data? What can we do with all
+of these applications? So let's look into each
+one of them in details. So we talked about that the roots of
+Hadoop go way back into Google's Bigtable and different kinds of applications
+that started working around that idea of how do we scale and distribute and
+process very large amounts of data? So here, we have the original Google
+stack as some people refer to it. And what they did,
+is they started with a Google file system. They thought that it would be a great idea
+to distribute a large amount of pretty cheap storage and try and
+put a lot of data on there. And come up with some framework that
+would allow us to process all that data. So they had their original MapReduce,
+and they were storing and processing large amounts of data. Then they said, well that was really
+great, but we would really like to be able to access that data and
+access it in a SQL like language. So they built the SQL gateway to adjust
+the data into the MapReduce cluster and be able to query some
+of that data as well. Then, they realized they needed
+a high-level specific language to access MapReduce in the cluster and
+submit some of those jobs. So Sawzall came along. Then, Evenflow came along and allowed to chain together complex
+work codes and coordinate events and service across this kind of a framework or
+the specific cluster they had at the time. Then, Dremel came along. Dremel was a columnar storage in the
+metadata manager that allows us to manage the data and is able to process a very
+large amount of unstructured data. And then of course, you needed
+something to coordinate all of this. So Chubby came along as a coordination
+system that would manage all of the products in this one unit or
+one ecosystem that could process all these large amounts
+of structured data seamlessly. Well, then we can see that
+Facebook's stack looks very similar. You have Zookeeper that
+orchestrates things. You have HBase,
+you have Hive and Databee, and then we have Scribe that is used for
+ingestion of large data set. Then, if we move on and
+look at the Yahoo stack, you can see that they will use some of the
+same components but they have something called Data Highway and Oozie and
+then HCatalog for the metadata catalog. So things are still very similar. They are still used for the same purposes. However, they might have different names because they have somewhat different
+implementations of these tools. Moving on, we can see that LinkedIn
+has their own version of this stack. Again, you can see that there's
+some of the same components, and then there's some specific versions of
+these tools that these organizations developed on their own. So you can see that there's a pattern
+that emerges across all these stacks the different organizations use it. And now we can see that we come down to
+the Cloudera's distribution for Hadoop, and we can see which one of the pieces
+of the system Cloudera has. So you can see that in Cloudera's
+distribution for Hadoop, or Cloudera Stack as we call it We
+have Sqoop and Flume for ingestion. We use HBase for the common store. We have Oozie as the coordination and
+the workflow engine. We use Pig and Hive for high level
+languages and querying some of the data. And then we use Zookeeper as
+a coordination service on bottom of this stack. So we decided to use
+Cloudera's distribution for Hadoop because they had this
+really excellent quick start VM, that we, you guys have already
+downloaded in the previous class, and we can do all kinds of experiments on it,
+without having to spend the time either begging our IT guys to install
+a full installation of the Hadoop stack. Or having to spend time doing it ourself. This VM is structured in a way that enable
+us to run all these different services and learn how they work without a whole
+lot of back end work involved. I know that some of you may be
+have had problems with a VM and if you don't have enough memory
+it might be really slow. Cloudera does have the live version where
+you can log in and do some of these experiments on your own without having
+to have a VM running on your engine. So there's some of the write ups in our
+reading sections of this class as well.

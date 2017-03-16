@@ -1,0 +1,81 @@
+Hello, everybody. Welcome to the Big Data specialization
+offered with the support of Splunk. My name is Natasha Balac and I work here, at the San Diego Supercomputer Center at
+the University of California, San Diego. Here at San Diego Supercomputer Center, I'm a Director of
+Predictive Analytics Center of Excellence. I'm also the President of
+Data Insight Discovery, consultancy for predictive analytics, and
+big data technologies. I've been teaching at the UCSD extension
+for over 14 years, and I'm a lecturer of the Computer Science Department here at
+the University of California, San Diego. Over the past five years, my colleagues
+here at the San Diego Supercomputer Center and I have designed numerous boot camps,
+which were two day workshops specifically designed for
+working professionals who are willing and interested in learning about
+new big data technologies. And trying to understand how they can
+become more aware of the upcoming tools, methodology, and
+technologies that can bring new insight into massive data sets that
+you might be dealing with. As much that we know that many people
+might like come and visit San Diego, we are aware and know that that
+might not be an option for everyone. As courserians, we know that you
+might live anywhere in the world, and you might be busy with your life,
+and work, and might not have an opportunity to
+physically come and visit the campus. So we're really excited to take our
+show on the road and share all of our experience and expertise in big data and
+big data analytics with you. So let's go! Just to give you a quick idea of what you
+will learn in this course, we have four courses designed that will follow
+this first introduction to big data. This first course is specifically
+designed to set the stage and help you understand,
+why do we need big data? Why is big data such a big hype? And why is there such an incredible
+need for data scientists? After this intro course,
+as a matter of fact, at the end of our intro course,
+we're gonna jump straight into Hadoop. You're gonna have an opportunity to
+download the VM, install Hadoop, and do a simple Hello World program. Once we get into our second course,
+the Hadoop platform, you're gonna be able to work in
+more technical environment, and we're going to learn more in-depth
+knowledge about how Hadoop works. We're gonna do exercises in MapReduce and
+Spark, and we will learn specific functionalities
+of a Hadoop-based system. Now this is very important to know. You do not have to be a programmer or
+a developer to do well in this course. We do expect you to have
+some programming experience. However, most of the exercises we're
+gonna do in this specific specialization, you're gonna be able to follow along
+with minimal programming knowledge. We will be focusing on
+showing you well defined and predefined codes in
+analytics codes in Hadoop. You will need very little or
+no programming experience to be able to take this code and execute it
+in the platform to see the results. Of course, if you have plenty
+of programming experience, you're welcome to go deeper and
+play around and do more advanced things. And we'll give you some options for
+that as well. In our next course,
+the Big Data Analytics, we're gonna apply a lot of different
+analytics tools to the data stored in HDFS to enable a lot of different
+types of processing of big data. You will apply tools with funny names,
+like Pig, and Hive, and Spark, and all kinds of interesting tools that
+will enable you to query the data, do summary statistics, basic analytics,
+and interesting dashboards where you can show off all of these
+outcomes of all of these cool tools. In the Machine Learning for Big Data
+Class, we're gonna learn basic methodology and algorithms for machine learning,
+both on small and big data. We will focus specifically on
+scalable machine learning algorithm that work both in the MapReduce and
+Spark frameworks. In the Graph Analytics course, you will learn how to perform
+analytics on graphs, and how to leverage graph properties in order
+to infer new knowledge and information. And we have a real exciting
+Capstone project that we're offering in collaboration with Splunk. We will tell you more about this
+Capstone in details as we go along. But we know that this Capstone
+is really relevant and valuable to you as a demonstration
+of the industry relevance quick skills that you will acquire
+throughout this specialization. And as in incentive, because everybody does better with
+incentives, Splunk has offered to offer an interview to the top finishers
+in our exciting Capstone project. Finally, while I will be setting up
+the stage in this first course, for the rest of specialization, I will be joined by my colleagues from
+the San Diego Supercomputer Center, who are experts in big data and
+related fields as well. And I would really like you to meet them,
+and know what's coming up. Let me introduce you the team of experts that are gonna help us
+teach this specialization. Here we have Andrea Zonca. He's gonna spend the time with
+you on the Spark side of things. He's gonna help us introduce the concept
+of a new Spark framework and help us learn about the analytics and predictive
+analytics within that framework. Next up we have Mahi. Mahi will spend a lot of time teaching and
+explaining how Hadoop, MapReduce, and
+HDFS work as a framework in itself. Paul Rodriguez, in the upper right corner,
+and myself will spend a lot of time talking about analytics, machine
+learning, MapReduce, scaling machine learning algorithms to work faster and
+better on the larger amounts of data. And Amarnath will spend the time with
+you talking about graph networks, analytics, and how you can gain
+some insight from social networks. We hope you'll join us.

@@ -1,0 +1,62 @@
+2.  Compare and contrast how the candidates *analyzed the problem*? What did the candidate do in the good interview that the one in the bad interview did not, and vice versa?
+
+Good Interview
+-  Confirmed the type of data
+-  candidate asked good questions for better analyzing the problem
+-  Used an example to clearify the question.
+
+Bad Interview
+-  Candidate directly started coding without clear understanding of the question
+-  assumed the data structure was for integers only
+-  No discussion of the approach
+
+
+3.  What edge cases did the candidate in the bad interview miss? How could he have avoided missing these?
+-  handling duplicates
+-  element to be removed not present
+-  number of elements in the array constant value, use an arraylist
+-  getting the first value from hashmap and calling it random.
+-  Tree random is not really random, it will not work in a lot of cases
+
+ 
+4.  Give an example of where the candidate in the good interview approached the problem methodically and logically.
+-  understood the problem, clearify the problem using an example,
+-  discuss the solution and started thinking of a better way as soon as realized that this is not the optimal solution
+-  After writing the code candidate tests the code with a test case
+
+
+
+5. Give at least one example that indicates that the candidate in the bad interview does not have a strong foundation in basic computer science concepts?
+-  constant value of elements in array assumed. hard coding
+-  not thinking about the optimal solution but just whatever works
+-  not having knowledge about methods used by him in his solution. 
+-  Candidate says he doesn't know how to iterate in a hash map
+-  candidate confused by groind from array to arraylist to hashmap to tree 
+
+
+
+6.  Reflect on the code produced in the two interviews. Does the code in the bad interview work? Why not? In what ways is the candidate's code in the good interview easier to maintain than the code in the bad interview?
+
+Good Interview:
+Understands the actual motive of the question and solves it in the best optimal way. 
+
+Bad Interview:
+-  The whole point of the question was to get a data structure that can give the best performance. but the candidate did not provide an optimal solution. Also the solution with trees is not correct
+-  BS tree is not needed for this question as lot of time is taken in sorting which is not needed. 
+
+
+
+7.  Give examples from the two interviews that indicate how the candidates would or would not be pleasant to work with? Be specific and justify why you think a particular action or statement indicates that the candidate would or would not be a pleasant and productive person to have on a team.
+
+I would definitely want to have the candidate in good interview in my team because of following reasons:
+Good interview:
+-  Candidate listens carefully before talking
+-  very clear description and no assumptions
+-  addresses his mistakes and corrects them
+
+Bad Interview
+-  No firm answers, very doubtfull on self solution 
+-  Bad description and no clear writing
+
+
+

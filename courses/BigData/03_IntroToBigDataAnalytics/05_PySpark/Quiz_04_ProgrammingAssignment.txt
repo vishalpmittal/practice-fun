@@ -1,0 +1,137 @@
+Programming Assignment: DataFrame Analytics
+==============================================
+
+Question :1
+---------------------
+Following the same procedure from the videos, load the "orders" table from Hive into a DataFrame. If the "orders" table is not available in Hive, follow the instructions in "Check data on Hive are available" section of this module.
+
+In all of this assignment, you can choose whether to use the DataFrame or the SQL interface (or both!).
+How many orders are in SUSPECTED_FRAUD status?
+
+Solution: 1
+---------------------
+sqlCtx.sql("SELECT COUNT(order_id) FROM orders WHERE order_status='SUSPECTED_FRAUD'").show()
+
+1558
+
+==============================================
+
+Question :2
+---------------------
+Now load the table "order_items" from Hive, check the column names, find the total amount (sum of all "order_item_subtotal") for each order ("order_item_order_id").
+
+What is the 3rd highest order amount?
+
+Choose the closest answer
+
+
+Solution: 2
+---------------------
+sqlCtx.sql("SELECT order_item_order_id, SUM(order_item_subtotal) as vishal FROM order_items GROUP BY order_item_order_id ORDER BY vishal DESC").show()
+
+order_item_order_id vishal
+68703               3449.9099884033203
+68724               2859.8900032043457
+68858               2839.9100036621094
+68809               2779.8600006103516
+68766               2699.899990081787
+68806               2629.9200134277344
+68821               2629.9200134277344
+68778               2629.8999938964844
+68848               2399.959991455078
+68875               2399.949981689453
+68859               2349.8899841308594
+68816               2329.939987182617
+68837               2299.959991455078
+68736               2259.949996948242
+68722               2199.989990234375
+68883               2149.989990234375
+22030               2039.800033569336
+46229               1999.8800354003906
+36584               1979.8300476074219
+14539               1899.9000549316406
+
+Answer --> 2840
+
+==============================================
+
+Question :3
+---------------------
+For the next 2 questions, we will perform joins. There is a bug in Spark 1.3.0 (fixed in more recent versions) that prevents joins from working when data are loaded from Hive, as a workaround, we can re-create the DataFrames we created before:
+
+order_items = sqlCtx.createDataFrame(order_items.rdd, order_items.schema)
+orders = sqlCtx.createDataFrame(orders.rdd, orders.schema)
+Create a inner join between the two DataFrames either with the "join" method or with SQL. Good idea to cache it in memory so you can experiment more quickly with the next steps.
+
+What is the average product price ("order_item_product_price") for products that belong to "COMPLETE" orders?
+
+Solution: 3
+---------------
+sqlCtx.sql("SELECT AVG(oit.order_item_product_price) FROM orders o INNER JOIN order_items oit ON o.order_id = oit.order_item_order_id WHERE o.order_status='COMPLETE'").show()
+
+133.18070529114834
+
+
+==============================================
+
+Question :4
+---------------------
+Using the joined dataset created in the previous question, consider only orders in "COMPLETE" status and find the total amount each customer ordered.
+
+What is the maximum amount a single customer ordered?
+
+Solution: 4
+---------------------
+
+order_items = sqlCtx.sql("SELECT * FROM order_items")
+order_items = sqlCtx.createDataFrame(order_items.rdd, order_items.schema)
+
+orders = sqlCtx.sql("SELECT * FROM orders")
+orders = sqlCtx.createDataFrame(orders.rdd, orders.schema)
+
+
+order_items.join( 
+    orders, 
+    orders.order_id == order_items.order_item_order_id, 
+    "inner" 
+).select(order_items.uid, 
+    "useful_perc", 
+    "review_count"
+).show(5)
+
+
+
+groupBy("code").count().orderBy(desc("count")).show()
+
+useful_perc_data.join( 
+    yelp_df, 
+    yelp_df.id == useful_perc_data.uid, 
+    "inner" 
+).select(useful_perc_data.uid, 
+    "useful_perc", 
+    "review_count"
+).show(5)
+
+
+sqlCtx.sql("SELECT o.order_id, o.order_status, oit.order_item_order_id, oit.order_item_product_price 
+FROM orders o INNER JOIN order_items oit 
+ON o.order_id = oit.order_item_order_id 
+WHERE o.order_status='COMPLETE'
+GROUP BY o.").show()
+
+
+sqlCtx.sql("SELECT o.order_customer_id, oit.order_item_product_price FROM orders o INNER JOIN order_items oit ON o.order_id = oit.order_item_order_id WHERE o.order_status='COMPLETE' GROUP BY o.order_customer_id").show()
+
+
+==============================================
+
+Question :5
+---------------------
+Now let's focus on order which are not complete, i.e. in any state that is not "COMPLETE" (Python simbol for not equal is "!=").
+
+Find the total amount of each of those orders, i.e. sum all the "order_item_subtotal".
+
+What is the largest across all total amounts?
+
+Solution: 5
+---------------------

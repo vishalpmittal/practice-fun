@@ -1,0 +1,67 @@
+So let's talk a little bit about
+Hadoop Distributed File System. In the next module of this class, Myhadar
+will go deeper into how the HDFS works, what are its components, and you're
+going to do some hands on exercises. But before we get there, let's just
+understand what is HDFS at its core? It is a distributed, scalable, and portable file system written in Java in
+order to support the Hadoop framework. Each node in Hadoop instance
+typically has a single name node, and a cluster of data nodes that
+formed this HDFS cluster. Each HDFS stores large files, typically
+in ranges of gigabytes to terabytes, and now I hear petabytes,
+across multiple machines. And it can achieve reliability by
+replicating the cross multiple hosts, and therefore does not require
+any range storage on hosts. The HTFS file system encodes
+the so-called secondary NameNote, which misleads some people into thinking
+that the primary NameNote goes offline, the secondary will take over. In fact, the secondary NameNote regularly
+connects to the primary NameNote and builds snapshots of the primary's
+NameNotes, the rapture information, and remembers which system saves to
+the local and the remote directories. About every one of the Hadoop based system
+sits some version of a MapReduce engine. As you will see later on, there is additional engines that have
+been developed in the meantime, however, the core of every system still
+delivers a MapReduce as an engine. And the MapReduce, similarly to the HDFS, has different ways to submit jobs and
+track kinds of jobs we have submitted. The typical MapReduce engine will consist
+of a job tracker, to which client applications can submit MapReduce jobs,
+and this job tracker typically pushes work out to all the available
+task trackers, now it's in the cluster. Struggling to keep the word as
+close to the data as possible, as balanced as possible. So we've talked about this earlier, the map produce has done a complete
+overhaul in the Hadoop 0.23 version, and ever since we started
+talking about MapReduce 2.0, or often time you're going to see MRV2,
+for Map Reduce Version 2. This is then kind of turned
+into a new name called YARN. So the Apache Hadoop YARN is actually
+another subset of the Hadoop and part of the Apache software foundation,
+and it was introduced as a Hadoop 2.0. It basically separates the research
+management and the processes component. YARN was born as a need to enable a
+broader array of interaction patterns for data stored in HDFS beyond
+the MapReduce kind of framework. And the YARN basic architecture, the Hadoop 2.0 provides a more
+general processing platform, that is not constraining to this map and
+reduce kinds of processes. The fundamental idea behind
+the MapReduce 2.0 is to split up two major functionalities of the job
+tracker, resource management, and the job scheduling and monitoring,
+and to do two separate units. The idea is to have a global
+resource manager, and per application master manager. I'm not going to go into
+too much details about it, because Matt is covering
+in our next module. So what is Yarn? Yarn enhances the power of
+the Hadoop compute cluster, without being limited by the map
+produce kind of framework. It's scalability's great. The processing power and
+data centers continue to grow quickly, because the YARN research manager
+focuses exclusively on scheduling. He can manage those very large
+clusters quite quickly and easily. Then we talk about the compatibility. YARN is completely compatible
+with the MapReduce. Existing MapReduce application
+end users can run on top of the Yarn without disrupting
+any of their existing processes. It does have a Improved
+cluster utilization as well. The resource manager is a pure schedule or
+they just optimize this cluster utilization according to the criteria
+such as capacity, guarantees, fairness, how to be fair, maybe different SLA's or
+service level agreements. And unlike before, there's no named
+map and there's no reduce slots, so it helps us utilize this
+cluster in better ways. It supports other work flows other than
+just map reduce as I said earlier, we're not stuck with the mapping and
+reducing. Now we can bring in additional programming
+models, such as graph process or iterative modeling, and now it's possible
+to process the data in your base. This is especially useful when we talk
+about machine learning applications, which I love. So I am excited about this, and we're going to talk more about that in
+one of our classes coming down the road. Yarn allows multiple access engines,
+either open source or proprietary, to use Hadoop as a common standard for either
+batch or interactive processing, and even real time engines that can simultaneous
+acts as a lot of different data, so you can put streaming kind of applications on
+top of YARN inside a Hadoop architecture, and seamlessly work and
+communicate between these environments.
