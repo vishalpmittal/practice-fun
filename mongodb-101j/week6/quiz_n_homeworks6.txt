@@ -1,0 +1,246 @@
+======================================
+Network Errors
+======================================
+What are the reasons why an application may receive an error back even if the write was successful. Check all that apply.
+
+True: The network TCP network connection between the application and the server was reset between the time of the write and the time of the getLastError call.
+True: The MongoDB server terminates between the write and the getLastError call.
+True: The network fails between the time of the write and the time of the getLastError call
+False: The write violates a primary key constraint on the collection and must be rolled back.
+
+======================================
+Introduction to Replication
+======================================
+What is the minimum original number of nodes needed to assure the election of a new Primary if a node goes down?
+3
+
+======================================
+Replica Set Elections
+======================================
+Which types of nodes can participate in elections of a new primary?
+True: Regular replica set members
+True: Hidden Members
+True: Arbiters
+False: Lawyers
+
+======================================
+Write Consistency
+======================================
+During the time when failover is occurring, can writes successfully complete?
+No
+
+======================================
+Creating a Replica Set
+======================================
+Which command, when issued from the mongo shell, will allow you to read from a secondary?
+
+db.isMaster()
+db.adminCommand({'readPreference':'Secondary'})
+rs.setStatus("Primary")
+True: rs.slaveOk()
+
+======================================
+Replica Set Internals
+======================================
+In the video how long did it take to elect a new primary?
+
+True: About three seconds
+Above 10 seconds
+About 30 seconds
+About a minute
+
+======================================
+Failover and Rollback
+======================================
+What happens if a node comes back up as a secondary after a period of being offline and the oplog has looped on the primary?
+The entire dataset will be copied from the primary
+
+======================================
+Connecting to a Replica Set from Java
+======================================
+If you leave a replica set node out of the seedlist within the driver, what will happen?
+
+The missing node will not be used by the application.
+True: The missing node will be discovered as long as you list at least one valid node.
+This missing node will be used for reads, but not for writes.
+The missing node will be used for writes, but not for reads.
+
+======================================
+Bad Things Happen to Good Nodes
+======================================
+If you use the MongoClient constructor that takes a seed list of replica set members, are you guaranteed to avoid application exceptions during a primary failover?
+
+No
+
+======================================
+Introduction to Sharding
+======================================
+If the shard key is not include in a find operation and there are 3 shards, each one a replica set with 3 nodes, how many nodes will see the find operation?
+
+3
+
+======================================
+Building a Sharded Environment
+======================================
+If you want to build a production system with two shards, each one a replica set with three nodes, how may mongod processes must you start?
+
+9 ( 2 shards has 6 nodes. 3 config nodes )
+
+======================================
+Implications of Sharding
+======================================
+Suppose you wanted to shard the zip code collection after importing it. You want to shard on zip code. What index would be required to allow MongoDB to shard on zip code?
+
+True: An index on zip or a non-multi-key index that starts with zip.
+No index is required to use zip as the shard key.
+A unique index on the zip code.
+Any index that that includes the zip code.
+
+======================================
+Sharding + Replication
+======================================
+Suppose you want to run multiple mongos routers for redundancy. What level of the stack will assure that you can failover to a different mongos from within your application?
+
+mongod
+mongos
+True: drivers
+sharding config servers
+
+======================================
+Choosing a Shard Key
+======================================
+You are building a facebook competitor called footbook that will be a mobile social network of feet. You have decided that your primary data structure for posts to the wall will look like this:
+{'username':'toeguy',
+     'posttime':ISODate("2012-12-02T23:12:23Z"),
+     "randomthought": "I am looking at my feet right now",
+     'visible_to':['friends','family', 'walkers']}
+Thinking about the tradeoffs of shard key selection, select the true statements below.
+
+True: Choosing posttime as the shard key will cause hotspotting as time progresses.
+True: Choosing username as the shard key will distribute posts to the wall well across the shards.
+True: Choosing visible_to as a shard key is illegal.
+Choosing posttime as the shard key suffers from low cardinality.
+
+======================================
+HW 6.1
+======================================
+Which of the following statements are true about MongoDB replication. Check all that apply.
+
+true --> The minimum sensible number of voting nodes to a replica set is three.
+MongoDB replication is synchronous.
+The Mongo shell is capable of attaching to a replica set and automatically failing over.
+By default, using the new MongoClient connection class, w=1 and j=1.
+true --> The oplog utilizes a capped collection.
+
+======================================
+HW 6.2
+======================================
+Let's suppose you have a five member replica set and want to assure that writes are committed to the journal and are acknowledged by at least 3 nodes before you proceed forward. What would be the appropriate settings for w and j?
+
+w=1, j=1
+true --> w="majority", j=1
+w=3, j=0
+w=5, j=1
+w=1,j=3
+
+======================================
+HW 6.3
+======================================
+Which of the following statements are true about choosing and using a shard key:
+
+The shard key must be unique
+true --> There must be a index on the collection that starts with the shard key.
+true --> Mongo can not enforce unique indexes on a sharded collection other than the shard key itself.
+true --> Any update that does not contain the shard key will be sent to all shards.
+You can change the shard key on a collection if you desire.
+
+======================================
+HW 6.4
+======================================
+You have a sharded system with three shards and have sharded the collections "grades" in the "test" database across those shards. The output of sh.status() when connected to mongos looks like this:
+-----------------
+mongos> sh.status()
+--- Sharding Status --- 
+  sharding version: { "_id" : 1, "version" : 3 }
+  shards:
+ {  "_id" : "s0",  "host" : "s0/localhost:37017,localhost:37018,localhost:37019" }
+ {  "_id" : "s1",  "host" : "s1/localhost:47017,localhost:47018,localhost:47019" }
+ {  "_id" : "s2",  "host" : "s2/localhost:57017,localhost:57018,localhost:57019" }
+  databases:
+ {  "_id" : "admin",  "partitioned" : false,  "primary" : "config" }
+ {  "_id" : "test",  "partitioned" : true,  "primary" : "s0" }
+  test.grades chunks:
+    s1 4
+    s0 4
+    s2 4
+   { "student_id" : { $minKey : 1 } } -->> { "student_id" : 0 } on : s1 Timestamp(12000, 0) 
+   { "student_id" : 0 } -->> { "student_id" : 2640 } on : s0 Timestamp(11000, 1) 
+   { "student_id" : 2640 } -->> { "student_id" : 91918 } on : s1 Timestamp(10000, 1) 
+   { "student_id" : 91918 } -->> { "student_id" : 176201 } on : s0 Timestamp(4000, 2) 
+   { "student_id" : 176201 } -->> { "student_id" : 256639 } on : s2 Timestamp(12000, 1) 
+   { "student_id" : 256639 } -->> { "student_id" : 344351 } on : s2 Timestamp(6000, 2) 
+   { "student_id" : 344351 } -->> { "student_id" : 424983 } on : s0 Timestamp(7000, 2) 
+   { "student_id" : 424983 } -->> { "student_id" : 509266 } on : s1 Timestamp(8000, 2) 
+   { "student_id" : 509266 } -->> { "student_id" : 596849 } on : s1 Timestamp(9000, 2) 
+   { "student_id" : 596849 } -->> { "student_id" : 772260 } on : s0 Timestamp(10000, 2) 
+   { "student_id" : 772260 } -->> { "student_id" : 945802 } on : s2 Timestamp(11000, 2) 
+   { "student_id" : 945802 } -->> { "student_id" : { $maxKey : 1 } } on : s2 Timestamp(11000, 3) 
+-----------------
+
+If you ran the query
+> use test
+> db.grades.find({'student_id':530289})
+Which shards would be involved in answering the query?
+
+s0,s1 and s2
+s0
+true --> s1
+s2
+
+======================================
+HW 6.5
+======================================
+
+HOMEWORK: HOMEWORK 6.5 (MONGOPROC)
+
+In this homework you will build a small replica set on your own computer. We will check that it works with MongoProc.
+
+Create three directories for the three mongod processes. On unix, this could be done as follows:
+---------------
+mkdir -p /data/rs1 /data/rs2 /data/rs3
+---------------
+or on Windows:
+---------------
+mkdir \data\rs1 \data\rs2 \data\rs3
+---------------
+
+Now start three mongo instances as follows. Note that are three commands. The browser is probably wrapping them visually.
+Linux and Mac users:
+---------------
+mongod --replSet m101 --logpath "1.log" --dbpath /data/rs1 --port 27017 --smallfiles --oplogSize 64 --fork
+mongod --replSet m101 --logpath "2.log" --dbpath /data/rs2 --port 27018 --smallfiles --oplogSize 64 --fork
+mongod --replSet m101 --logpath "3.log" --dbpath /data/rs3 --port 27019 --smallfiles --oplogSize 64 --fork
+---------------
+Windows users:
+---------------
+start mongod --replSet m101 --logpath 1.log --dbpath \data\rs1 --port 27017 --smallfiles --oplogSize 64
+start mongod --replSet m101 --logpath 2.log --dbpath \data\rs2 --port 27018 --smallfiles --oplogSize 64
+start mongod --replSet m101 --logpath 3.log --dbpath \data\rs3 --port 27019 --smallfiles --oplogSize 64
+---------------
+
+Now connect to a mongo shell and make sure it comes up.
+mongo --port 27017
+Now you will create the replica set. Type the following commands into the mongo shell:
+---------------
+config = { _id: "m101", members:[
+          { _id : 0, host : "localhost:27017"},
+          { _id : 1, host : "localhost:27018"},
+          { _id : 2, host : "localhost:27019"} ]
+};
+rs.initiate(config);
+---------------
+At this point, the replica set should be coming up. You can type rs.status() to see the state of replication.
+
+Now go to MongoProc to ensure that it works. Make sure to configure MongoProc to have mongod1 set to the hostname and port of one of the replica set members.
+If you need to reinstall it, click here to download mongoProc.
+You can also look back to the lesson on using mongoProc from chapter 2 if you have trouble using it.

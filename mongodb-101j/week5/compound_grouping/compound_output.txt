@@ -1,0 +1,9 @@
+> db.products.aggregate([ {$group:  {_id: { "maker" : "$manufacturer",   "category" : "$category"}, num_products:{$sum:1} } } ] )
+{ "_id" : { "maker" : "Amazon", "category" : "Tablets" }, "num_products" : 2 }
+{ "_id" : { "maker" : "Apple", "category" : "Laptops" }, "num_products" : 1 }
+{ "_id" : { "maker" : "Google", "category" : "Tablets" }, "num_products" : 1 }
+{ "_id" : { "maker" : "Sony", "category" : "Laptops" }, "num_products" : 1 }
+{ "_id" : { "maker" : "Samsung", "category" : "Tablets" }, "num_products" : 1 }
+{ "_id" : { "maker" : "Samsung", "category" : "Cell Phones" }, "num_products" : 1 }
+{ "_id" : { "maker" : "Apple", "category" : "Tablets" }, "num_products" : 3 }
+>

@@ -1,0 +1,177 @@
+vmittal:temp vmittal$ git clone -b master https://github.com/vishalpmittal/knightGame
+Cloning into 'knightGame'...
+remote: Counting objects: 45, done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 45 (delta 3), reused 42 (delta 3)
+Unpacking objects: 100% (45/45), done.
+Checking connectivity... done.
+
+vmittal:temp vmittal$ cd knightGame/
+
+vmittal:knightGame vmittal$ mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ChessGame 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ChessGame ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/vmittal/hwx/temp/knightGame/src/main/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ ChessGame ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ChessGame ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/vmittal/hwx/temp/knightGame/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ ChessGame ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ChessGame ---
+[INFO] Surefire report directory: /Users/vmittal/hwx/temp/knightGame/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.vpm.game.GameTest
+--------------------------------
+Starting Game with base location :(1,1)
+Knight at: (1,1)
+Knight can move to : [(3,2), (2,3)]
+Knight at: (3,2)
+Knight can move to : [(1,3), (1,1)]
+Knight at: (1,3)
+Knight can move to : [(3,2), (2,1)]
+Knight at: (2,1)
+Knight can move to : [(3,3), (1,3)]
+Knight at end: (3,3)
+Turns :4
+--------------------------------
+--------------------------------
+Starting Game with base location :(1,2)
+Knight at: (1,2)
+Knight can move to : [(3,3), (3,1)]
+Knight at end: (3,3)
+Turns :1
+--------------------------------
+--------------------------------
+Starting Game with base location :(1,3)
+Knight at: (1,3)
+Knight can move to : [(3,2), (2,1)]
+Knight at: (3,2)
+Knight can move to : [(1,3), (1,1)]
+Knight at: (1,1)
+Knight can move to : [(3,2), (2,3)]
+Knight at: (2,3)
+Knight can move to : [(3,1), (1,1)]
+Knight at: (3,1)
+Knight can move to : [(1,2), (2,3)]
+Knight at: (1,2)
+Knight can move to : [(3,3), (3,1)]
+Knight at end: (3,3)
+Turns :6
+--------------------------------
+--------------------------------
+Starting Game with base location :(2,1)
+Knight at: (2,1)
+Knight can move to : [(3,3), (1,3)]
+Knight at end: (3,3)
+Turns :1
+--------------------------------
+--------------------------------
+Starting Game with base location :(2,3)
+Knight at: (2,3)
+Knight can move to : [(3,1), (1,1)]
+Knight at: (3,1)
+Knight can move to : [(1,2), (2,3)]
+Knight at: (1,2)
+Knight can move to : [(3,3), (3,1)]
+Knight at end: (3,3)
+Turns :3
+--------------------------------
+--------------------------------
+Starting Game with base location :(3,1)
+Knight at: (3,1)
+Knight can move to : [(1,2), (2,3)]
+Knight at: (1,2)
+Knight can move to : [(3,3), (3,1)]
+Knight at end: (3,3)
+Turns :2
+--------------------------------
+--------------------------------
+Starting Game with base location :(3,2)
+Knight at: (3,2)
+Knight can move to : [(1,3), (1,1)]
+Knight at: (1,3)
+Knight can move to : [(3,2), (2,1)]
+Knight at: (2,1)
+Knight can move to : [(3,3), (1,3)]
+Knight at end: (3,3)
+Turns :3
+--------------------------------
+--------------------------------
+Starting Game with base location :(3,3)
+Knight at: (3,3)
+Knight at end: (3,3)
+Turns :0
+--------------------------------
+--------------------------------
+Starting Game with base location :(2,2)
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ ChessGame ---
+[INFO] Building jar: /Users/vmittal/hwx/temp/knightGame/target/ChessGame-1.0-SNAPSHOT.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ ChessGame ---
+[INFO] Installing /Users/vmittal/hwx/temp/knightGame/target/ChessGame-1.0-SNAPSHOT.jar to /Users/vmittal/.m2/repository/org/vpm/game/ChessGame/1.0-SNAPSHOT/ChessGame-1.0-SNAPSHOT.jar
+[INFO] Installing /Users/vmittal/hwx/temp/knightGame/pom.xml to /Users/vmittal/.m2/repository/org/vpm/game/ChessGame/1.0-SNAPSHOT/ChessGame-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.612 s
+[INFO] Finished at: 2014-06-15T01:51:53-08:00
+[INFO] Final Memory: 5M/81M
+[INFO] ------------------------------------------------------------------------
+
+
+vmittal:knightGame vmittal$ mvn exec:java -Dexec.mainClass="org.vpm.game.ChessGame" -Dexec.args="1 1"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ChessGame 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.3.1:java (default-cli) @ ChessGame ---
+[WARNING] Warning: killAfter is now deprecated. Do you need it ? Please comment on MEXEC-6.
+--------------------------------
+Starting Game with base location :(1,1)
+Knight at: (1,1)
+Knight can move to : [(3,2), (2,3)]
+Knight at: (3,2)
+Knight can move to : [(1,3), (1,1)]
+Knight at: (1,3)
+Knight can move to : [(3,2), (2,1)]
+Knight at: (2,1)
+Knight can move to : [(3,3), (1,3)]
+Knight at end: (3,3)
+Turns :4
+--------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.517 s
+[INFO] Finished at: 2014-06-15T02:13:06-08:00
+[INFO] Final Memory: 8M/81M
+[INFO] ------------------------------------------------------------------------
+vmittal:knightGame vmittal$

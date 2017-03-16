@@ -1,0 +1,32 @@
+Question
+================================================
+FINAL: QUESTION 8
+
+Supposed we executed the following Java code. How many animals will be inserted into the "animals" collection?
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
+public class InsertTest { 
+        public static void main(String[] args) {
+            MongoClient c =  new MongoClient();
+            MongoDatabase db = c.getDatabase("test");
+            MongoCollection<Document> animals = db.getCollection("animals");
+
+           Document animal = new Document("animal", "monkey");
+
+            animals.insertOne(animal);
+            animal.remove("animal");
+            animal.append("animal", "cat");
+            animals.insertOne(animal);
+            animal.remove("animal");
+            animal.append("animal", "lion");
+            animals.insertOne(animal);
+        }
+}
+
+Answer
+================================================
+When you run the above , then you will see an error is thrown that there is a duplicate ID , as we are trying to add , documents again and again on the same Id as we are modifying the same document . So the only one document will be inserted in the collection which will be the first insert as  {_id::xxx,"animal","monkey"} then when again ("animal","cat") is tried to push then the id is same so , it throws duplicate key . So answer is that only one document gets inserted.

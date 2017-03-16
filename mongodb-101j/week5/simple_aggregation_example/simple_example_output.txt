@@ -1,0 +1,4 @@
+> db.products.aggregate([{$group:{"_id":"$category","num_products":{"$sum":1}}}])
+{ "_id" : "Laptops", "num_products" : 2 }
+{ "_id" : "Cell Phones", "num_products" : 1 }
+{ "_id" : "Tablets", "num_products" : 7 }

@@ -1,0 +1,17 @@
+HOMEWORK 1.2
+
+Which of the following are valid JSON documents? Please choose all that apply.
+
+
+True: { "title" : "Star Wars", "quotes" : [ "Use the Force", "These are not the droids you are looking for" ], "director" : "George Lucas" }
+True: {}
+False: { "city" = "New York", "population" = 7999034, "boroughs" = ["queens", "manhattan", "staten island", "the bronx", "brooklyn"] }
+False: { "name" : "Fred Flinstone" ; "occupation": "Miner" ; "wife" : "Wilma" }
+True: { "a" : 1, "b" : { "b" : 1, "c" : "foo", "d" : "bar", "e" : [1, 2, 4] } }
+
+
+There are no equal signs, nor are there semicolons in JSON*. It uses colons and commas, respectively.
+
+Everything else here is valid.
+
+* Unless, of course, they are contained within a string.
