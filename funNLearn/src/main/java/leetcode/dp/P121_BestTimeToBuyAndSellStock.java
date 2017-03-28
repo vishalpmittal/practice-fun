@@ -8,7 +8,7 @@
  * Hint: Find the maximum difference between any nth number and n+mth number
  */
 
-package leetcode;
+package leetcode.dp;
 
 import static org.junit.Assert.assertTrue;
 
