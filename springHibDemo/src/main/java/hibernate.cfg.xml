@@ -34,7 +34,7 @@
 		<!-- <property name="hbm2ddl.auto">create</property> -->
 
 		<!-- Names the annotated entity class -->
-		<mapping class="dto.UserDetails_V4" />
+		<mapping class="dto.UserDetails_V6" />
 
 	</session-factory>
 

@@ -6,23 +6,23 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import dto.Address_V5;
-import dto.UserDetails_V5;
+import dto.Address_V6;
+import dto.UserDetails_V6;
 
-public class HibernateTest_V5 {
+public class HibernateTest_V6 {
 
     public static void main(String[] args) {
-        UserDetails_V5 user1 = new UserDetails_V5();
+        UserDetails_V6 user1 = new UserDetails_V6();
         user1.setUserName("User1");
         user1.setJoinedDate(new Date());
 
-        Address_V5 add1 = new Address_V5();
+        Address_V6 add1 = new Address_V6();
         add1.setStreet("100 1st Street");
         add1.setCity("San Jose");
         add1.setState("CA");
         add1.setPincode("12345");
 
-        Address_V5 add2 = new Address_V5();
+        Address_V6 add2 = new Address_V6();
         add2.setStreet("200 2nd Street");
         add2.setCity("San Jose");
         add2.setState("CA");
