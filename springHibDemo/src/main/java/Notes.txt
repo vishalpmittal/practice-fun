@@ -20,7 +20,7 @@
 	-   Although hibernate knows that the vehicle object has a reference in user object
 	    it does not saves it. As both are entities and hibernate wants user to be in control
 	    off entities. 
-	-	but user can override and ask hibernate to auto save when she uses cascade with one to many
+	-	but user can override and ask hibernate to auto save when she uses c	ascade with one to many
 	-	Types
 		-	PERSIST : cascade while saving the object
 		-	REMOVE : cascade while delete the object
@@ -28,3 +28,26 @@
 		-	DETATCH :
 		-	MERGE : 
 		-	REFRESH : 
+
+-	Inheritance : "Single class" strategy
+	-	V92
+	-	For all the subclasses marked with @Entity there will be only one table created with name of 
+		superclass. Whatever are the separate fields in those classes will be added as fields in the table
+		and values will be entered based on the type of object
+		
+-	Inheritance With "Table Per Class" Strategy
+	-	V93
+	-	Better and normalized version
+	-   Each class has a complete table of it's own.
+	-	Subclass tables will have all the fields in table, including the superclass fields.
+	-	so all the superclass fields will be duplicated in each subclass table.
+	
+-	Inheritance with "JOINED" strategy
+	-	V93 change: 
+		Vehicle_V93 annotation to @Inheritance(strategy = InheritanceType.JOINED)
+	-	Here all the super class fields are stored in the super class table
+	-	all the individual fields are stored in the sub class tables
+	-	So it is normalized as well as with no duplication
+	
+	
+	

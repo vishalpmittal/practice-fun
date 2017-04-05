@@ -17,7 +17,7 @@ public class HibernateTest_V91 {
         vehicle1.setVehicleName("User1s car");
 
         Vehicle_V91 vehicle2 = new Vehicle_V91();
-        vehicle1.setVehicleName("User1s Motorcycle");
+        vehicle2.setVehicleName("User1s Motorcycle");
 
         user1.addVehicle(vehicle1);
         user1.addVehicle(vehicle2);
