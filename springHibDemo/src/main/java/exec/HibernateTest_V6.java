@@ -40,7 +40,36 @@ public class HibernateTest_V6 {
         // commit the transaction
         session.getTransaction().commit();
         session.close();
-        sessionFactory.close();
 
+        /* -----------------------------------------------------------------
+         * Get the user data back using hibernate
+         * ----------------------------------------------------------------- */
+        UserDetails_V6 user2 = null;
+        session = sessionFactory.openSession();
+
+        // after this command hibernate creates a proxy user object (a proxy user subclass of UserDetails_V6
+        // is created internally by hibernate ) and does not grab the whole object
+        user2 = (UserDetails_V6) session.get(UserDetails_V6.class, 1);
+
+        // at this command hibernate goes and grab only the data that is needed
+        System.out.println(user2.getListOfAddresses().size());
+        session.close();
+
+        /* -----------------------------------------------------------------
+         * fetching type
+         * ----------------------------------------------------------------- */
+        UserDetails_V6 user3 = null;
+        session = sessionFactory.openSession();
+        user3 = (UserDetails_V6) session.get(UserDetails_V6.class, 1);
+
+        session.close();
+
+        // This will fail as at this point only proxy object was present and the session is already closed
+        System.out.println(user3.getListOfAddresses().size());
+
+        // to Make it work add following at the top of listOfAddresses in UserDetails_v6
+        // @ElementCollection(fetch=FetchType.EAGER)
+
+        sessionFactory.close();
     }
 }

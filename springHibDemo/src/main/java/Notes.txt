@@ -1,0 +1,30 @@
+
+-  Gracefully handle/ignore when an object is not found
+	----------------------
+	@ManyToOne
+	@NotFound(action=NotFoundAction.IGNORE)
+	private UserDetails user
+	----------------------
+	
+-  Hibernate Collections 
+	Hibernate uses one of the following semantics in the background to maintain the collections
+	-  Bag Semantic - List / ArrayList
+	-  Bag semantic with ID - List / ArrayList
+	-  List semantic -  List / ArrayList
+	   List semantic is ordered while bag is not
+	-  Set semantic - Set
+	-  Map semantic - Map
+	
+-	Cascading
+	-	in V91 if user has 100 vehicles she has to save all one by one. 
+	-   Although hibernate knows that the vehicle object has a reference in user object
+	    it does not saves it. As both are entities and hibernate wants user to be in control
+	    off entities. 
+	-	but user can override and ask hibernate to auto save when she uses cascade with one to many
+	-	Types
+		-	PERSIST : cascade while saving the object
+		-	REMOVE : cascade while delete the object
+		-	ALL :
+		-	DETATCH :
+		-	MERGE : 
+		-	REFRESH : 

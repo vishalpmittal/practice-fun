@@ -8,6 +8,7 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +34,9 @@ public class UserDetails_V6 {
     @Column(name = "USER_NAME")
     private String userName;
 
-    @ElementCollection
+    /* FetchType=EAGER grabs this data at proxy object creation, so it is accessible
+     * even if the session is closed */
+    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "USER_ADDRESS", joinColumns = @JoinColumn(name = "USER_ID"))
 
     /* Hibernate specific params
