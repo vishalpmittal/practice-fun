@@ -29,13 +29,13 @@
 
 		<!-- Keeps the existing schema and does not recreate. Just update the existing 
 			one -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 
 		<!-- Drop and re-create the database schema on startup -->
 		<!-- <property name="hbm2ddl.auto">create</property> -->
 
 		<!-- Names the annotated entity class -->
-		<mapping class="dto.UserDetails_V001" />
+		<mapping class="dto.UserDetails_V003" />
 	</session-factory>
 
 </hibernate-configuration>

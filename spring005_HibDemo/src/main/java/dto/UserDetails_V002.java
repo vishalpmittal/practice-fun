@@ -6,8 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.SelectBeforeUpdate;
+
 @Entity(name = "USER_DETAILS")
-public class UserDetails_V001 {
+@SelectBeforeUpdate(value = true)
+public class UserDetails_V002 {
 
     @Id
     @Column(name = "USER_ID")

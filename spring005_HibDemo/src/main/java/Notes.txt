@@ -2,4 +2,19 @@
 -   V001
 	-    CRUD Operations
 
--	V002	
+-	Object states
+	-	Transient Objects : object before save
+	-	Persistent Objects : object after save (session.save(obj);)
+	-	Detached Objects : object after session.close()
+	
+-	V002
+	Persisting Detached Objects
+	
+-	HQL, V003
+	-	Select and Pagination
+	-	Understanding Parameter Binding and SQL Injection
+	-	Named Queries
+	-	Named Native Queries (Full sql statement)
+	-	Criteria APIs
+	-	Restrictions
+	-	Projections

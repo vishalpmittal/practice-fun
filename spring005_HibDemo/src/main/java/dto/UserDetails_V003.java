@@ -5,10 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQuery;
 
 @Entity(name = "USER_DETAILS")
-public class UserDetails_V001 {
-
+@NamedQuery(name = "userDetails.byId", query = "from USER_DETAILS where userId = :userId")
+@NamedNativeQuery(name = "userDetails.byName", query = "Select * from USER_DETAILS where USER_NAME = :userName", resultClass = UserDetails_V003.class)
+public class UserDetails_V003 {
     @Id
     @Column(name = "USER_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,6 +34,11 @@ public class UserDetails_V001 {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDetails_V003 [userId=" + userId + ", userName=" + userName + "]";
     }
 
 }
