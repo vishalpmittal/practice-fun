@@ -1,3 +1,5 @@
+Hibernate APIs and documentation link
+https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html#mapping-database-generated-value-example
 
 -   V001
 	-    CRUD Operations
@@ -18,3 +20,23 @@
 	-	Criteria APIs
 	-	Restrictions
 	-	Projections
+
+-	V004
+	-	Cache-ing
+	-	First Level Cache - session level (automatically provided by hibernate)
+	-	Second level cache
+		-	Across sessions in an application
+		-	Across applications
+		-	Across Clusters
+		
+	-	Steps to enable second level cache
+		-	include dependancy "hibernate-ehcache" in maven
+		-	cache provider class in hibernate.cfg.xml
+		-   enable use_second_level_cahe in hibernate.cfg.xml
+		-	make userdetails class cachable
+			@Cacheable
+		-	Set strategy
+			@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)   
+			
+			Other values: NONE, NONSTRICT_READ_WRITE, READ_ONLY, READ_WRITE, TRANSACTIONAL
+		

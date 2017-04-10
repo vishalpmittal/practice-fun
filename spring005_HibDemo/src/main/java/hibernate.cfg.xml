@@ -22,7 +22,12 @@
 		<property name="dialect">org.hibernate.dialect.ProgressDialect</property>
 
 		<!-- Disable the second-level cache -->
-		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.use_query_cache">true</property>
+		<property name="cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property>
+		<property name="hibernate.cache.region.factory_class">
+			org.hibernate.cache.ehcache.EhCacheRegionFactory
+		</property>
 
 		<!-- Echo all executed SQL to stdout -->
 		<property name="show_sql">true</property>
@@ -35,7 +40,7 @@
 		<!-- <property name="hbm2ddl.auto">create</property> -->
 
 		<!-- Names the annotated entity class -->
-		<mapping class="dto.UserDetails_V003" />
+		<mapping class="dto.UserDetails_V004" />
 	</session-factory>
 
 </hibernate-configuration>
