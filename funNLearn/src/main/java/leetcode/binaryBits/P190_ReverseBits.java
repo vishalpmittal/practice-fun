@@ -25,9 +25,9 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class P190_ReverseBits {
-	/*
-	 * ------------------------------------------- for all bits get one at a
-	 * time and then shift -------------------------------------------
+	/*------------------------------------------- 
+	 * for all bits get one at a time and then shift 
+	 * -------------------------------------------
 	 */
 	public static int reverseBits_1(int n) {
 		int result = 0;

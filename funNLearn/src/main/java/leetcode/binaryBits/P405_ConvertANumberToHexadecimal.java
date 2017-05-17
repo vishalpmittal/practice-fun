@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.binaryBits;
 
 /** ---------------------------------------------
  * Given an integer, write an algorithm to convert it to hexadecimal. 

@@ -10,7 +10,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.dp;
 
 import static org.junit.Assert.assertTrue;
 

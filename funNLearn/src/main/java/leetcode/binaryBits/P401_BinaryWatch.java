@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.binaryBits;
 
 /** ---------------------------------------------
  * A binary watch has 4 LEDs on the top which represent the hours (0-11), 
