@@ -1,92 +1,111 @@
 package utils;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
 import java.util.Properties;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.BodyPart;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVRecord;
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.MultiPartEmail;
 
 public class EmailWithAttachment {
-    public static void main(String[] args) {
-        // Recipient's email ID needs to be mentioned.
-        String to = "vishalpmittal@gmail.com";
+    private static Properties props = new Properties();
 
-        // Sender's email ID needs to be mentioned
-        String from = "poorvavm@gmail.com";
+    static void readProperties(String filePath) {
+        InputStream input = null;
+        try {
+            input = new FileInputStream(filePath);
 
-        final String username = "poorvavm";// change accordingly
-        final String password = "RSPSvpm#193";// change accordingly
-
-        // Assuming you are sending email through relay.jangosmtp.net
-        String host = "relay.jangosmtp.net";
-
-        Properties props = new Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", host);
-        props.put("mail.smtp.port", "25");
-
-        // Get the Session object.
-        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(username, password);
+            // load a properties file
+            props.load(input);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (input != null) {
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-        });
+        }
+    }
+
+    static void sendEmail(String toFName, String toLName, String toEmail) {
+        System.out.print("Sending email to " + toFName + " " + toLName + " @" + toEmail + " ");
+        System.out.print(".");
+
+        // Create the email message
+        MultiPartEmail email = new MultiPartEmail();
+        email.setHostName(props.getProperty("emailServer"));
+        email.setSmtpPort(Integer.parseInt(props.getProperty("emailServerPort")));
+        email.setAuthenticator(new DefaultAuthenticator(props.getProperty("userName"), props.getProperty("password")));
+        email.setSSL(true);
+        System.out.print(".");
+
+        // Create the attachment
+        EmailAttachment attachment = new EmailAttachment();
+        attachment.setPath(props.getProperty("attachFile"));
+        attachment.setDisposition(EmailAttachment.ATTACHMENT);
+        attachment.setDescription(props.getProperty("attachDesc"));
+        attachment.setName(props.getProperty("attachDesc"));
+        System.out.print(".");
 
         try {
-            // Create a default MimeMessage object.
-            Message message = new MimeMessage(session);
+            email.setFrom(props.getProperty("email"), props.getProperty("name"));
+            email.addTo(toEmail, toFName + " " + toLName);
 
-            // Set From: header field of the header.
-            message.setFrom(new InternetAddress(from));
+            email.setSubject(props.getProperty("emailSubject"));
+            email.setMsg(props.getProperty("emailContent").replaceFirst("TODO_RECEIVER", toFName));
 
-            // Set To: header field of the header.
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+            System.out.print(".");
+            // add the attachment
+            email.attach(attachment);
 
-            // Set Subject: header field
-            message.setSubject("Testing Subject");
+            System.out.print(".");
+            // send the email
+            email.send();
 
-            // Create the message part
-            BodyPart messageBodyPart = new MimeBodyPart();
-
-            // Now set the actual message
-            messageBodyPart.setText("This is message body");
-
-            // Create a multipar message
-            Multipart multipart = new MimeMultipart();
-
-            // Set text message part
-            multipart.addBodyPart(messageBodyPart);
-
-            // Part two is attachment
-            messageBodyPart = new MimeBodyPart();
-            String filename = "/desk/personal/poorva/Resume_PoorvaMittal.txt";
-            DataSource source = new FileDataSource(filename);
-            messageBodyPart.setDataHandler(new DataHandler(source));
-            messageBodyPart.setFileName(filename);
-            multipart.addBodyPart(messageBodyPart);
-
-            // Send the complete message parts
-            message.setContent(multipart);
-
-            // Send message
-            Transport.send(message);
-
-            System.out.println("Sent message successfully....");
-
-        } catch (MessagingException e) {
-            throw new RuntimeException(e);
+            System.out.println("done");
+        } catch (EmailException e) {
+            e.printStackTrace();
         }
+    }
+
+    static void sendEmails(String csvFilePath) {
+        Reader in = null;
+        Iterable<CSVRecord> records = null;
+        try {
+            in = new FileReader(csvFilePath);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            records = CSVFormat.EXCEL.withHeader().parse(in);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (CSVRecord record : records) {
+            String firstName = record.get("FirstName").trim();
+            firstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
+            String lastName = record.get("LastName").trim();
+            lastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
+            String email = record.get("EmailID").trim();
+            // System.out.println(firstName + lastName + email);
+            sendEmail(firstName, lastName, email);
+        }
+    }
+
+    public static void main(String[] args) {
+        readProperties("src/main/java/utils/EmailWithAttachment.properties");
+        // sendEmail("xyz", "Ml", "xyzml@gmail.com");
+        sendEmails(props.getProperty("toEmailsCSVFile"));
     }
 }
