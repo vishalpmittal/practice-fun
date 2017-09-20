@@ -1,18 +1,29 @@
 {% extends 'vishmusic/base.html' %}
 
 {% block body %}
-    {% if all_albums %}
-    <h3>Here are your albums !</h3>
-    <ul>
-        {% for album in all_albums %}
-        <li>
-            <a href="{% url 'vishmusic:detail' album.id %}">
-                {{ album.album_title }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <h3>You don't have any albums yet..!!</h3>
-    {% endif %}
+
+<div class="panel-group">
+{% for album in all_albums_list %}
+
+    <div class="panel panel-default col-sm-offset-1 col-sm-3">
+        <div class="panel-heading">
+            <a href="{% url 'vishmusic:detail' album.id %}"> Album: {{ album.id }} </a>
+        </div>
+        <div class="panel-body">
+            <img src="{{ album.album_logo }}" alt="Smiley face" border="5" style="width: 200px;">
+            <hr>
+
+            <a href="{% url 'vishmusic:detail' album.id %}"> <h2>{{ album.album_title}} </h2> </a>
+
+            <h3>{{ album.artist}} </h3>
+
+
+        </div>
+    </div>
+
+
+
+{% endfor %}
+</div>
+
 {% endblock %}

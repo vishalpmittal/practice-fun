@@ -89,6 +89,14 @@ Django Cheatsheet
       python manage.py migrate
    ```
 
+-  MakeMigrations
+   ```
+   python manage.py makemigrations <app_name> --name <give_a_name_to_migration>
+   python manage.py migrate
+   python manage.py migrate <app_name> 0090                //revert to an older migration 0090
+   python manage.py migrate                                //Migrate all the way up to current
+   ```
+
 -  Database APIs n filters
    ```
       python manage.py shell
@@ -159,4 +167,3 @@ Django Cheatsheet
 
    Register Model for admin access
    -  in <app_folder> -> admin.py -> admin.site.register(Album)
-
