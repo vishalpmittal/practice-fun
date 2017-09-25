@@ -1,0 +1,55 @@
+================================
+Project Title: Numuno
+Project Author: Vishal Mittal
+================================
+
+1. Introduction
+---------------
+If you have to tell me what songs were most popular in the second week of March in 2016, there is no
+one place where you can go and find it. Off course you can google it and then match 10 results and
+give it to me somehow. But if I ask you about most popular mobile phones, cars, laptops, etc. and
+it can be any category during any period of time for a defined cost range. There is no such database
+that shows the current and past history of the popularity of any product in a particular category for
+a particular price point.
+
+For ex. if I have to buy a refrigerator and my budget is $600.00, there should be a website where I can
+check people's ratings for it. List of top 10 refrigerator in this area within price range 500 to 600.
+
+A counter argument can be we can do this currently as well on Amazon, Walmart and other websites. But you
+can just see what's current rating. They do not show the trend for any product, media or services.
+It is more like Yelp but not restaurant specific and also this can show for how long this particular
+item in the category has remained at certain place in the top 10.
+
+
+2. Expected List of Features
+----------------------------
+-  Gives you a list of top 10 current items in any category
+-  Gives you a list of top 10 current items in any time frame
+-  Gives you a list of top 10 current items in any price range
+-  Selecting an item can give you it's popularity plot
+-  Selecting a category gives user a stock market like plot
+-  User's can vote up any item
+-  User's can not vote up more than 5 items in 1 day
+-  User's can see items that they have liked any time
+-  User's can save items in their briefcase.
+
+These feature provides the end to end functionality for the product. and provides
+a good platform structure for more features to be supported in the future.
+
+3. Market Survey
+----------------
+-  Do a survey of the Web to find about five web sites that might have similar ideas as yours.
+   Yelp, Amazon, facebook, ebay, pinterest
+
+-  Briefly compare the features of these applications with your application idea.
+   All these websites provide what's current. But not one provides what's the past.
+   There is a record of data but none of them are putting it out there in a best fashion.
+   Also this data can be used further for data analysis in terms of product marketing/trends, and
+   competitive analysis.
+
+4. References
+-------------
+-  http://www.yelp.com
+-  http://www.facebook.com
+-  http://www.amazon.com
+-  http://www.pinterest.com
