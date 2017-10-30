@@ -33,3 +33,4 @@ Thumbs.db
 # Package Modules #
 ##################
 node_modules
+dist
