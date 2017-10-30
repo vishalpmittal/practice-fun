@@ -16,4 +16,12 @@ $(document).ready(function() {
     }
   });
 
+  $("#login-button").click(function() {
+    $('#loginModal').modal('show')
+  });
+
+  $("#reserveTable-button").click(function() {
+    $('#reservationModal').modal('show')
+  });
+
 });
