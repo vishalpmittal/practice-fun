@@ -28,3 +28,27 @@ under the current directory. add the location manually to path to have cli acces
 -  --save-dev vs. --save in npm install
 --save adds npm package as a dependency in package.json
 while --save-dev adds npm package as a dev dependency in package.json
+
+
+===================
+Angular
+===================
+-  Architecture
+   -  Modular
+   -  Component-based with templates
+   -  Services
+
+-  Module
+   Could contain a set of Components and services
+
+-  Components (views of angular)
+-  Services
+
+-  Decorator
+-  Directives
+-  Pipes
+-  Templates
+-  Routing
+
+-  Interpolation
+-  One way data binding
