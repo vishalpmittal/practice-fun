@@ -45,7 +45,13 @@ Angular
 -  Services
 
 -  Decorator
+
 -  Directives
+   -  A component is a special kind of directive which has it's own template
+   -  Predefined directives: eg: ngFor, ngIf, ngSwitch
+      -  Structural directives: helps us to alter DOM
+   -  Attribute directives:
+
 -  Pipes
 -  Templates
 -  Routing
