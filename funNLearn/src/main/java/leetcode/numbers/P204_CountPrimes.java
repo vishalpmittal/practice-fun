@@ -103,7 +103,7 @@
 * }
 * ----------------------------------
 */
-package leetcode;
+package leetcode.numbers;
 
 import static org.junit.Assert.assertTrue;
 

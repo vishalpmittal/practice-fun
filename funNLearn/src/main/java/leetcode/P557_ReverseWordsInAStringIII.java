@@ -22,14 +22,14 @@ public class P557_ReverseWordsInAStringIII {
         
         return null;
     }
-
-    public static boolean problem(int n) {
-        return problem_1(n);
-    }
+//
+//    public static boolean problem(int n) {
+////        return problem_1(n);
+//    }
 
     public static void main(String[] args) {
-        assertTrue("Test1", problem(94));
-        assertFalse("Test2", problem(97));
+//        assertTrue("Test1", problem(94));
+//        assertFalse("Test2", problem(97));
         System.out.println("All Tests passed");
     }
 }
