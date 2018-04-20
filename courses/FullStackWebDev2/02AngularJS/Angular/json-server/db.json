@@ -45,6 +45,12 @@
           "comment": "This is a great one",
           "rating": 4,
           "date": "2018-04-04T20:28:46.311Z"
+        },
+        {
+          "author": "Test Author",
+          "comment": "Test Comment",
+          "rating": 5,
+          "date": "2018-04-20T23:17:29.629Z"
         }
       ]
     },
