@@ -5,17 +5,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class RenameFiles {
-	private static String year="2013";
+	private static String year="2018";
 	private static String replace_title_tag_as_filename="false";
 	private static String replace_file_name_by_album_tag="false";
 	private static String[] str2rem = {"www.Songs.PK","songs","pk","Songs.PK","www","320Kbps","320kbps","128Kbps",
 		"128Kbps","Bollymucom","Bollym4u.com","2004","2005","2007","2008","2009","2010","2011","2012", "2013","mp3pk.com",
-		"Muskurahat","Dot","Com"};
+		"Muskurahat","Dot","Com", "Songs", "Hindi"};
 	
 	public static void main (String args[]){
-		String prop_file = "/Users/vishalmittal/Music/editor.properties";
+		String prop_file = "/Users/vishalm/Downloads/editor.properties";
 		
-		File dir = new File("/Users/vishalmittal/Music/HindiMovieSongs/"+year);
+//		File dir = new File("/Users/vishalmittal/Music/HindiMovieSongs/"+year);
+		File dir = new File("/Users/vishalm/Downloads/"+year);
 		
 		for (final File fileEntry : dir.listFiles()) {
 	    	if (fileEntry.isDirectory()){
