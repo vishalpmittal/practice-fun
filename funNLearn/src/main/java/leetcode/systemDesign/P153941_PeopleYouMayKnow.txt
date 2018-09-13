@@ -1,0 +1,20 @@
+===========
+Problem
+===========
+Design the "People You May Know" feature like on linkedin and FB, based on user data.
+
+===========
+Solution 1
+===========
+for a user A, consider all friends of A.
+Let us say {F_1, F_2, ..., F_n}.
+Let friends of F_i that are not friends of A be NF_i.
+
+Maintain a hashmap P containing the count of suggested friends for A with keys from NF_i s.
+Recommend top k from NFs based on their count in P.
+
+===========
+Solution 2
+===========
+In combination to Solution 1 
+list of users in persons phone contacts, email contacts, etc. 
