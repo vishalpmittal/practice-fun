@@ -1,0 +1,45 @@
+===========
+Problem
+===========
+Given large set of files, design a system to efficiently handle a query like:
+Find all files that have these words and doesn't have these words.
+
+Follow up optimization question:
+Can you make it efficient for queries that involve words which are common across most files (not all) and not frequently queried.
+
+===========
+Solution 1
+===========
+Elastic search is one of the solution to do solve this problem. When you read a file, you have to index the words there and add a link of that file.
+
+Here is a sudo code:
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+public class FileWordMapper {
+    static ConcurrentHashMap<String,Set<String>> es_word2loc_map;
+    public static void main(String[] args){
+        fileProcess();
+        search("searchKey");
+
+    }
+
+    private static Set<String> search(String searchKey) {
+        return es_word2loc_map.get(searchKey);
+    }
+
+    private static void fileProcess(){
+        while(readAllFileOneAfterAnother){
+            File file = getTheFile();
+            String word = readWordAfterWordFromTheFile(file);
+            if(es_word2loc_map.get(word)==null){
+                Set<String> set = new LinkedHashSet<>();
+                set.add("file Name");
+                es_word2loc_map.put(word,set);
+            }else {
+                Set<String> set = es_word2loc_map.get(word);
+                set.add("file name");
+            }
+        }
+    }
+}
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

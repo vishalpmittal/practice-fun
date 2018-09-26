@@ -1,0 +1,41 @@
+===========
+Problem
+===========
+Design a scalable chat application on phone.
+
+
+=================================
+Questions to ask
+=================================
+Q: Parental Control - Parents being able to read the chat? 
+Q: Only mobile ?
+Q: One on one, group or channel based?
+Q: Announcements?
+Q: Media / text type of messages?
+Q: 
+
+===========
+Solution 1
+===========
+-  maintain a simple mapping of user_id to status.
+-  When a user gets online, query each user in the friend list and return the statuses back to the client (Query will be fast since it is in-memory).
+-  When a user changes status, publish the status change to each of his/her online friends. The list of online friends can be sent via the payload or stored as a cache in the server if the list is too huge.
+
+===========
+Solution 2
+===========
+
+Basic solution
+---------------
+
+
+Distributed
+---------------
+
+
+
+pseudo code:
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
