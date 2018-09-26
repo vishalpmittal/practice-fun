@@ -7,19 +7,25 @@
 *.o
 *.so
 
-# IDE files #
+# IDE/env files #
 #############
 *.idea
 .idea
+.env
+.grunt
+.npm
+.node_repl_history
+.next
+.serverless
+.vscode
 
 # Packages #
 ############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
 *.7z
 *.dmg
 *.gz
 *.iso
+*.tgz
 
 # Logs and databases #
 ######################
@@ -40,3 +46,20 @@ Thumbs.db
 node_modules
 dist
 package-lock.json
+bower_components
+jspm_packages
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+.lock-wscript
+.cache
