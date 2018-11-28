@@ -33,7 +33,6 @@ public class UserStressTest implements Runnable
          this.testURL();
       } catch (Exception e)
       {
-         // TODO Auto-generated catch block
          e.printStackTrace();
       }
    }

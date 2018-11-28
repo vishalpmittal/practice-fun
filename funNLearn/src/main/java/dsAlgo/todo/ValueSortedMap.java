@@ -1,8 +1,6 @@
 package dsAlgo.todo;
 
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.TreeMap;
 import java.util.Map.Entry;
 
 public class ValueSortedMap {

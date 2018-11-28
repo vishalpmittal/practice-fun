@@ -18,11 +18,6 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertTrue;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-import static org.junit.Assert.assertFalse;
-
 public class P027_RemoveElement {
 	// Using two pointers iterative
 	public static int removeElement_1(int[] nums, int val) {

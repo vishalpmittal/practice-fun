@@ -28,13 +28,10 @@ public class MyBlobInsert {
             int count = ps.executeUpdate();
             System.out.println("Count: "+count);
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } finally{
             try{

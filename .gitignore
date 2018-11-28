@@ -18,6 +18,8 @@
 .next
 .serverless
 .vscode
+.settings
+funNLearn/bin
 
 # Packages #
 ############
