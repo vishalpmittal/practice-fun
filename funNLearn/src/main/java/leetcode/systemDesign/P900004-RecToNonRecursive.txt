@@ -1,0 +1,18 @@
+===========
+Problem
+===========
+How would you make a recursive algorithm non-recursive. 
+
+===========
+Solution
+===========
+Using a stack. 
+
+stack.push(first-item)
+while(stack.count > 0){
+    process next item. 
+    stack.push next item. 
+    base condition 
+    return 
+    pop
+}

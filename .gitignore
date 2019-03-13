@@ -19,6 +19,7 @@
 .serverless
 .vscode
 .settings
+.classpath
 funNLearn/bin
 
 # Packages #

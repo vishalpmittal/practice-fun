@@ -16,7 +16,7 @@
  * operations will be called on an empty queue).
  */
 
-package leetcode.stacksQueues;
+package leetcode.algorithms.P201_P300;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
