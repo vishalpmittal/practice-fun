@@ -1,6 +1,7 @@
-// Tag: TO-DO
-
-/* Given a string, find the length of the longest substring without 
+/**
+ * Tag: string
+ * 
+ * Given a string, find the length of the longest substring without 
  * repeating characters. 
  * 
  * For example, the longest substring without repeating letters 
