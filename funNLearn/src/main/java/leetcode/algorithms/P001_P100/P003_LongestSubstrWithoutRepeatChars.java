@@ -1,3 +1,5 @@
+// Tag: TO-DO
+
 /* Given a string, find the length of the longest substring without 
  * repeating characters. 
  * 
@@ -6,7 +8,9 @@
  * For "bbbbb" the longest substring is "b", with the length of 1.
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P001_P100;
+
+import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 
@@ -40,13 +44,14 @@ public class P003_LongestSubstrWithoutRepeatChars {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(lengthOfLongestSubstring("dvdf"));
-		System.out.println(lengthOfLongestSubstring("vishal"));
-		System.out.println(lengthOfLongestSubstring("aab"));
-		System.out.println(lengthOfLongestSubstring("abcabcbb"));
-		System.out.println(lengthOfLongestSubstring("c"));
-		System.out.println(lengthOfLongestSubstring("bbbbbbbbb"));
-		System.out.println(lengthOfLongestSubstring(""));
-		System.out.println(lengthOfLongestSubstring(null));
+		assertEquals(3, lengthOfLongestSubstring("dvdf"));
+		assertEquals(6, lengthOfLongestSubstring("vishal"));
+		assertEquals(2, lengthOfLongestSubstring("aab"));
+		assertEquals(3, lengthOfLongestSubstring("abcabcbb"));
+		assertEquals(1, lengthOfLongestSubstring("c"));
+		assertEquals(1, lengthOfLongestSubstring("bbbbbbbbb"));
+		assertEquals(0, lengthOfLongestSubstring(""));
+		assertEquals(0, lengthOfLongestSubstring(null));
+		System.out.println("Tests Passed!");
 	}
 }

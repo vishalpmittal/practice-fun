@@ -1,3 +1,5 @@
+Tag: TO-DO
+
 ===========
 Problem
 ===========
@@ -18,8 +20,12 @@ Q:
 Solution 1
 ===========
 -  maintain a simple mapping of user_id to status.
--  When a user gets online, query each user in the friend list and return the statuses back to the client (Query will be fast since it is in-memory).
--  When a user changes status, publish the status change to each of his/her online friends. The list of online friends can be sent via the payload or stored as a cache in the server if the list is too huge.
+-  When a user gets online, query each user in the friend list and return the
+statuses back to the client (Query will be fast since it is in-memory).
+
+-  When a user changes status, publish the status change to each of his/her
+online friends. The list of online friends can be sent via the payload or stored
+as a cache in the server if the list is too huge.
 
 ===========
 Solution 2

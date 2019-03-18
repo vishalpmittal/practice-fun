@@ -1,14 +1,19 @@
+Tag: TO-DO
+
 ===========
 Problem
 ===========
-if you have 1GB of data displayed on front-end, what if on back-end a single value changes. How do we effectively update the fron-end with just updated value rather than getting whole 1GB of data and rendering again on front-end?
+if you have 1GB of data displayed on front-end, what if on back-end a single value changes. 
+How do we effectively update the fron-end with just updated value rather than 
+getting whole 1GB of data and rendering again on front-end?
 
 
 =================================
 Questions to ask
 =================================
 Q: What are we using Angular/AJAX/React? 
-A: If any one of them is used they all have real time two way parameter binding which can be used to sync the info from back end show on the front end. 
+A: If any one of them is used they all have real time two way parameter binding
+which can be used to sync the info from back end show on the front end. 
 
 ===========
 Solution 1

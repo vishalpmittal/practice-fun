@@ -19,7 +19,6 @@ Solution 2
 In combination to Solution 1 
 list of users in persons phone contacts, email contacts, etc. 
 
-
 Location 
 -----------
 If you have location data.. people who are in your vicinity most of the time. 

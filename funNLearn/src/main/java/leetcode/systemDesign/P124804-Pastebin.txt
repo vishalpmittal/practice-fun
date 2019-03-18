@@ -1,7 +1,9 @@
 ===========
 Problem
 ===========
-Pastebin web service enable users to store plain text over the network and generate unique URLs to access the uploaded data. It is also used to share data over the network quickly, as users would just need to pass the URL to let other users see it.
+Pastebin web service enable users to store plain text over the network and generate 
+unique URLs to access the uploaded data. It is also used to share data over the 
+network quickly, as users would just need to pass the URL to let other users see it.
 
 Functional Requirements:
 ------------------------------
@@ -48,11 +50,13 @@ Can be implemented as Restful Webservices as -
 
 HA 
 ------------------------------
-HA caching as much as possible between the user and the backend. cloud front, akamai, squid, etc. These are all the key parts here.
+HA caching as much as possible between the user and the backend. 
+cloud front, akamai, squid, etc. These are all the key parts here.
 
 Hashing
 ------------------------------
-case where multiple users paste the same text. In this case, can we avoid re-storing the same text? Hashing the text could be a good idea, perhaps with SHA-256.
+case where multiple users paste the same text. In this case, can we avoid re-storing 
+the same text? Hashing the text could be a good idea, perhaps with SHA-256.
 
 Pros
 -  space saving
@@ -60,7 +64,8 @@ Pros
 Cons
 -  in order to check if this paste already exists, you need to make a search in the databases
 -  How do you guarantee that two insertions won't have the same text?
--  need to handle the case where multiple users (or even the same user) paste the same text, but want different expiries
+-  need to handle the case where multiple users (or even the same user) paste the same text, 
+but want different expiries
 
 ===========
 Solution 2
@@ -68,8 +73,11 @@ Solution 2
 
 Application Servers can be separated to Two: 
 1.  Upload Service 
-Generate unique Url and send it along with text to DB, and send back Url to User, and Send url and text to Global Cache(Means the cache will be in the between Clients and Service)
+Generate unique Url and send it along with text to DB, and send back Url to User, and Send 
+url and text to Global Cache(Means the cache will be in the between Clients and Service)
 
 2.  Retrieve Service: 
-When receive a url from user, firstly look up the Global cache, If there is in the cache then just return it. it not, go to the DB according the "url Key" to search and then return to user.
+When receive a url from user, firstly look up the Global cache, If there is in the cache 
+then just return it. it not, go to the DB according the "url Key" to search 
+and then return to user.
 

@@ -14,7 +14,8 @@ Qn: How many items are shown?
 Assumption: Maximum of 5.
 
 Qn: Did the other customer buy the items at the same time? 
-Assumption: Not necessarily, but if it was many years between purchases of A and B then we would not recommend B with A.
+Assumption: Not necessarily, but if it was many years between purchases of A and B
+then we would not recommend B with A.
 
 Qn: What is the scale of the system? 
 Assumption: Start with a small solution and extent to the scale of Amazon.
@@ -24,14 +25,19 @@ Assumption: No.
 
 Qn: should product type/department be considered?
 Ans: if considered it reduces the size and "long tail" but miss some cross-department sales.
-Improve recommendations from the above count-based method with machine learning accounting for individual characteristics.
+Improve recommendations from the above count-based method with machine learning
+accounting for individual characteristics.
 
 ===========
 Solution 1
 ===========
 When a user bought a product, record in redis: uid -> set(pid), and pid -> set(uid)
-When a user browse a product, follow the graph from pid to a set of uid and then each uid to a set of pid's. This way we have a relationship "Customers who bought this item also bought".
-We should then record the also_bought pid's into redis: sorted_set(pid). Basically, it's a set sorted by weight. Weight of a pid is its frequency. This way we can recommend the top K products.
+When a user browse a product, follow the graph from pid to a set of uid and then
+each uid to a set of pid's. This way we have a relationship "Customers who bought
+this item also bought".
+We should then record the also_bought pid's into redis: sorted_set(pid). 
+Basically, it's a set sorted by weight. Weight of a pid is its frequency.
+This way we can recommend the top K products.
 
 
 ===========
@@ -42,7 +48,8 @@ Basic solution
 ---------------
 Relational database table ALSO_BOUGHT with columns item_A_id, item_B_id, count.
 Primary key is (item_A_id, item_B_id).
-count is the number of times these items have been bought by the same customer (within 1 year of the purchases).
+count is the number of times these items have been bought by the same customer
+(within 1 year of the purchases).
 Enforce ordering so that item_A_id < item_B_id, so we don't duplicate everything.
 Do not store multiple purchases where item_A_id == item_B_id since they are not good recommendations.
 
@@ -55,16 +62,19 @@ Sort by count and return the top 5.
 
 Asynchronous and scaling
 ------------------------------
-Updating ALSO_BOUGHT can be done asynchronously. It is not necessary to include all purchases to the latest millisecond.
+Updating ALSO_BOUGHT can be done asynchronously. It is not necessary to include all 
+purchases to the latest millisecond.
 Use a cache to store purchases temporarily, and periodically update the database.
 Or write purchases to a log, which are processed in parallel similar to MapReduce.
 Or write to a queue, which are consumed by workers (a dedicated microservice).
-If data is lost due to hardware failure, we can recreate it by querying the main purchases database.
+If data is lost due to hardware failure, we can recreate it by querying 
+the main purchases database.
 
 Latency
 ------------------------
 Finding the recommentaions to show with an item must have low latency.
-The scheme above will be slow, if Amazon has 10^8 products and each product has been bought with 1000 others the table has ~10^11 rows.
+The scheme above will be slow, if Amazon has 10^8 products and each product has 
+been bought with 1000 others the table has ~10^11 rows.
 Calculate the top 5 recommendations for each item asynchronously and store in a RECOMMENDATIONS table.
 For the most popular items, store their top 5 recommendations in a cache.
 

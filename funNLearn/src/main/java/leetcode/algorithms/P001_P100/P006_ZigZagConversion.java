@@ -15,7 +15,7 @@
 * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
 */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 

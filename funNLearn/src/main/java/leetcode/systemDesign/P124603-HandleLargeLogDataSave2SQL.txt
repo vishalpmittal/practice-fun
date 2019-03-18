@@ -1,24 +1,34 @@
 ===========
 Problem
 ===========
-Image there is a website generates user access log in Terabytes scale every day. Each log contains many different information such as username, visiting time, location, page visited, and etc.
+Image there is a website generates user access log in Terabytes scale every day. 
+Each log contains many different information such as username, visiting time, 
+location, page visited, and etc.
 
-what's your solution if we want to only store certain info(for example, user, login time, location) to a sql database. How to optimize the process.
+what's your solution if we want to only store certain info(for example, user, 
+login time, location) to a sql database. How to optimize the process.
 
 =================================
 Considerations
 =================================
 -  Asynchronous : user should not be locked because of the log processing.
 -  Lossless (as much as possible)
--  Latency : Are these logs being used for real-time analysis and alerting for site-down? If so < 1 min latency. Is this is used for offline reporting? 20 min latency might be doable.
--  Security : Are you sending PII data-logs for the user. If so, they must be encrypted during transfer and every service must have the right keys to de-crypt before processing
+-  Latency : Are these logs being used for real-time analysis and alerting for 
+site-down? If so < 1 min latency. Is this is used for offline reporting? 20 min 
+latency might be doable.
+-  Security : Are you sending PII data-logs for the user. If so, they must be 
+encrypted during transfer and every service must have the right keys to de-crypt 
+before processing
 
 =================================
 Questions to ask:
 =================================
-Q: How am I getting the logs? are they stored in a file or do I have rest endpoint where the log is reported to?
+Q: How am I getting the logs? are they stored in a file or do I have rest endpoint 
+where the log is reported to?
 
-Q: SQL databases are not designed for heavy writing. SQL database was designed for heavy relation data reading. No SQL would be a better solution at the first point. Can we change it?
+Q: SQL databases are not designed for heavy writing. SQL database was designed for 
+heavy relation data reading. No SQL would be a better solution at the first point. 
+Can we change it?
 
 Q: Can we run an agent on client's machine?
 
@@ -30,23 +40,40 @@ Solution 1
 Divide the process in two services:
 
 -  Log-receiver: 
-This service can receive logs and perform basic validations - size, data-types, required fields like user-id etc. It then batches these logs in-memory (say: 30k or 3 min) and stores this batch into a store say an S3 bucket file. (Depending on how fault-tolerant you need to be you can store each log too, since in-memory batches can be lost if the server crashes before a persist). This initial store ensures that you persist a raw copy of the log-data. (This is similar to the Producer service referred in Kafka answers)
+This service can receive logs and perform basic validations - size, data-types, 
+required fields like user-id etc. It then batches these logs in-memory 
+(say: 30k or 3 min) and stores this batch into a store say an S3 bucket file. 
+(Depending on how fault-tolerant you need to be you can store each log too, since 
+in-memory batches can be lost if the server crashes before a persist). This initial 
+store ensures that you persist a raw copy of the log-data. (This is similar to the
+Producer service referred in Kafka answers)
 
-This service can also be preceded by a queue like SQS, to decouple the log-sending service/client from this log-receiving service. Scale-handling.
+This service can also be preceded by a queue like SQS, to decouple the log-sending
+service/client from this log-receiving service. Scale-handling.
 
 -  Log-Processing worker: 
-This can reads S3 file contents, transforms into the data-model needed for SQL and writes required rows into SQL. You can also drop this transformed data into another queue so you can decouple and scale writes-to-SQL independent of log transformation. SQL query engine will take care of updating indexes and atomic/consistent writes.
+This can reads S3 file contents, transforms into the data-model needed for SQL and
+writes required rows into SQL. You can also drop this transformed data into another
+queue so you can decouple and scale writes-to-SQL independent of log transformation.
+SQL query engine will take care of updating indexes and atomic/consistent writes.
 
 
 Partitioning 
 -------------
-You can either have timestamp be the partition key (which likely means you'll have hot-partitions for recent logs but good range querying) or you can have user-id be partition key(less likelihood of hot partitions for an amazon user). Or have a hash of either ts /userid be partition key (good distribution poor range querying).
+You can either have timestamp be the partition key (which likely means you'll have
+hot-partitions for recent logs but good range querying) or you can have user-id be
+partition key(less likelihood of hot partitions for an amazon user). Or have a hash
+of either ts /userid be partition key (good distribution poor range querying).
 
 
 =================================
 Solution 2
 =================================
-These big amount of logs must come from several machines, so to have one agent on each machine, simply filter & extract login messages which only have user, time and location, and send these much smaller amount of messages to db for insertion. If db node still cannot handle, shard these messages and use several db machines to do the insertion.
+These big amount of logs must come from several machines, so to have one agent on
+each machine, simply filter & extract login messages which only have user, time and
+location, and send these much smaller amount of messages to db for insertion. If db
+node still cannot handle, shard these messages and use several db machines to do
+the insertion.
 
 
 =================================
