@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math
+ * 
  * Determine whether an integer is a palindrome. 
  * Do this without extra space.
  * 
@@ -14,7 +16,7 @@
  * There is a more generic way of solving this problem.
  */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

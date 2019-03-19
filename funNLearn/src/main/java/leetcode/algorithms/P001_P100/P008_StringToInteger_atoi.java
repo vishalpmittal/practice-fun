@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: string, integer
+ * 
  * Implement atoi to convert a string to an integer.
  * 
  * Hint: Carefully consider all possible input cases. If you want a challenge, 
@@ -33,7 +35,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 
@@ -66,7 +68,9 @@ public class P008_StringToInteger_atoi {
 				break;
 
 			//check if total will be overflow after 10 times and add digit
-			if (Integer.MAX_VALUE / 10 < total || Integer.MAX_VALUE / 10 == total && Integer.MAX_VALUE % 10 < digit)
+			if (Integer.MAX_VALUE / 10 < total ||
+					Integer.MAX_VALUE / 10 == total &&
+					Integer.MAX_VALUE % 10 < digit)
 				return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
 
 			total = 10 * total + digit;
