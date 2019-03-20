@@ -1,8 +1,20 @@
-/*
+/**
+ * Tag: string
+ * 
  * Write a function to find the longest common prefix string amongst an array of strings.
+ * 
+ * Example 1:
+ * Input: ["flower","flow","flight"]
+ * Output: "fl"
+ * 
+ * Example 2:
+ * Input: ["dog","racecar","car"]
+ * Output: ""
+ * Explanation: There is no common prefix among the input strings.
+ * 
  */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 
@@ -36,6 +48,7 @@ public class P014_LongestCommonPrefix {
 		String pre = strs[0];
 		int i = 1;
 		while (i < strs.length) {
+			// Keep removing one char from pre everytime it is not found in strs[i]
 			while (strs[i].indexOf(pre) != 0)
 				pre = pre.substring(0, pre.length() - 1);
 			i++;

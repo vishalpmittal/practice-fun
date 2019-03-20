@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math
+ * 
  * Given a roman numeral, convert it to an integer.
  * 
  * Input is guaranteed to be within the range from 1 to 3999.
@@ -12,7 +14,7 @@
  * M -> 1000
  */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
 import java.util.HashMap;
 
