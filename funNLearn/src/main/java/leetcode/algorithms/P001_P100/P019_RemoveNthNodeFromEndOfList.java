@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: linked list
+ * 
  * Given a linked list, remove the nth node from the end of list and return its head.
  * 
  * For example,
@@ -11,7 +13,7 @@
  * Try to do this in one pass.
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P001_P100;
 
 import leetcode.dependencies.ListNode;
 
