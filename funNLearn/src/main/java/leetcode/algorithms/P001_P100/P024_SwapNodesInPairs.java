@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: linked list, recursive
+ * 
  * Given a linked list, swap every two adjacent nodes and return its head.
  * 
  * For example,
@@ -8,7 +10,7 @@
  * You may not modify the values in the list, only nodes itself can be changed.
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 

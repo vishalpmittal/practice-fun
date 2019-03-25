@@ -15,36 +15,9 @@
 """
 from Queue import PriorityQueue
 
-class ListNode(object):
-    """
-    Singly linked list node class
-    """
-    def __init__(self, val=None, next=None):
-        self.val = val
-        self.next = next
-
-    @staticmethod
-    def create_llist(r_list=[]):
-        if not r_list or len(r_list)<1:
-            return None
-
-        head_node = ListNode(val=r_list[0])
-        curr_node = head_node
-        for nd in range (1, len(r_list)):
-            new_node = ListNode(r_list[nd])
-            curr_node.next = new_node
-            curr_node = new_node
-        return head_node
-
-    def __str__(self):
-        ret_str = ""
-        curr_node = self
-        while (curr_node):
-            ret_str += str(curr_node.val)
-            if curr_node.next:
-                ret_str += " -> "
-            curr_node = curr_node.next
-        return ret_str
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), '../..', 'dependencies'))
+from list_node import ListNode
 
 class Solution(object):
     def mergeKLists(self, lists):

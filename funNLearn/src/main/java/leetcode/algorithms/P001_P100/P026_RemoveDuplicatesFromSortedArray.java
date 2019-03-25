@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: array
+ * 
  * Given a sorted array, remove the duplicates in place such that each 
  * element appear only once and return the new length.
  * 
@@ -14,7 +16,7 @@
  * 
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P001_P100;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
