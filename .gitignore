@@ -20,8 +20,20 @@
 .serverless
 .vscode
 .settings
+.classpath
 **/.classpath
+.project
 funNLearn/bin
+mongodb-101j/final/final_q4/final-problem4/target
+mongodb-101j/week1/hw1-3/target
+rest-ws/simple-service-webapp/bin
+spring001_CoreNAspectJDemo/bin
+spring002_JPADemo/bin
+spring003_BootDemo/bin
+spring004_HibDemo/bin
+spring005_HibDemo/bin
+
+
 
 # Packages #
 ############

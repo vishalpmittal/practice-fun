@@ -1,7 +1,7 @@
 """
     Tag: TO-DO, string, dp, array, integer, bit, linked list
     Tag: tree, sort, math, matrix, regex, recursive
-    Tag: design ds (design data structure), dfs
+    Tag: design ds (design data structure), dfs, binary search, algo
 
 
 """
