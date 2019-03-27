@@ -56,10 +56,30 @@ Django Structure
       -  urls.py
          -  app level urls
 
+      -  forms.py
+         -  if you want to define any forms in django app
+         -  this is similar to defining a model
+         -  create a post url in urls.py
+         -  create a view that handles the post url
+         -  to display create a template by adding form \tag and csrf_token
+         -  forms.as_p in template formats the form as paragraph on UI. basically
+            each field on a separate line. 
+         -  widgets such as date widget can be added to add form field widgets. 
+         -  meta forms can be used to create forms directly from model classes
+
       -  Templates folder
          -  can be called using render function in views
+         -  django built in template tags and filters
+            for, if, filter, firstof, forloop.counter, ifchanged, include, etc. 
+            https://docs.djangoproject.com/en/2.1/ref/templates/builtins/
+         -  template inheritance
+            templates can extend other templates to keep the code modular and simpler 
+         -  block content is the content specifc for own page
+
+         
       -  models.py
          -  https://docs.djangoproject.com/en/2.1/ref/models/fields/
+
       -  admin.py
          -  in order to see models in admin UI, register the models here
          -  eg:
@@ -72,15 +92,16 @@ Django Structure
    -  groups and users auto created
    -  models needs to be added to be viewed here
 
+-  Inbuilt auth user model
+   -  any model can import the model and use objects of built in user model
+      from django.contrib.auth.models import User
+
 imports
 ==========
 from django.http import HTTPResponse
 from django.contrib import admin
 from django.conf.urls import include, url
 from django.db import models
-
-
-
-
+from django.contrib.auth.models import User
 
 
