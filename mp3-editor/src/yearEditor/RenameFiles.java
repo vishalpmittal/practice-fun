@@ -5,12 +5,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class RenameFiles {
-	private static String year="2018";
+	private static String year="2019";
 	private static String replace_title_tag_as_filename="false";
 	private static String replace_file_name_by_album_tag="false";
 	private static String[] str2rem = {"www.Songs.PK","songs","pk","Songs.PK","www","320Kbps","320kbps","128Kbps",
 		"128Kbps","Bollymucom","Bollym4u.com","2004","2005","2007","2008","2009","2010","2011","2012", "2013","mp3pk.com",
-		"Muskurahat","Dot","Com", "Songs", "Hindi"};
+		"Muskurahat","Dot","Com", "Songs", "Hindi", "SongsMp3.Org", "SongsMp3.Cool", "Song"};
 	
 	public static void main (String args[]){
 		String prop_file = "/Users/vishalm/Downloads/editor.properties";
@@ -40,7 +40,7 @@ public class RenameFiles {
 					BufferedWriter out = new BufferedWriter(fstream);
 		    		out.write("path="+dir+
 		    				"\nalbumArtist=VM" +
-		    				"\ngenre=Bollywood Music" +
+		    				"\ngenre=Bollywood" +
 		    				"\nyear="+year+
 		    				"\nmovie="+newName+"-"+year +
 		    				"\nalbum="+newName +
