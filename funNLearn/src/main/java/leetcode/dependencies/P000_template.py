@@ -7,11 +7,11 @@
 """
 
 class Solution(object):
-    def solve_problem(self):
+    @staticmethod
+    def solve_problem():
         return
 
 def test_code():
-    obj = Solution()
-    assert obj.solve_problem() == True
+    assert Solution.solve_problem() == True
 
 test_code()

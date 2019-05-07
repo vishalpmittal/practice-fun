@@ -10,7 +10,7 @@
  * Note: The sequence of integers will be represented as a string.
  */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 
