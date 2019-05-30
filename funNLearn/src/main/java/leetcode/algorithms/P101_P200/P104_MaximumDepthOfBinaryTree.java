@@ -1,22 +1,19 @@
-/*
- * Given a binary tree, find its minimum depth.
- * The minimum depth is the number of nodes along the shortest 
- * path from the root node down to the nearest leaf node.
+/**
+ * Tag: tree
  * 
+ * Given a binary tree, find its maximum depth.
+ * 
+ * The maximum depth is the number of nodes along the longest path from 
+ * the root node down to the farthest leaf node.
  */
 
-package leetcode.tree;
+package leetcode.algorithms.P101_P200;
 
 import leetcode.dependencies.TreeNode;
 
-public class P111_MinimumDepthOfBinaryTree {
-
-	public static int minDepth(TreeNode root) {
-		if (root == null)
-			return 0;
-		int left = minDepth(root.left);
-		int right = minDepth(root.right);
-		return (left == 0 || right == 0) ? left + right + 1 : Math.min(left, right) + 1;
+public class P104_MaximumDepthOfBinaryTree {
+	public static int maxDepth(TreeNode root) {
+		return root == null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
 	}
 
 	public static void main(String[] args) {
@@ -26,8 +23,8 @@ public class P111_MinimumDepthOfBinaryTree {
 		//|          2                  3
 		//|        /   \              /   \
 		//|     4        5         6         7
-		//|    /  \       \      /  \       
-		//|  8     9      10   11    12    
+		//|    /  \       \      /  \       /
+		//|  8     9      10   11    12    13
 		//|   \              
 		//|   14
 		//
@@ -44,6 +41,7 @@ public class P111_MinimumDepthOfBinaryTree {
 		TreeNode tn10 = new TreeNode(10);
 		TreeNode tn11 = new TreeNode(11);
 		TreeNode tn12 = new TreeNode(12);
+		TreeNode tn13 = new TreeNode(13);
 		TreeNode tn14 = new TreeNode(14);
 
 		tn1.setLeft(tn2);
@@ -57,10 +55,10 @@ public class P111_MinimumDepthOfBinaryTree {
 		tn5.setRight(tn10);
 		tn6.setLeft(tn11);
 		tn6.setRight(tn12);
+		tn7.setLeft(tn13);
 		tn8.setRight(tn14);
 
 		System.out.println(TreeNode.printTree(tn1));
-		System.out.println(minDepth(tn1));
-
+		System.out.println(maxDepth(tn1));
 	}
 }

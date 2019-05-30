@@ -1,19 +1,21 @@
-/*
-* Given numRows, generate the first numRows of Pascal's triangle.
-* 
-* For example, given numRows = 5,
-* Return
-* 
-* [
-*      [1],
-*     [1,1],
-*    [1,2,1],
-*   [1,3,3,1],
-*  [1,4,6,4,1]
-* ]
-*/
+/**
+ * Tag: dp, math
+ * 
+ * Given numRows, generate the first numRows of Pascal's triangle.
+ * 
+ * For example, given numRows = 5,
+ * Return
+ * 
+ * [
+ *      [1],
+ *     [1,1],
+ *    [1,2,1],
+ *   [1,3,3,1],
+ *  [1,4,6,4,1]
+ * ]
+ */
 
-package leetcode;
+package leetcode.algorithms.P101_P200;
 
 import java.util.ArrayList;
 import java.util.Arrays;

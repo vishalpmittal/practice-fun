@@ -1,11 +1,12 @@
-/*
+/**
+ * Tag: integer, math
+ * 
  * Implement int sqrt(int x).
  * Compute and return the square root of x.
  */
 
-package leetcode;
+package leetcode.algorithms.P001_P100;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class P069_Sqrt_x {

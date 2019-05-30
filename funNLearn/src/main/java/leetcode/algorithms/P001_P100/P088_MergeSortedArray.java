@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: array, sort
+ * 
  * Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
  * 
  * Note:
@@ -7,14 +9,14 @@
  * nums1 and nums2 are m and n respectively.
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P001_P100;
 
 import java.util.Arrays;
 
 public class P088_MergeSortedArray {
 
 	// Start comparing from the beginning
-	// Compare and keep saving extras in nums2 while keep saving sorted seried in nums1
+	// Compare and keep saving extras in nums2 while keep saving sorted series in nums1
 	// once done copy nums2 to nums 1
 	public static void merge(int[] nums1, int m, int[] nums2, int n) {
 		int p1 = 0, p2 = 0;

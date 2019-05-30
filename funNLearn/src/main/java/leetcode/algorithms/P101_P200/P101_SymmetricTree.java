@@ -1,5 +1,6 @@
-package leetcode.tree;
-/*
+/**
+ * Tag: tree
+ * 
 * Given a binary tree, check whether it is a mirror of itself 
 * (ie, symmetric around its center).
 * 
@@ -35,18 +36,16 @@ package leetcode.tree;
 * The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 */
 
+package leetcode.algorithms.P101_P200;
+
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
 import leetcode.dependencies.TreeNode;
-
 import static org.junit.Assert.assertTrue;
-
 import java.util.Stack;
-
-import static org.junit.Assert.assertFalse;
 
 public class P101_SymmetricTree {
 

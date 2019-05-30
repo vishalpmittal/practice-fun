@@ -1,39 +1,44 @@
-/*
-* Given a binary tree, return the bottom-up level order traversal of 
-* its nodes' values. (ie, from left to right, level by level from leaf to root).
-* 
-* For example:
-* Given binary tree {3,9,20,#,#,15,7},
-*     3
-*    / \
-*   9  20
-*     /  \
-*    15   7
-* 
-* return its bottom-up level order traversal as:
-* [
-*   [15,7],
-*   [9,20],
-*   [3]
-* ]
-*/
+/**
+ * Tag: tree
+ * 
+ * Given a binary tree, return the bottom-up level order traversal of 
+ * its nodes' values. (ie, from left to right, level by level from leaf to root).
+ * 
+ * For example:
+ * Given binary tree {3,9,20,#,#,15,7},
+ *     3
+ *    / \
+ *   9  20
+ *     /  \
+ *    15   7
+ * 
+ * return its bottom-up level order traversal as:
+ * [
+ *   [3],
+ *   [9,20],
+ *   [15,7]
+ * ]
+ */
 
-package leetcode.tree;
+package leetcode.algorithms.P101_P200;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import leetcode.dependencies.TreeNode;
 
-public class P107_BinaryTreeLevelOrderTraversalII {
+public class P102_BinaryTreeLevelOrderTraversal {
 
-	public static List<List<Integer>> levelOrderBottom(TreeNode root) {
+	// Recursrive solution O(N)
+	public static List<List<Integer>> levelOrderTop(TreeNode root) {
 		List<TreeNode> list = new ArrayList<TreeNode>();
 		List<List<Integer>> listOfList = new ArrayList<List<Integer>>();
-		
-		if(root == null)
+
+		if (root == null)
 			return listOfList;
-		
+
 		list.add(root);
 		levelOrderHelper(list, listOfList);
 		return listOfList;
@@ -54,8 +59,42 @@ public class P107_BinaryTreeLevelOrderTraversalII {
 				subList.add(tn.right);
 		}
 
-		levelOrderHelper(subList, listOfList);
 		listOfList.add(intList);
+		levelOrderHelper(subList, listOfList);
+	}
+
+	// Iterative solution BFS
+	public static List<List<Integer>> levelOrderTop_1(TreeNode root) {
+		List<List<Integer>> listOfList = new ArrayList<List<Integer>>();
+		if (root == null)
+			return listOfList;
+
+		Queue<TreeNode> queue = new LinkedList<TreeNode>();
+		queue.add(root);
+		int numNodesCurrentLevel = 1;
+
+		while (!queue.isEmpty()) {
+			int levelCounter = 0;
+			List<Integer> levelList = new ArrayList<Integer>();
+			
+			for (int i = 0; i < numNodesCurrentLevel; i++) {
+				TreeNode currNode = queue.poll();
+				levelList.add(currNode.val);
+				
+				if (currNode.left != null){
+					queue.add(currNode.left);
+					levelCounter++;
+				}
+				if (currNode.right != null){
+					queue.add(currNode.right);
+					levelCounter++;
+				}
+			}
+			
+			listOfList.add(levelList);
+			numNodesCurrentLevel = levelCounter;
+		}
+		return listOfList;
 	}
 
 	public static void main(String[] args) {
@@ -102,9 +141,9 @@ public class P107_BinaryTreeLevelOrderTraversalII {
 		tn8.setRight(tn14);
 
 		System.out.println(TreeNode.printTree(tn1));
-		
+
 		// Answer should be this:
-		// [[14], [8, 9, 10, 11, 12, 13], [4, 5, 6, 7], [2, 3], [1]]
-		System.out.println(levelOrderBottom(tn1));
+		// [[1], [2, 3], [4, 5, 6, 7], [8, 9, 10, 11, 12, 13], [14]]
+		System.out.println(levelOrderTop_1(tn1));
 	}
 }

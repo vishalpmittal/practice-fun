@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: dp, math 
+ *
  * Given an index k, return the kth row of the Pascal's triangle.
  * 
  * For example, given k = 3,
@@ -8,7 +10,7 @@
  * Could you optimize your algorithm to use only O(k) extra space?
  */
 
-package leetcode;
+package leetcode.algorithms.P101_P200;
 
 import java.util.ArrayList;
 import java.util.Arrays;

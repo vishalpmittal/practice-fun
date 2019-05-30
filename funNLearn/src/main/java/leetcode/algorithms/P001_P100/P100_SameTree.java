@@ -1,11 +1,13 @@
-/*
+/**
+ * Tag: tree
+ * 
  * Given two binary trees, write a function to check if they are equal or not.
  * 
  * Two binary trees are considered equal if they are structurally identical 
  * and the nodes have the same value.
  */
 
-package leetcode.tree;
+package leetcode.algorithms.P001_P100;
 
 import leetcode.dependencies.TreeNode;
 

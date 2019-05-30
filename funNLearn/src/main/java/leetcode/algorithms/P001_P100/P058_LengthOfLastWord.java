@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: string
+ * 
  * Given a string s consists of upper/lower-case alphabets and empty space characters ' ', 
  * return the length of last word in the string.
  * 
@@ -11,7 +13,7 @@
  * return 5.
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 

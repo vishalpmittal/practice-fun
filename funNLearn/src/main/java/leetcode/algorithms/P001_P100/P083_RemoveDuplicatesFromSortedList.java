@@ -1,4 +1,6 @@
 /**
+ * Tag: linked list, sort
+ * 
  * Given a sorted linked list, delete all duplicates such that 
  * each element appear only once.
  * 
@@ -6,7 +8,7 @@
  * Given 1->1->2, return 1->2.
  * Given 1->1->2->3->3, return 1->2->3.
  */
-package leetcode.listsNArrays;
+package leetcode.algorithms.P001_P100;
 
 import leetcode.dependencies.ListNode;
 
