@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: linked list
+ *
  * Remove all elements from a linked list of integers that have value val.
  * 
  * Example
@@ -7,7 +9,7 @@
  * 
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P201_P300;
 
 import leetcode.dependencies.ListNode;
 
@@ -38,15 +40,20 @@ public class P203_RemoveLinkedListElements {
 		 * [R]
 		 * [R -> 2 -> 3 -> 4 -> 5]
 		 */
-		System.out.println(
-				ListNode.getListString(removeElements(ListNode.makeMeAList(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 1)));
-		System.out.println(
-				ListNode.getListString(removeElements(ListNode.makeMeAList(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 7)));
-		System.out.println(
-				ListNode.getListString(removeElements(ListNode.makeMeAList(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 4)));
-		System.out.println(ListNode.getListString(removeElements(ListNode.makeMeAList(new int[] { 1, 1 }), 1)));
-		System.out.println(
-				ListNode.getListString(removeElements(ListNode.makeMeAList(new int[] { 1, 1, 2, 3, 4, 5 }), 1)));
-
+		System.out.println(ListNode.getListString(
+			removeElements(ListNode.makeMeAList(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 1)
+			));
+		System.out.println(ListNode.getListString(
+			removeElements(ListNode.makeMeAList(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 7)
+			));
+		System.out.println(ListNode.getListString(
+			removeElements(ListNode.makeMeAList(new int[] { 1, 2, 3, 4, 5, 6, 7 }), 4)
+			));
+		System.out.println(ListNode.getListString(
+			removeElements(ListNode.makeMeAList(new int[] { 1, 1 }), 1)
+			));
+		System.out.println(ListNode.getListString(
+			removeElements(ListNode.makeMeAList(new int[] { 1, 1, 2, 3, 4, 5 }), 1)
+			));
 	}
 }

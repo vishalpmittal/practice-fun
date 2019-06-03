@@ -1,10 +1,12 @@
 /**
+ * Tag: linked list
+ * 
  *  Given a linked list, determine if it has a cycle in it.
  *  
  *  Follow up:
  *  Can you solve it without using extra space?
  */
-package leetcode.listsNArrays;
+package leetcode.algorithms.P101_P200;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

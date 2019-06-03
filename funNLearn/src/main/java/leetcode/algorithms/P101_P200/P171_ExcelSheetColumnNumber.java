@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math 
+ *
  * Related to question Excel Sheet Column Title (P168_ExcelSheetColumnTitle)
  * 
  * Given a column title as appear in an Excel sheet, return its corresponding column number.
@@ -21,7 +23,7 @@
  *   here the base is 26 instead of 10, that is it
  */
 
-package leetcode;
+package leetcode.algorithms.P101_P200;
 
 public class P171_ExcelSheetColumnNumber {
 

@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: string, array
+ *
  * Given two strings s and t, determine if they are isomorphic.
  * 
  * Two strings are isomorphic if the characters in s can be replaced to get t.
@@ -15,7 +17,7 @@
  * You may assume both s and t have the same length.
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

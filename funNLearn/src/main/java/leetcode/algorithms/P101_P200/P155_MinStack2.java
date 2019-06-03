@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: list
+ * 
 * Design a stack that supports push, pop, top, and retrieving the 
 * minimum element in constant time.
 * 
@@ -18,7 +20,7 @@
 * minStack.getMin();   --> Returns -2.
 */
 
-package leetcode;
+package leetcode.algorithms.P101_P200;
 
 import java.util.Stack;
 

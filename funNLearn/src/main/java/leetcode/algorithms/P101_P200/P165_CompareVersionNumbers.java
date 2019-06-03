@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math, array
+ *
  * Compare two version numbers version1 and version2.
  * If version1 > version2 return 1, if version1 < version2 return -1, otherwise return 0.
  * 
@@ -12,7 +14,7 @@
  * 0.1 < 1.1 < 1.2 < 13.37
  */
 
-package leetcode;
+package leetcode.algorithms.P101_P200;
 
 import static org.junit.Assert.assertTrue;
 

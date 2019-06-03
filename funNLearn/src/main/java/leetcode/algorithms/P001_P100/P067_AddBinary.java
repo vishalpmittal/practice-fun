@@ -7,7 +7,7 @@
  * Return "100".
  */
 
-package leetcode.binaryBits;
+package leetcode.algorithms.P001_P100;
 
 import static org.junit.Assert.assertTrue;
 
@@ -16,7 +16,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-public class P67_AddBinary {
+public class P067_AddBinary {
 	public static String addBinary_1(String a, String b) {
 		if (a == null && b == null)
 			return null;
@@ -61,7 +61,7 @@ public class P67_AddBinary {
 	}
 
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(P67_AddBinary.class);
+		Result result = JUnitCore.runClasses(P067_AddBinary.class);
 		System.out.println("All Tests passed : " + result.wasSuccessful());
 		for (Failure failure : result.getFailures()) {
 			System.out.println("Failed Test cases" + failure.toString());

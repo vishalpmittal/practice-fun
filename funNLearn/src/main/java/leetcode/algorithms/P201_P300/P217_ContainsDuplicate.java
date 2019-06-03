@@ -1,10 +1,12 @@
-/*
+/**
+ * Tag: array
+ *
  * Given an array of integers, find if the array contains any duplicates. 
  * Your function should return true if any value appears at least twice 
  * in the array, and it should return false if every element is distinct.
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P201_P300;
 
 import java.util.Arrays;
 import java.util.HashSet;

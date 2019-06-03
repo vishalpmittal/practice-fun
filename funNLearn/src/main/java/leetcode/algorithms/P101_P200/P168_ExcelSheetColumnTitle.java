@@ -1,4 +1,6 @@
-/*
+/**
+ *  Tag: math
+ *
  * Related to question P171_ExcelSheetColumnNumber
  * 
  * Given a positive integer, return its corresponding column title as appear in an Excel sheet.
@@ -21,7 +23,7 @@
  *   here the base is 26 instead of 10, that is it
  */
 
-package leetcode;
+package leetcode.algorithms.P101_P200;
 
 public class P168_ExcelSheetColumnTitle {
 

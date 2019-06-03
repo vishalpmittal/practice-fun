@@ -1,8 +1,10 @@
-/*
+/**
+ * Tag: linked list
+ *
  * Reverse a singly linked list
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P201_P300;
 
 import leetcode.dependencies.ListNode;
 

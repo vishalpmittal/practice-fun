@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math, algo, Sieve of Eratosthenes
+ *
 * Count the number of prime numbers less than a non-negative number, n.
 * 
 * Hint:
@@ -103,7 +105,7 @@
 * }
 * ----------------------------------
 */
-package leetcode.numbers;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertTrue;
 

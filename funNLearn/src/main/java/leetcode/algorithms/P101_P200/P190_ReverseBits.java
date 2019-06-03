@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: bit 
+ *
  * Reverse bits of a given 32 bits unsigned integer.
  * 
  * For example, given 
@@ -11,7 +13,7 @@
  * Related problem: Reverse Integer
  */
 
-package leetcode.binaryBits;
+package leetcode.algorithms.P101_P200;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,12 +24,10 @@ import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
 public class P190_ReverseBits {
-	/*------------------------------------------- 
+	/*
 	 * for all bits get one at a time and then shift 
-	 * -------------------------------------------
 	 */
 	public static int reverseBits_1(int n) {
 		int result = 0;

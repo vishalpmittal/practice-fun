@@ -1,5 +1,7 @@
-/*
-* Rotate an array of n elements to the right by k steps.
+/**
+ * Tag: array
+ * 
+ * Rotate an array of n elements to the right by k steps.
 * 
 * For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
 * 
@@ -12,7 +14,7 @@
 * Related problem: Reverse Words in a String II
 */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P101_P200;
 
 import static org.junit.Assert.assertTrue;
 
@@ -25,14 +27,14 @@ import org.junit.runner.notification.Failure;
 
 public class P189_RotateArray {
 	/*
-	 * The basic idea is that, for example, nums = [1,2,3,4,5,6,7] and k = 3, 
-	 * first we reverse [1,2,3,4], it becomes[4,3,2,1]; then we reverse[5,6,7], 
-	 * it becomes[7,6,5], finally we reverse the array as a whole, 
-	 * it becomes[4,3,2,1,7,6,5] ---> [5,6,7,1,2,3,4].
+	 * The basic idea is that, for example, nums = [1,2,3,4,5,6,7] and k = 3, first
+	 * we reverse [1,2,3,4], it becomes[4,3,2,1]; then we reverse[5,6,7], it
+	 * becomes[7,6,5], finally we reverse the array as a whole, it
+	 * becomes[4,3,2,1,7,6,5] ---> [5,6,7,1,2,3,4].
 	 * 
-	 * Reverse is done by using two pointers, one point at the head and the 
-	 * other point at the tail, after switch these two, these two pointers move 
-	 * one position towards the middle.
+	 * Reverse is done by using two pointers, one point at the head and the other
+	 * point at the tail, after switch these two, these two pointers move one
+	 * position towards the middle.
 	 */
 	public static void rotate_1(int[] nums, int k) {
 		if (nums == null || nums.length < 2) {
@@ -61,7 +63,8 @@ public class P189_RotateArray {
 		if (nums.length <= 1) {
 			return;
 		}
-		//step each time to move
+
+		// 4%10 = 4, 5%10 = 5, 13%10= 3
 		int step = k % nums.length;
 		int[] tmp = new int[step];
 		for (int i = 0; i < step; i++) {
@@ -95,3 +98,4 @@ public class P189_RotateArray {
 		}
 	}
 }
+

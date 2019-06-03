@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math, algo, Floyd Cycle Detection Algorithm
+ *
  * Write an algorithm to determine if a number is "happy".
  * A happy number is a number defined by the following process: 
  * Starting with any positive integer, replace the number by the sum of 
@@ -15,7 +17,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import java.util.HashSet;
 import org.junit.Test;
@@ -29,7 +31,7 @@ import static org.junit.Assert.assertTrue;
 public class P202_HappyNumber {
 
 	/*
-	 * O(n) Space. 
+	 * O(n) Space.
 	 */
 	public static boolean isHappy_1(int n) {
 		HashSet<Integer> repos = new HashSet<Integer>();
@@ -47,9 +49,8 @@ public class P202_HappyNumber {
 	}
 
 	/*
-	 * O(1) Space
-	 * Using Floyd Cycle Detection Algorithm
-	 * like the one in linked list colliding problem
+	 * O(1) Space Using Floyd Cycle Detection Algorithm like the one in linked list
+	 * colliding problem
 	 */
 	public static int digitSquareSum(int n) {
 		int sum = 0;

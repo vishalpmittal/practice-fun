@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: linked list 
+ *
  * Write a program to find the node at which the intersection of two singly linked lists begins.
  * 
  * For example, the following two linked lists:
@@ -20,15 +22,14 @@
  * traversing so that equal length traversing is started.This can be done two ways:
  * 
  * Solution 1: 
- * -  Move list1/list2 pointer ahead untill the length of both lists is same
+ * -  Move list1/list2 pointer ahead until the length of both lists is same
  * 
  * Solution 2:
  * -  Iterate twice and swap the pointers at the end of first iteration. 
  * 	  This will make the pointers start at the same length point in the second iteration.
- * 
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P101_P200;
 
 import static org.junit.Assert.assertTrue;
 
@@ -40,6 +41,15 @@ import org.junit.runner.notification.Failure;
 import leetcode.dependencies.ListNode;
 
 public class P160_IntersectionOfTwoLinkedLists {
+	private static int length(ListNode node) {
+		int length = 0;
+		while (node != null) {
+			node = node.next;
+			length++;
+		}
+		return length;
+	}
+
 	// Solution 1
 	public static ListNode getIntersectionNode_1(ListNode headA, ListNode headB) {
 		int lenA = length(headA), lenB = length(headB);
@@ -60,21 +70,16 @@ public class P160_IntersectionOfTwoLinkedLists {
 		return headA;
 	}
 
-	private static int length(ListNode node) {
-		int length = 0;
-		while (node != null) {
-			node = node.next;
-			length++;
-		}
-		return length;
-	}
-
 	// Solution 2
 	public static ListNode getIntersectionNode_2(ListNode headA, ListNode headB) {
 		if (null == headA || null == headB)
 			return null;
 
 		ListNode curA = headA, curB = headB;
+
+		// Basically point currA to headB at the end of listA 
+		// and currB to headA at the end of list B. 
+		// thus the different in length will offset and we will find the common one
 		while (curA != curB) {
 			curA = curA == null ? headB : curA.next;
 			curB = curB == null ? headA : curB.next;
