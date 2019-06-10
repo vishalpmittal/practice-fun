@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: tree
+ *
  * Given a binary search tree (BST), find the lowest common 
  * ancestor (LCA) of two given nodes in the BST.
  * 
@@ -18,10 +20,9 @@
  * For example, the lowest common ancestor (LCA) of nodes 2 and 8 is 6. 
  * Another example is LCA of nodes 2 and 4 is 2, since a node can be a 
  * descendant of itself according to the LCA definition.
- * 
  */
 
-package leetcode.tree;
+package leetcode.algorithms.P201_P300;
 
 import leetcode.dependencies.TreeNode;
 

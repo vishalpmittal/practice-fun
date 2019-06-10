@@ -1,6 +1,8 @@
 
 """
-Given a list of numbers, remove the last odd number from the list. 
+    Tag: math
+
+    Given a list of numbers, remove the last odd number from the list. 
 """
 
 def remove_last_odd(num_list):

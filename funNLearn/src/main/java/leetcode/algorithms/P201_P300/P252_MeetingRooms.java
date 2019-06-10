@@ -1,4 +1,6 @@
 /**
+ * Tag: array
+ * 
  * Given an array of meeting time intervals consisting of start and end times 
  * [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
  * 
@@ -7,7 +9,7 @@
  * return false.
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

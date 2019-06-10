@@ -1,4 +1,6 @@
 /**
+ * Tag: tree
+ * 
  * Given a non-empty binary search tree and a target value, 
  * find the value in the BST that is closest to the target.
  * 
@@ -6,22 +8,27 @@
  * -  Given target value is a floating point.
  * -  You are guaranteed to have only one unique value in the BST that 
  * is closest to the target.
+ *
+ * Example:
+ * Input: root = [4,2,5,1,3], target = 3.714286
+ *     4
+ *    / \
+ *   2   5
+ *  / \
+ * 1   3
+ * Output: 4
  */
 
-package leetcode.tree;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+package leetcode.algorithms.P201_P300;
 
 import leetcode.dependencies.TreeNode;
 
 public class P270_ClosestBinarySearchTreeValue {
-
 	public static int closestValue(TreeNode root, double target) {
 		double currDiff = Math.abs(target - ((double) root.val));
 
 		double leftDiff = -1.0;
-		if (root.left != null) 
+		if (root.left != null)
 			leftDiff = Math.abs(target - ((double) root.left.val));
 
 		double rightDiff = -1.0;
@@ -34,13 +41,11 @@ public class P270_ClosestBinarySearchTreeValue {
 			return closestValue(root.left, target);
 		else if (leftDiff == -1.0 || leftDiff > rightDiff)
 			return closestValue(root.right, target);
-		
+
 		return root.val;
 	}
 
 	public static void main(String[] args) {
-		//		assertTrue("Test1", problem(94));
-		//		assertFalse("Test2", problem(97));
-		System.out.println("All Tests passed");
+		// System.out.println("All Tests passed");
 	}
 }

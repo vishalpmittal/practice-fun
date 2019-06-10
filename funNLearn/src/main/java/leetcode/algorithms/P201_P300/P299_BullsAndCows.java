@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math
+ *
  * You are playing the following Bulls and Cows game with your friend: 
  * You write down a number and ask your friend to guess what the number is. 
  * Each time your friend makes a guess, you provide a hint that indicates how many digits in 
@@ -27,7 +29,7 @@
  * and their lengths are always equal.
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertTrue;
 
@@ -41,8 +43,10 @@ public class P299_BullsAndCows {
 	/*
 	 * Rule 1 : if a match just increment bulls
 	 * Rule 2 : for every s digit increment array and for every g decrement array
-	 * Rule 3 : if at anytime s digit array value goes below 0 means it exists in guess and can be count as cow
-	 * Rule 4 : if at anytime g digit array value goes above 0 means it exists in secret and can be count as cow 
+	 * Rule 3 : if at anytime s digit array value goes below 0 means it exists in 
+	 * 			guess and can be count as cow
+	 * Rule 4 : if at anytime g digit array value goes above 0 means it exists in 
+	 * 			secret and can be count as cow 
 	 */
 	public String getHint(String secret, String guess) {
 		int bulls = 0;

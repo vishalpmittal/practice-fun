@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: tree
+ *
  * Invert a binary tree.
  * 
  *      4
@@ -14,7 +16,7 @@
  * 9   6 3   1
 */
 
-package leetcode.tree;
+package leetcode.algorithms.P201_P300;
 
 import leetcode.dependencies.TreeNode;
 

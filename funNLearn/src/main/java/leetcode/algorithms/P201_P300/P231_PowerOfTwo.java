@@ -1,8 +1,10 @@
-/*
+/**
+ * Tag: math
+ *
  * Given an integer, write a function to determine if it is a power of two.
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

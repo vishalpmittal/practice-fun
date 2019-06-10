@@ -1,4 +1,6 @@
 /**
+ * Tag: string
+ * 
  * Given a string, determine if a permutation of the string could form a palindrome.
  * 
  * For example,
@@ -11,7 +13,7 @@
  * 	  How about character which occurs odd number of times?
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

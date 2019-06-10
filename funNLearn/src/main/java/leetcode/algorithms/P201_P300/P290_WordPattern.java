@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: string
+ *
  * Given a pattern and a string str, find if str follows the same pattern.
  * Here follow means a full match, such that there is a bijection between a 
  * letter in pattern and a non-empty word in str.
@@ -14,7 +16,7 @@
  * contains lowercase letters separated by a single space.
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

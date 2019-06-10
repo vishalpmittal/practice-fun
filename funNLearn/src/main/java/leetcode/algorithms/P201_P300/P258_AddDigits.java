@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math
+ * 
  * Given a non-negative integer num, repeatedly add all its digits 
  * until the result has only one digit.
  * For example:
@@ -14,7 +16,7 @@
  * Digital Root (AKA Repeated Digital Sum) 
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 public class P258_AddDigits {
 

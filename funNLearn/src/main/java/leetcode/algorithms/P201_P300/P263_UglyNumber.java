@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math
+ *
  * Write a program to check whether a given number is an ugly number.
  * Ugly numbers are positive numbers whose prime factors only include 
  * 2, 3, 5. For example, 6, 8 are ugly while 14 is not ugly since it 
@@ -6,7 +8,7 @@
  * 
  * Note that 1 is typically treated as an ugly number.
  */
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 public class P263_UglyNumber {
 
@@ -69,9 +71,7 @@ public class P263_UglyNumber {
 	    }
 	    return false;
 	}
-	
-	
-	
+		
 	public static void main(String[] args) {
 		System.out.println(isUgly(905391974));
 	}

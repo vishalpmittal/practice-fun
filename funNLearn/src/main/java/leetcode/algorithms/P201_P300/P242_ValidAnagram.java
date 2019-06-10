@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: string
+ *
  * Given two strings s and t, write a function to determine if t is an anagram of s.
  * 
  * For example,
@@ -14,7 +16,7 @@
  * 
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P201_P300;
 
 import java.util.HashMap;
 

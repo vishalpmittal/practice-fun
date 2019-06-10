@@ -1,10 +1,12 @@
-package leetcode;
+package leetcode.algorithms.Pxxx;
 
-/*
-* implementing stack using an array. 
-* The basic idea is to use last entry in the array as top of stack
-* and use head of the array as bottom of the stack
-*/
+/** 
+ * Tag: design ds
+ *
+ * implementing stack using an array. 
+ * The basic idea is to use last entry in the array as top of stack
+ * and use head of the array as bottom of the stack
+ */
 import java.util.Arrays;
  
 public class Pxxx_StacKUsingArray <E>

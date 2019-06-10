@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: array, math
+ *
  * You are a product manager and currently leading a team to develop a new product. 
  * Unfortunately, the latest version of your product fails the quality check. 
  * Since each version is developed based on the previous version, all the versions 
@@ -12,7 +14,7 @@
  * the number of calls to the API.
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

@@ -1,11 +1,13 @@
-/*
+/**
+ * Tag: linked list
+ *
  * Given a singly linked list, determine if it is a palindrome.
  * 
  * Follow up:
  * Could you do it in O(n) time and O(1) space?
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P201_P300;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

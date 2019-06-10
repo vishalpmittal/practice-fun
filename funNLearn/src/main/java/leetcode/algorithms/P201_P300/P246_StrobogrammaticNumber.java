@@ -1,4 +1,6 @@
 /**
+ * Tag: Math
+ * 
  * A strobogrammatic number is a number that looks the same when 
  * rotated 180 degrees (looked at upside down).
  * 
@@ -8,7 +10,7 @@
  * For example, the numbers "69", "88", and "818" are all strobogrammatic.
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

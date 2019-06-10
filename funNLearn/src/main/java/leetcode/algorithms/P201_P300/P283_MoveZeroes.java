@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: array 
+ *
  * Given an array nums, write a function to move all 0's to the end of 
  * it while maintaining the relative order of the non-zero elements.
  * 
@@ -10,7 +12,7 @@
  * Minimize the total number of operations. 
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 import java.util.Arrays;
 
@@ -22,17 +24,17 @@ public class P283_MoveZeroes {
 
 		//last non zero index
 		int lnzi = -1;
-		for (int index = 0; index < nums.length; index++) {
+		for (int i = 0; i < nums.length; i++) {
 			// move all the non zeros to front
-			if (nums[index] != 0){				
-				nums[lnzi+1] = nums[index];
+			if (nums[i] != 0){				
+				nums[lnzi+1] = nums[i];
 				lnzi++;
 			}
 		}
 		
 		// set remaining positions to zero
-		for (int index = lnzi+1; index < nums.length; index++) {
-			nums[index] = 0;
+		for (int i = lnzi+1; i < nums.length; i++) {
+			nums[i] = 0;
 		}
 		
 	}

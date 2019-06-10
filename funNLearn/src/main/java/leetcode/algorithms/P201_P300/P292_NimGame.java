@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: math
+ *
  * You are playing the following Nim Game with your friend: 
  * There is a heap of stones on the table, each time one of you take turns to 
  * remove 1 to 3 stones. The one who removes the last stone will be the winner. 
@@ -17,7 +19,7 @@
  * remove the stones such that you will always be the winner?
  */
 
-package leetcode;
+package leetcode.algorithms.P201_P300;
 
 public class P292_NimGame {
 	public static boolean canWinNim(int n) {
