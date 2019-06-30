@@ -2,7 +2,7 @@
  * 
  */
 
-package leetcode;
+package leetcode.algorithms.P301_P400;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

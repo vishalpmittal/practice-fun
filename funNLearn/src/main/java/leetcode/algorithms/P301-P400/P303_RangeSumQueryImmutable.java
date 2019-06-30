@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: array, design ds
+ *
  * Given an integer array nums, find the sum of the elements between 
  * indices i and j (i ≤ j), inclusive.
  * 
@@ -11,9 +13,15 @@
  * Note:
  * You may assume that the array does not change.
  * There are many calls to sumRange function.
+ * 
+ * Approach:
+ * during the first time initiation, save sum upto arr[n] at arr[n]
+ * when called for sum from i to j just return arr[j]-arr[i]
+ * 
+ * O(n) initiation but O(1) run time
  */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 
@@ -25,7 +33,6 @@ import org.junit.runner.notification.Failure;
 public class P303_RangeSumQueryImmutable {
 	int[] nums;
 
-	// O(N) Initialization and O(1) sum range
 	public P303_RangeSumQueryImmutable(int[] nums) {
 		for (int i = 1; i < nums.length; i++)
 			nums[i] += nums[i - 1];
