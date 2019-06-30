@@ -1,0 +1,69 @@
+-  Little's Law
+   L = Average # of flow units in a process
+   W = average process cycle time
+   λ = process throughput
+   
+   At equilibrium 
+   L = λ . W
+   
+   eg:
+   100 new masters MSE students / year = λ
+   1.5 years to Masters degree = W
+   L = 100 * 1.5 = 150 students in MSE masters program
+
+-  Markov Processes/chain
+   https://en.wikipedia.org/wiki/Markov_chain
+
+-  Knapsack problem
+   suppose a hiker is scaling a hill: what items should he take in his Knapsack?
+
+   Item -> Value -> Weight
+   A -> 30 -> 25
+   B -> 70 -> 40
+   C -> 50 -> 20
+   D -> 55 -> 35
+
+   Objective : maximize the value of the contents in the Knapsack
+   Constraint: Hiker cannot carry more than 80 lbs in weight
+
+
+-  Linear Optimization
+
+
+-  capacity-inventory-service level
+-  inventory management
+-  Revenue Management
+-  Auctions
+-  Yield Management
+-  Pricing 
+-  Auction Design
+-  Footprint
+-  Thin Client
+
+-  Organizations (5 basic functions)
+   HR, Finance, R&D, Productions & Operations, Sales/Marketing
+
+-  Organizations Competitive Priorities:
+   Cost, Speed, Flexibility, Quality
+
+-  Operations Management (OM)?
+   -  OM is the field concerned with the effective planning, scheduling, and
+      control of manufacturing and service entities
+   -  OM is concerned with managing the production process that converts inputs
+      (i.e., material, manpower, capital, information, and energy) into outputs (i.e.,
+      goods and services)
+
+-  Probability of getting software with 10 independent modules completed in 16 weeks.
+   each success probability is 50%
+   1/2 * 1/2 * 1/2 .....10 times = 1/(2^10) = 1/1024
+   which is less than 1 in 1000 chance that all modules will be converted. 
+   
+-  Bernoulli Trial, Binomial distribution
+   https://en.wikipedia.org/wiki/Bernoulli_trial
+
+   
+-  Efficiency: output/input
+-  Quality: of output
+-  Capacity: maximum throughput = output production rate
+-  Cycle Time: time elapsed from input to output
+-  Flexibility: volume and product
