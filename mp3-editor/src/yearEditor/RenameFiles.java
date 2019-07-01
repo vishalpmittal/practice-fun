@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class RenameFiles {
-	private static String year="2019";
+	private static String year="2017";
 	private static String replace_title_tag_as_filename="false";
 	private static String replace_file_name_by_album_tag="false";
 	private static String[] str2rem = {"www.Songs.PK","songs","pk","Songs.PK","www","320Kbps","320kbps","128Kbps",
@@ -16,7 +16,7 @@ public class RenameFiles {
 		String prop_file = "/Users/vishalm/Downloads/editor.properties";
 		
 //		File dir = new File("/Users/vishalmittal/Music/HindiMovieSongs/"+year);
-		File dir = new File("/Users/vishalm/Downloads/"+year);
+		File dir = new File("/Users/vishalm/Downloads/songs_wip/"+year);
 		
 		for (final File fileEntry : dir.listFiles()) {
 	    	if (fileEntry.isDirectory()){
