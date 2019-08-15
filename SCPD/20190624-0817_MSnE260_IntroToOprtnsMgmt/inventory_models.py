@@ -112,5 +112,7 @@ def midterm_QR_analyzed():
 # print get_lz_value(1.25)
 
 print get_z_value(0.8)
+print get_z_value(0.4736)
+print get_z_value(0.421)
 
 
