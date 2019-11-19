@@ -79,6 +79,6 @@ def test_code():
     assert(obj.isMatch('aab', 'c*a*b') == True)
     assert(obj.isMatch('mississippi', 'mis*is*p*.') == False)
     assert(obj.isMatch('abadlfkadfkd', '.*') == True)
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

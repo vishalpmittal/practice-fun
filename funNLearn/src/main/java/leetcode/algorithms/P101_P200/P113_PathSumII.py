@@ -48,8 +48,8 @@ def ps_helper(root, sum, curr_list, list_of_list):
 def test_code():
     rn = TN.make_me_a_tree([5, 4, 8, 11, None, 13, 4, 7, 2, None, None, 5, 1])
     # print TN.tree2str(rn)
-    print pathSum(rn, 22)
-    # print "Tests Passed!!"
+    print (pathSum(rn, 22))
+    # print ("Tests Passed!")
 
 
 test_code()

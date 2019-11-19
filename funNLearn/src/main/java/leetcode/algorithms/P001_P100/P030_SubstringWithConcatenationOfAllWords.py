@@ -73,9 +73,9 @@ class Solution(object):
             wc_map[w] = wc_map[w] + 1 if w in wc_map else 1
 
         for i in xrange(min(wl, sl - twl + 1)):
-            print "i: {}, sl: {}, wl: {}, twl: {}, s: {}, wc_map: {}, ans: {}".format(
+            print ("i: {}, sl: {}, wl: {}, twl: {}, s: {}, wc_map: {}, ans: {}".format(
                 i, sl, wl, twl, s, wc_map, ans
-            )
+            ))
 
             self._findSubstring(i, i, sl, wl, twl, s, wc_map, ans)
         return ans
@@ -83,6 +83,6 @@ class Solution(object):
 def test_code():
     obj = Solution()
     assert obj.findSubstring('barfoothefoobarman', ['foo','bar']) == [0, 9]
-    print "Tests passed!"
+    print ("Tests Passed!")
 
 test_code()

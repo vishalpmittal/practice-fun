@@ -25,9 +25,9 @@ class Solution(object):
         l, r = 0, len(heights) - 1
         leftmax, rightmax = l, r
         while l < r:
-            print 'l: {}, r: {}, leftmax: {}, rightmax: {}, total: {}'.format(
+            print ('l: {}, r: {}, leftmax: {}, rightmax: {}, total: {}'.format(
                 l, r, leftmax, rightmax, total
-            )
+            ))
             if heights[l] > heights[leftmax]:
                 leftmax = l
             if heights[r] > heights[rightmax]:
@@ -41,6 +41,6 @@ class Solution(object):
         return total
 
 def test_code():
-    print Solution.trap([0,1,0,2,1,0,1,3,2,1,2,1])
+    print (Solution.trap([0,1,0,2,1,0,1,3,2,1,2,1]))
 
 test_code()

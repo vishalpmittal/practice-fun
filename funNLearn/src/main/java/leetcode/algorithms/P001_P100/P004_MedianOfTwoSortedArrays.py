@@ -99,6 +99,6 @@ def test_code():
     assert obj.findMedianSortedArrays_bf([1, 2], [3, 4]) == 2.5
     assert obj.findMedianSortedArrays([1, 3], [2]) == 2
     assert obj.findMedianSortedArrays([1, 2], [3, 4])
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

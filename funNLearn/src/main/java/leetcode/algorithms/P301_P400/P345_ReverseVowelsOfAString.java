@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: string, array
+ *
  * Write a function that takes a string as input and reverse only the vowels of a string.
  * 
  * Example 1:
@@ -9,7 +11,7 @@
  * 
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 

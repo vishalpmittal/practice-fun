@@ -27,6 +27,6 @@ class P005_LongestPalindromicSubstring(object):
 
 def test_code():
     obj = P005_LongestPalindromicSubstring()
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

@@ -78,6 +78,6 @@ def test_code():
     assert obj.divide(17, 3) == 5
     assert obj.divide(7, -3) == -2
     assert obj.divide(-24, -5) == 4
-    print "Tests passed!!"
+    print ("Tests Passed!")
 
 test_code()

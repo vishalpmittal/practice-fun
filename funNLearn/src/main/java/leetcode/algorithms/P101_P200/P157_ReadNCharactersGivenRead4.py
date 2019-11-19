@@ -114,7 +114,7 @@ def test_code():
     buf = list()
     assert read(buf, 2) == 2
     assert buf == ['a', 'b']
-    print "Tests Passed!!"
+    print ("Tests Passed!!")
 
 
 test_code()

@@ -88,4 +88,4 @@ obj.put(4, 4)
 assert obj.get(1) == -1
 assert obj.get(3) == 3
 assert obj.get(4) == 4
-print "Tests Passed!"
+print ("Tests Passed!")

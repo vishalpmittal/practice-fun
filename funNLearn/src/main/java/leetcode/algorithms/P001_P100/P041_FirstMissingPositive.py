@@ -40,6 +40,6 @@ def test_code():
     assert Solution.firstMissingPositive([1,2,0]) == 3
     assert Solution.firstMissingPositive([3,4,-1,1]) == 2
     assert Solution.firstMissingPositive([7,8,9,11,12]) == 1
-    print "Tests passed!!"
+    print ("Tests Passed!")
 
 test_code()

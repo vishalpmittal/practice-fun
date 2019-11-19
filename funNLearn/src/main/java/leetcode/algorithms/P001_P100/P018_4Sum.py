@@ -45,6 +45,6 @@ class Solution(object):
 
 def test_code():
     obj = Solution()
-    print obj.fourSum([1, 0, -1, 0, -2, 2], 0)
+    print (obj.fourSum([1, 0, -1, 0, -2, 2], 0))
 
 test_code()

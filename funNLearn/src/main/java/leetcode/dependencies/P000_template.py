@@ -10,6 +10,6 @@ def solve_problem():
 
 def test_code():
     assert solve_problem() == True
-    print "Tests Passed!!"
+    print ("Tests Passed!!")
 
 test_code()

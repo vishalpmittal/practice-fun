@@ -1,4 +1,7 @@
-/*
+/**
+ * 
+ * Tag: integer, bit, math
+ *
  * Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
  * 
  * Example:
@@ -7,7 +10,7 @@
  * Follow up: Could you solve it without loops/recursion?
  */
 
-package leetcode;
+package leetcode.algorithms.P301_P400;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;

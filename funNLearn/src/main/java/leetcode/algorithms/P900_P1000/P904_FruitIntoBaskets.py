@@ -78,6 +78,6 @@ def test_code():
     assert obj.totalFruit([1,2,3,2,2]) == 4
     assert obj.totalFruit([3,3,3,1,2,1,1,2,3,3,4]) == 5
 
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

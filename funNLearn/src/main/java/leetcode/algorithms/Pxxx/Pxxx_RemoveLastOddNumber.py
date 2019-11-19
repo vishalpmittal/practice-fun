@@ -22,6 +22,6 @@ def test_code():
     assert remove_last_odd([1,2,3,4,6,8]) == [1,2,4,6,8]
     assert remove_last_odd([]) == []
     assert remove_last_odd(None) == None
-    print "Tests passed!!"
+    print ("Tests Passed!")
 
 test_code()

@@ -48,10 +48,10 @@ class Solution(object):
 
 def test_code():
     obj = Solution()
-    print obj.mergeKLists([
+    print (obj.mergeKLists([
         ListNode.create_llist([1, 4, 5]),
         ListNode.create_llist([1, 3, 4]),
         ListNode.create_llist([2, 6])
-    ])
+    ]))
 
 test_code()

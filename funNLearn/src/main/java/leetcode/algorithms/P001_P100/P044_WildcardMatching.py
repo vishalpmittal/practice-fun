@@ -52,21 +52,21 @@ def isMatch(s, patt):
         accept = state
         state = set([0])
         
-        print 'transfer: {}'.format(transfer)
-        print 'accept: {}'.format(accept)
-        print 'state: {}'.format(state)
+        print ('transfer: {}'.format(transfer))
+        print ('accept: {}'.format(accept))
+        print ('state: {}'.format(state))
 
         for char in s:
             state = set([transfer.get((at, token)) for at in state for token in [char, '*', '?']])
 
-        print 'accept: {}'.format(accept)
-        print 'state: {}'.format(state)
+        print ('accept: {}'.format(accept))
+        print ('state: {}'.format(state))
 
         return accept in state
 
 
 def test_code():
-    print isMatch('abcdefg', 'ab?d*g')
+    print (isMatch('abcdefg', 'ab?d*g'))
 
 
 test_code()

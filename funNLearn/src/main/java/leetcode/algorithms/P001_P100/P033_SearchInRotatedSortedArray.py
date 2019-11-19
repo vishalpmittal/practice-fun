@@ -92,6 +92,6 @@ def test_code():
     obj = Solution()
     assert obj.search([4,5,6,7,0,1,2], 0) == 4
     assert obj.search([4,5,6,7,0,1,2], 3) == -1
-    print "Tests passed!"
+    print ("Tests Passed!")
 
 test_code()

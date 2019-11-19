@@ -87,6 +87,6 @@ def test_code():
         ans
     )
 
-    print "Tests Passed!!"
+    print ("Tests Passed!")
 
 test_code()

@@ -98,6 +98,6 @@ def test_code():
     obj.nextPermutation(num_list)
     assert num_list == [1, 5, 1]
     
-    print "Tests Passed!!"
+    print ("Tests Passed!")
 
 test_code()

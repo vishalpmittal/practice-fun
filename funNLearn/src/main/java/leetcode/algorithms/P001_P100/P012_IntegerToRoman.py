@@ -65,6 +65,6 @@ def test_code():
     assert obj.intToRoman(9)=='IX'
     assert obj.intToRoman(58)=='LVIII'
     assert obj.intToRoman(1994)=='MCMXCIV'
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

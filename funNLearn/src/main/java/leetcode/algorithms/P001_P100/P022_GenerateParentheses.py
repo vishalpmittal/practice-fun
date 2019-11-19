@@ -76,9 +76,9 @@ class Solution(object):
     """
     def generate_brcks(self, leftRemaining, rightRemaining, curr_str, super_set):
         
-        # print "----------------\n{} {} {} {}".format(
+        # print ("----------------\n{} {} {} {}".format(
         #     leftRemaining, rightRemaining, curr_str, super_set
-        #     )
+        #     ))
 
         # If we are left with 0 left and 0 right brackets to put. 
         # add curr_str and return
@@ -117,14 +117,14 @@ class Solution(object):
         # and so on...
         for i in range(1, n + 1):
             for j in range(i):
-                print "------ i={} j={} ".format(i, j)
-                print dp
+                print ("------ i={} j={} ".format(i, j))
+                print (dp)
                 dp[i] += ['(' + x + ')' + y for x in dp[j] for y in dp[i - j - 1]]
         return dp[n]
 
 def test_code():
     obj = Solution()
     # print obj.generateParenthesis_rec(3)
-    print obj.generateParenthesis_dp(4)
+    print (obj.generateParenthesis_dp(4))
 
 test_code()

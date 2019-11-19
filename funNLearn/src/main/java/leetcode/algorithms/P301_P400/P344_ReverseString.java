@@ -1,8 +1,10 @@
-/*
+/** 
+ * Tag: string
+ *
  * Write a function that takes a string as input and returns the string reversed.
  */
 
-package leetcode.strings;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 

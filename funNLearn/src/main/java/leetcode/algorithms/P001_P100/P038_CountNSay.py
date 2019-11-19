@@ -62,6 +62,6 @@ def test_code():
     assert Solution.solve_problem(7) == '13112221'
     assert Solution.solve_problem(8) == '1113213211'
     assert Solution.solve_problem(9) == '31131211131221'
-    print 'Tests Passed!'
+    print ("Tests Passed!")
 
 test_code()

@@ -67,6 +67,6 @@ class Solution(object):
 
 def test_code():
     assert Solution.multiply('123', '45') == '5535'
-    print 'tests passed!!'
+    print ('Tests passed!!')
 
 test_code()

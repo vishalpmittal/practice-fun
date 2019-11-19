@@ -41,6 +41,6 @@ def test_code():
     tso.add(1), tso.add(3), tso.add(5)
     assert tso.find(4)
     assert not tso.find(7)
-    print "Tests Passed!!"
+    print ("Tests Passed!!")
 
 test_code()

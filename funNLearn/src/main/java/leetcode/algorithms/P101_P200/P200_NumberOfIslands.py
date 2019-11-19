@@ -64,6 +64,6 @@ def test_code():
     m_island[3]=['0', '0', '0', '1', '1']
     assert obj.numIslands(m_island) == 3
 
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

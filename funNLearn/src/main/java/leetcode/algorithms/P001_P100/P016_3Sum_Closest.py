@@ -45,6 +45,6 @@ class P016_3Sum_Closest(object):
 def test_code():
     obj = P016_3Sum_Closest()
     assert obj.threeSumClosest([-1, 2, 1, -4], 1) == 2
-    print "Tests passed!"
+    print ("Tests Passed!")
 
 test_code()

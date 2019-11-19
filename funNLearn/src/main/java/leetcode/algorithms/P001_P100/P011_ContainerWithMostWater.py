@@ -45,6 +45,6 @@ class P011_ContainerWithMostWater(object):
 def test_code():
     obj = P011_ContainerWithMostWater()
     obj.maxArea([1,8,6,2,5,4,8,3,7]) == 49
-    print "Tests Passed!"
+    print ("Tests Passed!")
 
 test_code()

@@ -1,4 +1,6 @@
 /**
+ * Tag: array, recursive
+ * 
  * Given a nested list of integers, return the sum of all integers in the list 
  * weighted by their depth.
  * 
@@ -30,7 +32,7 @@
  * }
  */
 
-package leetcode;
+package leetcode.algorithms.P301_P400;
 
 import java.util.List;
 import leetcode.dependencies.NestedInteger;

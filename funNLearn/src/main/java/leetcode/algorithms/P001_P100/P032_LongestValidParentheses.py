@@ -24,7 +24,7 @@ class Solution(object):
         longest = 0
         
         for c in s:
-            # print 'c: {}, stack {}, longest: {}'.format(c, stack, longest)
+            # print (c: {}, stack {}, longest: {}'.format(c, stack, longest))
             if c == "(":
                 stack.append(0)
             else:
@@ -43,6 +43,6 @@ def test_code():
     assert obj.longestValidParentheses(')()())') == 4
     assert obj.longestValidParentheses('()(()') == 2
     assert obj.longestValidParentheses('()())((((((()))))))') == 14
-    print "Tests passed!"
+    print ("Tests Passed!")
 
 test_code()

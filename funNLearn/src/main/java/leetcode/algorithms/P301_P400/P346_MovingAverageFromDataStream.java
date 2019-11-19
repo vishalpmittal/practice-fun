@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: list
+ *
  * Given a stream of integers and a window size, calculate the moving 
  * average of all integers in the sliding window.
  * 
@@ -10,7 +12,7 @@
  * m.next(5) = (10 + 3 + 5) / 3
  */
 
-package leetcode;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 

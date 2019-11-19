@@ -48,6 +48,6 @@ def minCost(costs):
 def test_code():
     assert minCost([[17,2,17], [16,16,5], [14,3,19]]) == 10
     assert minCost([[17,17,2], [16,16,5], [14,3,19]]) == 21
-    print "Tests Passed!!"
+    print ("Tests Passed!")
 
 test_code()

@@ -60,7 +60,7 @@ def test_code():
     assert twoSum1([2, 7, 11, 15], 9) == [1, 2]
     assert twoSum2([2, 7, 11, 15], 9) == [1, 2]
     assert twoSum([2, 7, 11, 15], 9) == [1, 2]
-    print "Tests Passed!!"
+    print ("Tests Passed!!")
 
 
 test_code()

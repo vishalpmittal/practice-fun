@@ -40,6 +40,6 @@ def numWays(p, c):
 
 def test_code():
     assert numWays(3, 2) == 6
-    print "Tests Passed!!"
+    print ("Tests Passed!")
 
 test_code()

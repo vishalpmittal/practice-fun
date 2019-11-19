@@ -71,7 +71,7 @@ def test_code():
     rn2 = TN.make_me_a_tree([1, 2, 5, 3, 4, None, 6])
     flatten_iterative(rn2)
     assert TN.is_tree_equal(rn1, rn2)
-    print 'Tests Passed!!'
+    print ('Tests Passed!!')
 
 
 test_code()

@@ -66,6 +66,6 @@ def test_code():
     obj = Solution()
     assert obj.searchRange([5,7,7,8,8,10], 8) == [3, 4]
     assert obj.searchRange([5,7,7,8,8,10], 6) == [-1, -1]
-    print "tests passed!!"
+    print ("Tests Passed!")
 
 test_code()
