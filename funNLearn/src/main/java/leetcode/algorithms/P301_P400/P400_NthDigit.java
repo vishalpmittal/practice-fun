@@ -1,26 +1,21 @@
-package leetcode;
-
-/** ---------------------------------------------
- * Find the nth digit of the infinite integer sequence 
+/** 
+ * Tag: math
  * 
+ * Find the nth digit of the infinite integer sequence 
  * 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...
  * 
  * Note:
  * n is positive and will fit within the range of a 32-bit signed integer (n < 2 to power 31).
  * 
- * Example 1:
- * Input: 3
- * Output: 3
- * 
- * Example 2:
- * Input: 11
- * Output: 0
+ * Example 1: Input: 3, Output: 3
+ * Example 2: Input: 11, Output: 0
  * 
  * Explanation:
  * The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... is a 0, 
  * which is part of the number 10.
- * --------------------------------------------- */
+ */
 
+package leetcode.algorithms.P301_P400;
 import static org.junit.Assert.assertTrue;
 
 public class P400_NthDigit {
@@ -34,11 +29,8 @@ public class P400_NthDigit {
      * For input 12345
      * len
      * len = 1, count = 9, start = 1, n = 12345
-     * len = 1, count = 9, start = 1, n = 12336
      * len = 2, count = 90, start = 10, n = 12336
-     * len = 2, count = 90, start = 10, n = 12156
      * len = 3, count = 900, start = 100, n = 12156
-     * len = 3, count = 900, start = 100, n = 9456
      * len = 4, count = 9000, start = 1000, n = 9456
      * 
      * start = 1000 + (9456 - 1) / 4 = 3363

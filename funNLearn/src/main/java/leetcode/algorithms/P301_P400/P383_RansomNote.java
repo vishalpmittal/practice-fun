@@ -1,6 +1,6 @@
-package leetcode;
-
-/** ---------------------------------------------
+/** 
+ * Tag: string
+ * ---------------------------------------------
  * Given an arbitrary ransom note string and another string containing 
  * letters from all the magazines, write a function that will return true 
  * if the ransom note can be constructed from the magazines ; 
@@ -15,6 +15,8 @@ package leetcode;
  * canConstruct("aa", "ab") -> false
  * canConstruct("aa", "aab") -> true
  --------------------------------------------- */
+
+ package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

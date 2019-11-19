@@ -1,4 +1,7 @@
 /**
+ * 
+ * Tag: 
+ * 
  * Design a logger system that receive stream of messages along with its 
  * timestamps, each message should be printed if and only if it is not 
  * printed in the last 10 seconds.
@@ -31,7 +34,7 @@
  * logger.shouldPrintMessage(11,"foo"); returns true;
  */
 
-package leetcode;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;

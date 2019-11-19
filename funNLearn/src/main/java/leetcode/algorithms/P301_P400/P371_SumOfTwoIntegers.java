@@ -1,7 +1,8 @@
-package leetcode.binaryBits;
-
 /**
- * Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -
+ * Tag: math, bit
+ * 
+ * Calculate the sum of two integers a and b, but you are not allowed to use 
+ * the operator + and -
  * 
  * Example:
  * Given a = 1 and b = 2, return 3.
@@ -21,6 +22,8 @@ package leetcode.binaryBits;
  * 1101 is -3, which is ~3 + 1
  * so if you want to get a negative number, you can simply do ~x + 1
  */
+
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 

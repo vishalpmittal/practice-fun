@@ -1,6 +1,7 @@
-package leetcode;
-
-/** ---------------------------------------------
+/** 
+ * Tag: 
+ * 
+ * ---------------------------------------------
  * We are playing the Guess Game. The game is as follows:
  * 
  * I pick a number from 1 to n. You have to guess which number I picked.
@@ -19,9 +20,7 @@ package leetcode;
  * Return 6.
  --------------------------------------------- */
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
+package leetcode.algorithms.P301_P400;
 import java.util.Random;
 
 class GuessGame {

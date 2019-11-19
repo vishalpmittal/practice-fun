@@ -1,4 +1,7 @@
-/** ---------------------------------------------
+/** 
+ * Tag: array
+ * 
+ * ---------------------------------------------
  * Given two arrays, write a function to compute their intersection.
  * 
  * Example:
@@ -9,7 +12,7 @@
  * The result can be in any order. 
 --------------------------------------------- */
 
-package leetcode.listsNArrays;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 

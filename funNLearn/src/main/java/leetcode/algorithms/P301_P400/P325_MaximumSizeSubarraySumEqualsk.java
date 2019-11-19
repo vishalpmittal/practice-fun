@@ -1,4 +1,7 @@
 /**
+ * 
+ * Tag: array, dp
+ * 
  * Given an array nums and a target value k, find the maximum length 
  * of a subarray that sums to k. If there isn't one, return 0 instead.
  * 
@@ -15,10 +18,9 @@
  * 
  */
 
-package leetcode;
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
-
 import java.util.HashMap;
 
 public class P325_MaximumSizeSubarraySumEqualsk {

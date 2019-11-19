@@ -1,6 +1,7 @@
-package leetcode.strings;
-
-/** ---------------------------------------------
+/** 
+ * Tag: array
+ * 
+ * ---------------------------------------------
  * Given a string, find the first non-repeating character in it and 
  * return it's index. If it doesn't exist, return -1.
  * 
@@ -14,6 +15,8 @@ package leetcode.strings;
  * 
  * Note: You may assume the string contain only lowercase letters.
  --------------------------------------------- */
+
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 

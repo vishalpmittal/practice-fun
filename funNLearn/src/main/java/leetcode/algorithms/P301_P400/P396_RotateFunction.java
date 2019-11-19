@@ -1,6 +1,7 @@
-package leetcode;
-
-/** ---------------------------------------------
+/** 
+ * Tag: array, dp
+ * 
+ * ---------------------------------------------
  * Given an array of integers A and let n to be its length.
  * 
  * Assume Bk to be an array obtained by rotating the array A k positions 
@@ -13,9 +14,7 @@ package leetcode;
  * Note:
  * n is guaranteed to be less than 105.
  * 
- * Example:
- * 
- * A = [4, 3, 2, 6]
+ * Example: A = [4, 3, 2, 6]
  * 
  * F(0) = (0 * 4) + (1 * 3) + (2 * 2) + (3 * 6) = 0 + 3 + 4 + 18 = 25
  * F(1) = (0 * 6) + (1 * 4) + (2 * 3) + (3 * 2) = 0 + 4 + 6 + 6 = 16
@@ -24,6 +23,9 @@ package leetcode;
  * 
  * So the maximum value of F(0), F(1), F(2), F(3) is F(3) = 26.
  * --------------------------------------------- */
+
+
+package leetcode.algorithms.P301_P400;
 
 import static org.junit.Assert.assertTrue;
 
