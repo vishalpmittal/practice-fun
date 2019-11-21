@@ -10,10 +10,7 @@
  * not be any extra space in the string.
  */
 
-package leetcode;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+package leetcode.algorithms.P501_P600;
 
 public class P557_ReverseWordsInAStringIII {
 

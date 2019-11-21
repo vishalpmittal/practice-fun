@@ -1,4 +1,7 @@
-/** ---------------------------------------------
+/** 
+ * Tag: string
+ * 
+ * ---------------------------------------------
  * Count the number of segments in a string, where a segment is defined to 
  * be a contiguous sequence of non-space characters.
  * 
@@ -9,7 +12,7 @@
  * Output: 5
  * --------------------------------------------- */
 
-package leetcode;
+package leetcode.algorithms.P401_P500;
 
 import static org.junit.Assert.assertTrue;
 

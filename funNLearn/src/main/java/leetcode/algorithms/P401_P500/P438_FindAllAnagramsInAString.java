@@ -32,9 +32,7 @@
  * The substring with start index = 2 is "ab", which is an anagram of "ab".
  */
 
-package leetcode;
-
-import static org.junit.Assert.assertTrue;
+package leetcode.algorithms.P401_P500;
 
 import java.util.ArrayList;
 import java.util.HashMap;

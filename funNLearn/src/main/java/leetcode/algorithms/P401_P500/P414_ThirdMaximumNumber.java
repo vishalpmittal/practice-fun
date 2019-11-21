@@ -1,6 +1,7 @@
-package leetcode;
-
-/** ---------------------------------------------
+/** 
+ * Tag: math
+ * 
+ * ---------------------------------------------
  * Given a non-empty array of integers, return the third maximum number in this array. 
  * If it does not exist, return the maximum number. The time complexity must be in O(n).
  * 
@@ -15,6 +16,8 @@ package leetcode;
  * 
  * Both numbers with value 2 are both considered as second maximum.
  * --------------------------------------------- */
+
+package leetcode.algorithms.P401_P500;
 
 import static org.junit.Assert.assertTrue;
 

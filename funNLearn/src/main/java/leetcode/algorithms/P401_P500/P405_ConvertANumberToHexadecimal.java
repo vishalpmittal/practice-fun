@@ -1,11 +1,11 @@
-package leetcode.binaryBits;
-
-/** ---------------------------------------------
+/** 
+ * Tag: math, bit
+ * 
+ * ---------------------------------------------
  * Given an integer, write an algorithm to convert it to hexadecimal. 
  * For negative integer, two’s complement method is used.
  * 
  * Note:
- * 
  * 1. All letters in hexadecimal (a-f) must be in lowercase.
  * 2. The hexadecimal string must not contain extra leading 0s. 
  * ...If the number is zero, it is represented by a single zero character '0'; 
@@ -21,8 +21,8 @@ package leetcode.binaryBits;
  * Input: -1;  Output: "ffffffff"
  * --------------------------------------------- */
 
+package leetcode.algorithms.P401_P500;
 import static org.junit.Assert.assertTrue;
-
 public class P405_ConvertANumberToHexadecimal {
 
     /* ---------------------------------------------
@@ -30,6 +30,12 @@ public class P405_ConvertANumberToHexadecimal {
      * binary verion of the input, and maps that to a hex char
      * shift the input to the right by 4 bits, do it again
      * until input becomes 0.
+     * 
+     * for num = 26 (11010)
+     * 11010(26) & 1111(15) = hex(1010) => a
+     * 11010(26) >>> 4 => 1
+     * 1 & 1111(15) = hex(1) => 1
+     * hex of 26 => 1a
      * --------------------------------------------- */
     public static String toHex(int num) {
         if (num == 0)

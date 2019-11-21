@@ -1,4 +1,7 @@
-/** ---------------------------------------------
+/** 
+ * Tag: string, math
+ * 
+ * ---------------------------------------------
  * Given two non-negative integers num1 and num2 represented as string, 
  * return the sum of num1 and num2.
  * 
@@ -10,7 +13,7 @@
  * 4. You must not use any built-in BigInteger library or convert 
  * ...the inputs to integer directly.
  * --------------------------------------------- */
-package leetcode;
+package leetcode.algorithms.P401_P500;
 
 import static org.junit.Assert.assertTrue;
 

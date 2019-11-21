@@ -1,6 +1,6 @@
-package leetcode.binaryBits;
-
-/** ---------------------------------------------
+/**  
+ * Tag: math, bit, recursive
+ * 
  * A binary watch has 4 LEDs on the top which represent the hours (0-11), 
  * and the 6 LEDs on the bottom represent the minutes (0-59).
  * 
@@ -31,8 +31,7 @@ package leetcode.binaryBits;
  *    is not valid, it should be "10:02".
  * --------------------------------------------- */
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+package leetcode.algorithms.P401_P500;
 
 import java.util.ArrayList;
 import java.util.Arrays;

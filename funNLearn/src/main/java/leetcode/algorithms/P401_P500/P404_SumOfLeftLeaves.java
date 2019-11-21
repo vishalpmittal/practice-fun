@@ -1,14 +1,6 @@
-package leetcode.tree;
-
-import static org.junit.Assert.assertTrue;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
-import leetcode.dependencies.TreeNode;
-
 /**
+ * Tag: tree, recursive, stack
+ * 
  * ---------------------------------------------
  * Find the sum of all left leaves in a given binary tree.
  * 
@@ -24,6 +16,16 @@ import leetcode.dependencies.TreeNode;
  * with values 9 and 15 respectively. Return 24.
  * ---------------------------------------------
  */
+
+ package leetcode.algorithms.P401_P500;
+
+import static org.junit.Assert.assertTrue;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+import leetcode.dependencies.TreeNode;
 
 public class P404_SumOfLeftLeaves {
 
