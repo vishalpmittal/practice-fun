@@ -4,12 +4,13 @@
     Tag: design ds (design data structure), dfs, binary search, algo
 
 """
+from typing import List
 
-def solve_problem():
-    return
 
-def test_code():
-    assert solve_problem() == True
-    print ("Tests Passed!!")
+class Solution:
+    def solve_problem(self, list1: List[str], list2: List[str]) -> bool:
+        return True
 
-test_code()
+
+assert Solution().solve_problem([], [])
+print('Tests Passed!!')

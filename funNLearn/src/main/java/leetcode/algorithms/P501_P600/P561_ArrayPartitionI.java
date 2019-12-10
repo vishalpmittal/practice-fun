@@ -1,4 +1,6 @@
-/*
+/**
+ * Tag: array 
+ *
  * Given an array of 2n integers, your task is to group these integers into n pairs of 
  * integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all 
  * i from 1 to n as large as possible.
@@ -22,17 +24,19 @@ import java.util.Arrays;
 
 public class P561_ArrayPartitionI {
 
-    /* first sort the input array and then the sum of 1st, 3rd, 5th..., is the answer.
-     * - Assume in each pair i, bi >= ai.
-     * - Denote Sm = min(a1, b1) + min(a2, b2) + ... + min(an, bn). The biggest Sm is the answer
-     * of this problem. Given 1, Sm = a1 + a2 + ... + an.
-     * - Denote Sa = a1 + b1 + a2 + b2 + ... + an + bn. Sa is constant for a given input.
-     * - Denote di = |ai - bi|. Given 1, di = bi - ai. Denote Sd = d1 + d2 + ... + dn.
-     * - So Sa = a1 + a1 + d1 + a2 + a2 + d2 + ... + an + an + di = 2Sm + Sd => Sm = (Sa - Sd) / 2.
-     * - To get the max Sm, given Sa is constant, we need to make Sd as small as possible.
-     * - So this problem becomes finding pairs in an array that makes sum of di (distance between ai and bi) as small as
-     * possible.
-     * - Apparently, sum of these distances of adjacent elements is the smallest. */
+    /**
+     * first sort the input array and then the sum of 1st, 3rd, 5th..., is the
+     * answer. - Assume in each pair i, bi >= ai. - Denote Sm = min(a1, b1) +
+     * min(a2, b2) + ... + min(an, bn). The biggest Sm is the answer of this
+     * problem. Given 1, Sm = a1 + a2 + ... + an. - Denote Sa = a1 + b1 + a2 + b2 +
+     * ... + an + bn. Sa is constant for a given input. - Denote di = |ai - bi|.
+     * Given 1, di = bi - ai. Denote Sd = d1 + d2 + ... + dn. - So Sa = a1 + a1 + d1
+     * + a2 + a2 + d2 + ... + an + an + di = 2Sm + Sd => Sm = (Sa - Sd) / 2. - To
+     * get the max Sm, given Sa is constant, we need to make Sd as small as
+     * possible. - So this problem becomes finding pairs in an array that makes sum
+     * of di (distance between ai and bi) as small as possible. - Apparently, sum of
+     * these distances of adjacent elements is the smallest.
+     */
 
     public static int arrayPairSum(int[] nums) {
         Arrays.sort(nums);
@@ -43,8 +47,10 @@ public class P561_ArrayPartitionI {
         return result;
     }
 
-    /* create a Hash of all the numbers, browse through the hash and keep adding every alternative number
-     * also consider duplicates while adding */
+    /**
+     * create a Hash of all the numbers, browse through the hash and keep adding
+     * every alternative number also consider duplicates while adding
+     */
     public static int arrayPairSum_fast(int[] nums) {
         int[] hash = new int[20001];
         for (int ele : nums) {
