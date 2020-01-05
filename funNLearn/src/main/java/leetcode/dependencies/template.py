@@ -1,7 +1,7 @@
 """
     Tag: TO-DO, string, dp, array, integer, bit, linked list
     Tag: tree, sort, math, matrix, regex, recursive
-    Tag: design ds (design data structure), dfs, binary search, algo
+    Tag: design ds (design data structure), dfs, binary search, algo, game
 
 """
 from typing import List
@@ -12,5 +12,5 @@ class Solution:
         return True
 
 
-assert Solution().solve_problem([], [])
+assert Solution().solve_problem()
 print('Tests Passed!!')
