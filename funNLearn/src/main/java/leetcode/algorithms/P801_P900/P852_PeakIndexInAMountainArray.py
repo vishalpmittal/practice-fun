@@ -1,6 +1,8 @@
 """
     Tag: array, binary search
 
+    also see P941_ValidMountainArray.py
+
     Let's call an array A a mountain if the following properties hold:
     -  A.length >= 3
     -  There exists some 0 < i < A.length - 1 such that 
