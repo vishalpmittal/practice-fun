@@ -1,7 +1,5 @@
 """
-    Tag: TO-DO, string, dp, array, integer, bit, linked list
-    Tag: tree, sort, math, matrix, regex, recursive
-    Tag: design ds (design data structure), dfs, binary search, algo
+    Tag: dp, array, integer
 
     Given a non-empty integer array of size n, find the minimum number of 
     moves required to make all array elements equal, where a move is 

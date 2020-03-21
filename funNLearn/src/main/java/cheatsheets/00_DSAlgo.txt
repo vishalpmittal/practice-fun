@@ -1,0 +1,21 @@
+
+Describe what quality controls do you suggest for a critical highly available service before deploying to production
+
+
+Given a list of dominoes (represented as tuples), what is the longest row of dominoes that you can place down such that adjacent sides of neighboring dominoes have the same label? An example list of dominoes is [(0,3), (3,1), (2,1), (4,0)] and a valid row would be [(0,3), (3,1), (1,2)],
+
+
+-  Eulerian Graph (traverse graph but visit each EDGE exactly once)
+    -  traverse the graph visiting each edge exactly once
+    -  Conditions for eulerian graph
+        -  most of the vertices in the graph need to be of even degree in order for there 
+            to be an Eulerian path through this graph. but with two exceptions
+            -  Our starting vertex is allowed to have more outgoing edges than incoming edges
+            -  our ending vertex is allowed to have more incoming edges than outgoing edges.
+
+-  Graph : Egonet
+    -  For a given node n find all its adjacent components and the edges. Plus any edges between those components that are connected to the center node n.
+
+-  Graph : Strongly Connected Components (SCC)
+    -  The biggest subgraph in a graph where each node can be reached from all other nodes directly or indirectly. 
+    -  Do the DFS, take transpose of the graph (reverse all edges), and do BFS again.

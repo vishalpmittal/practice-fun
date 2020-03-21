@@ -25,7 +25,7 @@ class P015_3Sum(object):
         res = []
         # sort so to skip duplicates
         nums.sort()
-        for curr in xrange(len(nums)-2):
+        for curr in range(len(nums)-2):
             # Skip for duplicates of curr
             if curr > 0 and nums[curr] == nums[curr-1]:
                 continue

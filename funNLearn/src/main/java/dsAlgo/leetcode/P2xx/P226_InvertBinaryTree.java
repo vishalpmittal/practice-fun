@@ -1,7 +1,7 @@
 /**
  * Tag: tree
  *
- * Invert a binary tree.
+ * Invert a binary tree or create a mirror reflection of the binary tree
  * 
  *      4
  *    /   \

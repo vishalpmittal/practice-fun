@@ -1,0 +1,103 @@
+----------------------------------------
+-  In a team what is your working style.
+
+Answer:
+    -   Fun
+    -   
+
+    
+----------------------------------------
+## Q:  In a team which things are important to you.
+
+Answer:
+    -  Communication
+    -  Inclusion/Contribution
+    -  Organization
+    -  Goals and goal plan
+    -  Team Diversity
+    -  Leadership
+    -  Career gaols
+    -  Fun
+
+----------------------------------------
+Q:  what is difference between levels of engineer.
+
+Answer:
+    Based on Year of experience:
+    -   Graduate Engineer 
+        –   until 4 years after graduation
+        -   normally have limit responsibility and instructed daily by a more experience engineer
+    -   Intermediate Engineer 
+        –   between 2 to 5 years after graduation
+        -   Independent engineer which moderate guidance from the senior engineers
+    -   Engineer
+        -   between 5 to 10 years work experience
+    -   Senior Engineer 
+        -   10+ years of experience
+    -   Principal Engineer
+        -   15+ years after graduation from Uni after working on multiple projects
+
+    level according to responsibility
+    -   Engineer
+        -   responsible to himself and some work, might instruct graduate engineers.
+    -   Senior Engineer 
+        -   responsible of small to medium to projects, 
+        -   might have 2-3 engineers and grads working for him on a project but not directly reporting to him.
+    -   Lead Engineer 
+        -   will be responsible for a discipline on a medium to large project 
+        -   will have engineers from graduates to senior reporting for their work on a project or on site.
+    -   Chief Engineer
+        -   will be responsible for a team of engineers from grads to leads and might act as a lead engineer on large scale projects.
+    -   Engineer Manager
+        -   responsible on all projects and will manage the chief and lead engineers.
+
+----------------------------------------
+Q.  Do you describe yourself as a leader or a individual contributor? 
+    What kind of managerial style do you prefer?
+
+
+
+----------------------------------------
+-  challanging project you were a part of?
+
+----------------------------------------
+-  challanging project timeline?
+
+----------------------------------------
+-  give an example of how did you led the team?
+
+
+
+----------------------------------------
+Q: Let's say you are the manager of 5 people, and you are being asked to increase the diversity of the team. 
+How would you do that?
+
+QTA:
+1. Do you mean gender diversity, or racial diversity?
+2. What is the current structure of the team?
+3. what direction is the company push in?
+
+Answer:
+
+
+----------------------------------------
+Q: talk about steps to take to increase performance of two low performers.
+
+QTA: 
+1. what type of low performance (co-ordinational, technical, behavioral, cultural) ?
+2. How was this performance measured ?
+3. Do we have any preset guidelines ?
+
+Answer:
+    -   Technical
+        -   Task design and task allotment
+        -   
+
+    -   Behavioral
+        -   
+
+    -   Co-ordinational
+        -   
+
+
+----------------------------------------
