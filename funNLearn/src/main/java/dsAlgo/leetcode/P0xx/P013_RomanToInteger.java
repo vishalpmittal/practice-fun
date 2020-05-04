@@ -32,6 +32,7 @@ public class P013_RomanToInteger {
 
 		int num = 0;
 		for (int i = 0; i < s.length(); i++) {
+			// IV is 4, IX is 9, XIV is 14
 			if (i < (s.length() - 1) && romanTable.get(s.charAt(i)) < romanTable.get(s.charAt(i + 1))) {
 				num += (romanTable.get(s.charAt(i + 1)) - romanTable.get(s.charAt(i)));
 				i++;

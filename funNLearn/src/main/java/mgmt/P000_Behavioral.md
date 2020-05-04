@@ -1,5 +1,19 @@
 # Behvioural Interview
 
+## Have you learned from mistakes and grown as a result?
+
+## Do you generally assume positibe intent?
+
+## Do you have passion or enthusiasm for some area of technology?
+
+## Overall will you add to our positive work place environment and culture for example?
+
+## Do you resolve conflicts in ways that matche the company's culture?
+
+## Are you excited about the company mission and/or specific teams?
+
+
+
 ## In a team what is your working style
 
 - Fun

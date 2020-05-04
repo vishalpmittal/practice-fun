@@ -3,7 +3,7 @@
 
     Spanning Tree: weighted graph where every node is connected and there are n-1 edges for n vertices
     
-    Prims Minimum Spanning Tree:
+    Minimum Spanning Tree:
     - connect all the nodes
     - should not form a cycle
     - with minimum sum weight of the edges
@@ -12,7 +12,7 @@
     we can create combinations of each vertices and possible edges
     then calculate the minimum sum but it will be exponential run time
 
-    Prims Minimum Spanning Tree Algo. 
+    Kruskals Minimum Spanning Tree Algo. 
     1. pick a starting vertex
     2. add all the edges of starting vertex to a binary heap (priority queue)
     3. pull an edge from the heap, this will be the smallest edge of the starting vertex
@@ -21,29 +21,38 @@
     6. add all edges to non-visited vertices from to_vertex into the heap
     7. repeat steps 3,4,5,6 until the queue is empty
 """
+
 from collections import defaultdict
 import heapq
 
 
-def create_spanning_tree(G, starting_vertex):  # 1
-    mst = defaultdict()
-    visited = set([starting_vertex])
-    edges = [
-        (cost, starting_vertex, to) for to, cost in G[starting_vertex].items()
-    ]  # 2
-    heapq.heapify(edges)  # edges = [(2, 'A', 'B'), (3, 'A', 'C')]
+def kruskals_spanning_tree(G):
+    mst = {}
+    edges = set()
+    for from_vertex, to_vertices in G.items():
+        for to_vertex in to_vertices:
+            cost = G[from_vertex][to_vertex]
+            if (cost, from_vertex, to_vertex) not in edges: 
+                if (cost, to_vertex,from_vertex) not in edges:
+                    edges.add((cost, from_vertex, to_vertex))
+    sorted_edges = sorted(edges, key=lambda x: x[0])
 
-    while edges:
-        cost, frm, to = heapq.heappop(edges)  # 3
-        if to not in visited:
-            mst[frm] = mst.get(frm, {})
-            mst[frm][to] = cost  # 4
+    print(edges)
 
-            visited.add(to)  # 5
-            for to_next, cost in G[to].items():
-                if to_next not in visited:
-                    heapq.heappush(edges, (cost, to, to_next))  # 6
-    return mst
+    for vertex in G.keys():
+        mst[vertex] = {}
+
+    for cost, from_v, to_v in sorted_edges:
+        if to_v not in mst[from_v]:
+            mst[from_v][to_v] = cost
+            mst[to_v][from_v] = cost
+    
+    
+
+
+
+
+    pass
 
 
 example_graph = {
@@ -55,5 +64,5 @@ example_graph = {
     "F": {"C": 5, "E": 1, "G": 1},
     "G": {"F": 1},
 }
-print(dict(create_spanning_tree(example_graph, "A")))
+print(kruskals_spanning_tree(example_graph))
 # {'A': {'B': 2}, 'B': {'C': 1, 'D': 1}, 'D': {'E': 1}, 'E': {'F': 1}, 'F': {'G': 1}}

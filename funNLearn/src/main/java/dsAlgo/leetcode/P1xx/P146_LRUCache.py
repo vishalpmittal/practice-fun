@@ -1,5 +1,5 @@
 """
-    Tag: design ds
+    Tag: design ds, lru cache
 
     Design and implement a data structure for Least Recently Used (LRU) cache.
     It should support the following operations: get and put.
@@ -56,6 +56,12 @@ class LRUCache:
         return -1
 
     def put(self, key, value):
+        """
+            - add node to one node before the preset tail node of DLL
+            - if key exists remove it first and then add it again. 
+            - everytime check if more number of elements than capacity remove 
+              next element to head of the DLL
+        """
         if key in self.dic:
             self._remove(self.dic[key])
         n = Node(key, value)
@@ -91,4 +97,3 @@ assert obj.get(1) == -1
 assert obj.get(3) == 3
 assert obj.get(4) == 4
 print("Tests Passed!")
-

@@ -1,44 +1,37 @@
-Python Django beginners project
-===============================
+# Python Django beginners project
 
-Env Setup
----------
+## Env Setup
 
--  Install homebrew on mac
-
-```
-   https://brew.sh/
-
+* Install homebrew on mac https://brew.sh/
+```bash
    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
--  Install Python
-```
-   $ brew install python
-   $ python --version
+* Install Python
+```bash
+   brew install python
+   python --version
    Python 2.7.13
 ```
 
--  Install pip:
-
-   -  pip is already installed if you're using Python 2 >=2.7.9 or Python 3 >=3.4
-   -  Else refer following link to install pip
-   https://pip.pypa.io/en/stable/installing/
-```
-   $ pip --version
+* Install pip:
+  + pip is already installed if you're using Python 2 >=2.7.9 or Python 3 >=3.4
+  + Else refer following link to install pip https://pip.pypa.io/en/stable/installing/
+```bash
+   pip --version
    pip 9.0.1 from /usr/local/lib/python2.7/site-packages (python 2.7)
 ```
 
--  Install virtualenv
-```
+* Install virtualenv
+```bash
    $ cd django-beg-proj
    $ pip install virtualenv
    $ virtualenv --version
    15.1.0
 ```
 
--  Create project and activate virtualenv
-```
+* Create project and activate virtualenv
+```bash
   $ which python
    /usr/local/bin/python
 
@@ -48,10 +41,9 @@ Env Setup
    (vijango) vishalm-m01:django-beg-proj vishalm$ pip isntall django
 ```
 
--  Install django
-```
-   $ . vijango/bin/activate
-   (vijango) vishalm-m01:django-beg-proj vishalm$ pip isntall django
+* Install django
+```bash
+   (vijango) vishalm$ pip isntall django
 
    (vijango) vishalm-m01:django-beg-proj vishalm$ python
    Python 2.7.13 (default, Apr  4 2017, 08:46:44)

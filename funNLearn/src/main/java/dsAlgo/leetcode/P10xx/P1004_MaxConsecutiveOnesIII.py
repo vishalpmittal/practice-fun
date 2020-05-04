@@ -1,5 +1,5 @@
 """
-    Tag: dp, array
+    Tag: dp, array, sliding window
 
     Given an array A of 0s and 1s, we may change up to K 
     values from 0 to 1.
@@ -44,6 +44,8 @@ class Solution:
 
 
 assert Solution().longestOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2) == 6
-assert Solution().longestOnes(
-    [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3) == 10
-print('Tests Passed!!')
+assert (
+    Solution().longestOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3)
+    == 10
+)
+print("Tests Passed!!")
