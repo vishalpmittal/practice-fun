@@ -2,9 +2,6 @@ package dsAlgo.math;
 
 import java.util.ArrayList;
 
-/**
- * Created by Vishal on 8/27/2015.
- */
 public class FactorDivisorFraction {
 
     public static ArrayList<Integer> getFactors(int num) {

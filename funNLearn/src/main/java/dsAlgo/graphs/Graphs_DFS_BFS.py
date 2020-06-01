@@ -8,10 +8,11 @@ from queue import Queue
 
 
 class Solution:
-    def BFS(self, G):
+    def BFS(self, G, s):
         q = Queue()
         UVS = set(G.keys())  # unvisited vertices set
-        q.put(UVS.pop())
+        q.put(s)
+        UVS.remove(s)
 
         while not q.empty():
             cv = q.get()  # cv = current vertex
@@ -22,24 +23,35 @@ class Solution:
                     UVS.remove(nv)
         print()
 
-
-    def DFS(self, G):
+    def DFS(self, G, s):
         ST = []  # ST = stack
         UVS = set(G.keys())  # unvisited vertices set
-        ST[0] = UVS.pop()
+        ST.append(s)
+        UVS.remove(s)
 
-        while len(ST) > 0 :
-            cv = q.get()  # cv = current vertex
+        while len(ST) > 0:
+            cv = ST.pop(len(ST) - 1)  # cv = current vertex
             print(cv, end=", ")
             for nv in G[cv]:  # nv = Neighbor vertex
                 if nv in UVS:
-                    q.put(nv)
+                    ST.append(nv)
                     UVS.remove(nv)
         print()
 
+    def DFS_Rec(self, G, s):
+        def dfs_util(cv, UVS):
+            UVS.remove(cv)
+            print(cv, end=", ")
+
+            for nv in G[cv]:
+                if nv in UVS:
+                    dfs_util(nv, UVS)
+
+        UVS = set(G.keys())
+        dfs_util(s, UVS)
 
 
-graph = {
+G = {
     "B": {"A": 5, "D": 1, "G": 2},
     "A": {"B": 5, "D": 3, "E": 12, "F": 5},
     "D": {"B": 1, "G": 1, "E": 1, "A": 3},
@@ -49,4 +61,9 @@ graph = {
     "F": {"A": 5, "E": 2, "C": 16},
 }
 
-Solution().BFS(graph)
+G1 = {5: {0, 2}, 2: {3}, 0: {}, 3: {1}, 4: {0, 1}, 1: {}}
+
+Solution().BFS(G1, 5)
+Solution().BFS(G1, 4)
+Solution().DFS(G1, 5)
+Solution().DFS_Rec(G1, 5)

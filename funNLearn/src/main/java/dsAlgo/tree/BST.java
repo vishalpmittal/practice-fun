@@ -4,21 +4,21 @@
 
 package dsAlgo.tree;
 
-class BTreeNode<T> {
+class BinTreeNode<T> {
     public int value;
-    public BTreeNode left;
-    public BTreeNode right;
+    public BinTreeNode<T> left;
+    public BinTreeNode<T> right;
 
-    public BTreeNode(int value) {
+    public BinTreeNode(int value) {
         this.value = value;
     }
 }
 
 class BST {
-    public BTreeNode root;
+    public BinTreeNode root;
 
     public BST insert(int value) {
-        BTreeNode node = new BTreeNode<>(value);
+        BinTreeNode node = new BinTreeNode<>(value);
         if (root == null) {
             root = node;
             return this;
@@ -27,7 +27,7 @@ class BST {
         return this;
     }
 
-    private void insertRec(BTreeNode latestRoot, BTreeNode node) {
+    private void insertRec(BinTreeNode latestRoot, BinTreeNode node) {
 
         if (latestRoot.value > node.value) {
 
@@ -51,7 +51,7 @@ class BST {
         if (root == null) {
             return 0;
         }
-        BTreeNode currNode = root;
+        BinTreeNode currNode = root;
         while (currNode.left != null) {
             currNode = currNode.left;
         }
@@ -63,7 +63,7 @@ class BST {
             return 0;
         }
 
-        BTreeNode currNode = root;
+        BinTreeNode currNode = root;
         while (currNode.right != null) {
             currNode = currNode.right;
         }
@@ -75,7 +75,7 @@ class BST {
         System.out.println("");
     }
 
-    private void printInOrderRec(BTreeNode currRoot) {
+    private void printInOrderRec(BinTreeNode currRoot) {
         if (currRoot == null) {
             return;
         }
@@ -89,7 +89,7 @@ class BST {
         System.out.println("");
     }
 
-    private void printPreOrderRec(BTreeNode currRoot) {
+    private void printPreOrderRec(BinTreeNode currRoot) {
         if (currRoot == null) {
             return;
         }
@@ -103,7 +103,7 @@ class BST {
         System.out.println("");
     }
 
-    private void printPostOrderRec(BTreeNode currRoot) {
+    private void printPostOrderRec(BinTreeNode currRoot) {
         if (currRoot == null) {
             return;
         }

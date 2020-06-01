@@ -47,7 +47,7 @@ class Solution:
         self, products: List[str], searchWord: str
     ) -> List[List[str]]:
 
-        SD = OrderedDict()  # search dictionary
+        SD = dict()  # search dictionary
 
         def create_search_dict():
             products.sort()
@@ -55,11 +55,14 @@ class Solution:
             for prod in products:
                 curr_lvl_dict = SD
                 for c in prod:
-                    curr_lvl_dict[c] = curr_lvl_dict.get(c, OrderedDict())
+                    curr_lvl_dict[c] = curr_lvl_dict.get(c, dict())
                     curr_lvl_dict = curr_lvl_dict[c]
-                curr_lvl_dict[1] = True
+                curr_lvl_dict[1] = 1
 
         def get_search_str_level_dict(curr_str):
+            if curr_str[0] not in SD:
+                return {}
+
             curr_dict = SD
             for c in curr_str:
                 if c not in curr_dict:
@@ -67,19 +70,42 @@ class Solution:
                 curr_dict = curr_dict[c]
             return curr_dict
 
-        def get_word_suggestions(curr_level_dict):
-            pass
+        def get_word_suggestions(word, word_sugg_dict, sugg_list, n):
+            if len(sugg_list) == n:
+                return
 
+            if 1 in word_sugg_dict:
+                sugg_list.append(word)
+                if len(word_sugg_dict.keys()) == 1:
+                    return
+
+            for key, new_dict in word_sugg_dict.items():
+                if key == 1:
+                    continue
+                get_word_suggestions(word + key, new_dict, sugg_list, n)
+
+        create_search_dict()
         curr_search_str = ""
         result_lol = []
         for c in searchWord:
             curr_search_str += c
             curr_search_str_dict = get_search_str_level_dict(curr_search_str)
-            result_lol.append(get_word_suggestions(curr_search_str_dict))
+            curr_word_sugg_list = []
+            get_word_suggestions(
+                curr_search_str, curr_search_str_dict, curr_word_sugg_list, 3
+            )
+            result_lol.append(curr_word_sugg_list)
+        return result_lol
 
-        print(SD)
 
-
-Solution().suggestedProducts(
-    products=["mobile", "mouse", "moneypot", "monitor", "mousepad"], searchWord="mouse"
+print(
+    Solution().suggestedProducts(
+        ["mobile", "mouse", "moneypot", "monitor", "mousepad"], "mouse",
+    )
 )
+print(Solution().suggestedProducts(["havana"], "havana"))
+
+print(
+    Solution().suggestedProducts(["bags", "baggage", "banner", "box", "cloths"], "bags")
+)
+print(Solution().suggestedProducts(["havana"], "tatiana"))
