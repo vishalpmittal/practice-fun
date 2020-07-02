@@ -1,0 +1,15 @@
+Usage
+
+-  print output on cli
+cd woven/woven
+python manage.py interview_cmd --inbox-type=flat
+python manage.py interview_cmd --inbox-type=threaded
+
+-  View output on Browser
+
+cd woven/woven
+python manage.py runserver
+
+- go to 
+http://127.0.0.1:8000/inbox/flat
+http://127.0.0.1:8000/inbox/threaded
