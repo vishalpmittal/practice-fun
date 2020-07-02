@@ -1,4 +1,4 @@
-package javaMisc.concurrent;
+package dsAlgo.MultiThreading;
 
 public class ConcurrentAccountWithdrawSample {
 

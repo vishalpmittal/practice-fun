@@ -1,30 +1,7 @@
-package javaMisc.concurrent;
+package dsAlgo.MultiThreading;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-
-/**
- * Source :
- * http://www.java67.com/2015/12/producer-consumer-solution-using-blocking-queue-java.html
- * 
- * Producer Consumer Problem solution using BlockingQueue in Java.
- * BlockingQueue not only provide a data structure to store data
- * but also gives you flow control, require for inter thread communication.
- * 
- * @author Javin Paul
- */
-public class ProducerConsumerProblemSample {
-
-    public static void main(String[] args) {
-        BlockingQueue<Integer> sharedQ = new LinkedBlockingQueue<Integer>();
-
-        Producer p = new Producer(sharedQ);
-        Consumer c = new Consumer(sharedQ);
-
-        p.start();
-        c.start();
-    }
-}
 
 class Producer extends Thread {
     private BlockingQueue<Integer> sharedQueue;
@@ -66,5 +43,18 @@ class Consumer extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+}
+
+public class MTJavaConsumerProducerProblem {
+
+    public static void main(String[] args) {
+        BlockingQueue<Integer> sharedQ = new LinkedBlockingQueue<Integer>();
+
+        Producer p = new Producer(sharedQ);
+        Consumer c = new Consumer(sharedQ);
+
+        p.start();
+        c.start();
     }
 }

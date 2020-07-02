@@ -15,19 +15,27 @@
 
 
 class Solution(object):
-
     @staticmethod
     def trap(heights):
         """
-        
+        -   keep four pointers left, right, leftmax, rightmax 
+        -   if the rightmax is less
+            than leftmax, then we have a big pit trap, or the rightmax has reach left max
+            as well. 
+        -   if leftMax is still greater, keep adding the difference of leftmax
+            and left to the total count 
+        -   as anypoint in time if we have a bigger
+            leftmax, replacing it will keep the previous count and the new count can be added
         """
         total = 0
         l, r = 0, len(heights) - 1
         leftmax, rightmax = l, r
         while l < r:
-            print ('l: {}, r: {}, leftmax: {}, rightmax: {}, total: {}'.format(
-                l, r, leftmax, rightmax, total
-            ))
+            print(
+                "l: {}, r: {}, leftmax: {}, rightmax: {}, total: {}".format(
+                    l, r, leftmax, rightmax, total
+                )
+            )
             if heights[l] > heights[leftmax]:
                 leftmax = l
             if heights[r] > heights[rightmax]:
@@ -37,10 +45,12 @@ class Solution(object):
                 r -= 1
             else:
                 total += heights[leftmax] - heights[l]
-                l += 1                
+                l += 1
         return total
 
+
 def test_code():
-    print (Solution.trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+    print(Solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
+
 
 test_code()

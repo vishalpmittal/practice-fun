@@ -8,6 +8,7 @@
     Output: 'afcceeddbbb'
 """
 from collections import OrderedDict
+from collections import Counter
 
 
 class Solution:
@@ -31,7 +32,18 @@ class Solution:
                 ans_str += c * cnt
         return ans_str
 
+    def arrange_str2(self, S: str) -> str:
+        char_cnt = Counter(S)
+        char_position = {S[i]: i for i in range(len(S) - 1, -1, -1)}
+        S = sorted(S, key=lambda x: char_position[x])
+        S = sorted(S, key=lambda x: char_cnt[x])
+        return "".join(S)
+
 
 assert Solution().arrange_str("bbbcceeddaf") == "afcceeddbbb"
 assert Solution().arrange_str("david") == "avidd"
+
+assert Solution().arrange_str2("bbbcceeddaf") == "afcceeddbbb"
+assert Solution().arrange_str2("david") == "avidd"
+
 print("Tests Passed!!!")

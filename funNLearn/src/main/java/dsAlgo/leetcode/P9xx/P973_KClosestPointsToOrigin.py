@@ -25,6 +25,7 @@
     -  -10000 < points[i][1] < 10000
 """
 from typing import List
+from queue import PriorityQueue
 
 
 class Solution:
@@ -34,7 +35,18 @@ class Solution:
         points = sorted(points, key=lambda x: x[0] ** 2 + x[1] ** 2)
         return points[:K]
 
+    def kClosest1(self, points: List[List[int]], K: int) -> List[List[int]]:
+        pq = PriorityQueue(maxsize=K)
+        print(pq)
+        for n in points:
+            dist = n[0] ** 2 + n[1] ** 2
+            pq.put((dist, n[0], n[1]))
+        print(pq)
+
 
 Solution().kClosest([[3, 3], [5, -1], [-2, 4]], 2) == [[-2, 4], [3, 3]]
 Solution().kClosest([[1, 3], [-2, 2]], 1) == [[-2, 2]]
+Solution().kClosest1([[3, 3], [5, -1], [-2, 4]], 2) == [[-2, 4], [3, 3]]
+
+
 print("Tests Passed!!")
