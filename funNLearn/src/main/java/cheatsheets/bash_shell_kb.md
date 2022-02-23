@@ -1,3 +1,23 @@
+## For Loop
+------------
+```bash
+#!/bin/bash
+
+for directory in A B C
+do 
+    cmd="ls $directory"
+    echo $cmd
+    $cmd
+done
+```
+
+## Date
+---------
+```bash
+CURRENTDATE=`date +"%Y%m%d%H%M%S"`
+```
+
+
 # Bash
 - powertool, no undelete, no undo 
 - system files are protected
@@ -650,4 +670,46 @@ while [[ ! $answered ]]; do
         answered="no"
 done
 printf "\n%s\n" $answered
+```
+
+
+### Template
+-------------
+
+```
+#!/bin/bash
+
+function f1(){
+
+}
+
+function f2(){
+
+}
+
+function usage(){
+    echo ". ./this_script.sh [options]"
+}
+
+function main_exec() {
+    if [ "$#" -lt 1 ]; then
+        usage
+        return 1
+    fi
+
+    case "$1" in 
+        one)
+            f1
+            ;;
+        two)
+            f2
+            ;;
+        *)
+            usage
+            return 1
+            ;;
+    esac
+}
+
+main_exec
 ```

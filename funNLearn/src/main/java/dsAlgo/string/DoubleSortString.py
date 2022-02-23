@@ -35,7 +35,7 @@ class Solution:
     def arrange_str2(self, S: str) -> str:
         char_cnt = Counter(S)
         char_position = {S[i]: i for i in range(len(S) - 1, -1, -1)}
-        S = sorted(S, key=lambda x: char_position[x])
+        S = sorted(S, key=lambda x: (char_position[x]))
         S = sorted(S, key=lambda x: char_cnt[x])
         return "".join(S)
 

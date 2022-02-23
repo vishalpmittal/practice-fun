@@ -99,7 +99,7 @@ public class DataStructures {
         // --->> Gets
         // charAt(int index); -> char
         // indexOf(String str);
-        // indexOf(String str, int fromIndex);
+        // indexOf(String str, int fromIndex);ƒ
         // lastIndexOf(int ch, int fromIndex) -> int
         // lastIndexOf(String str, int fromIndex) -> int
         // substring(int beginIndex, int endIndex)
@@ -160,6 +160,9 @@ public class DataStructures {
     }
 
     public void arrayList() {
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+        ArrayList<String> cities = new ArrayList<>(Arrays.asList("London", "Tokyo", "New York"));
+
         ArrayList<Integer> al = new ArrayList<Integer>();
         al.add(1);
         al.contains(1);

@@ -1,0 +1,282 @@
+
+Thanks for connecting.
+We have an openhouse viewing on Nov 7, 1-4 pm PT at Dalton Commons, Fremont CA. The earliest possible move in date will be Dec 3rd.
+
+Please let us know if the timeline works and you are planning to visit open house.
+
+Rental application Link: https://tinyurl.com/xkm3j7ee
+
+
+
+- Maryam Haider, Zillow, 5107097387, US Bank lady, filled out application
+
+- Amir Hojabri, Zillow, 4088814142, Visiting Open house, sent application 
+- Praveena Gajendiran, Zillow, Visiting Open house, sent application 
+- old lady, (510) 598-9903, Zillow, Visiting Open house,
+
+- Shutapa, FB, Visiting Open house,
+- Mohammad, FB, planned to visit 
+
+
+want to see next week. 
+- Khaye, FB
+- Guneet, FB
+
+
+
+
+
+
+
+
+
+
+optum bank : 2130818251532
+
+
+
+
+
+
+
+
+
+
+GIL (Global Interpreter Lock)
+GIL never allows us to utilize multiple cores of CPU and hence we can say that there are no true threads in Python
+
+In CPython, GIL is the mutex - the mutual exclusion lock, which makes things thread safe. 
+In other words, we can say that GIL prevents multiple threads from executing Python code in parallel. 
+The lock can be held by only one thread at a time and if we want to execute a thread then it must acquire the lock first.
+
+However, there are some libraries and implementations in Python such as Numpy, Jpython and IronPytbhon. These libraries work without any interaction with GIL.
+
+
+
+are threading, concurrent.features, multiprocessing, asyncio, gevent and greenlets, etc.
+
+
+
+
+
+Host:     pg.pg4e.com 
+Port:     5432 
+Database: pg4e_2b430d6557 
+User:     pg4e_2b430d6557 
+Password: pg4e_p_661c7bd840d49c2
+
+
+psql -h pg.pg4e.com -p 5432 -U pg4e_2b430d6557 pg4e_2b430d6557
+
+
+git add .; git commit -a -m "removing sumologic log configuration"; git push -u origin sumologic_removal
+gh pr create --title "removing sumologic log configuration" --body "removing sumologic" --reviewer rohandev,sherwinlu,alexeyts
+. ../dev_env/experimental_branch.sh; git experimental
+
+
+https://jobs.jobvite.com/careers/barracuda-networks-inc/job/owrNgfwK?__jvst=Employee&__jvsd=s08b6jwd&__jvsc=LinkedIn&bid=nrsuDWwr
+----------------------------------------------------------------
+
+ACCOUNT_ID="be4b15e3-64fa-4f8d-91df-7dc6fe917194"
+ACCESS_TOKEN_ID="cfe47766-7bc4-4a13-85b2-745f21b7b5fd"
+
+curl --include --header "Content-Type: application/json" \
+    --request PUT \
+    --data "{\"accessTokenId\":\"${ACCESS_TOKEN_ID}\"}" \
+    "http://internal-Prod-accou-14O1X4QBNVJAY-432979996.us-east-1.elb.amazonaws.com/v1/account/${ACCOUNT_ID}/actions/disassociate_access_token"
+
+----------------------------------------------------------------
+
+curl \
+    --header "Content-Type: application/json" 
+    --request POST \
+    --data '{"publicKey":"v8UixJveKmcZwh8Omkc3RB","isSP":false,"comment":null}' \
+    "http://internal-sandb-pipel-wmzttbmcklbm-2096492357.us-east-1.elb.amazonaws.com/v2/feedback/sp_threat"
+
+
+=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+- standard Feedback form staging sentinel service user:
+Staging: org_sentinel (1HSEbeRtaw84u!]a)
+Prod: org_sentinel (5fwWA@ZESE#DV$$t)
+
+BLACKDUCK_PSWD="2u0mU^96GZOc"
+
+- etsgrowth account
+vishal@etsgrowth.onmicrosoft.com (Mom85149)
+
+Password@123
+
+- OpenVPN
+WrwjbdME3674jS
+=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+Yes bank:
+10268479 (HP@124Abeer)
+Debit card number: 5223060011178831
+
+
+----------------------------------------------------------------------------------------------------------------
+
+Hello,
+
+Thanks for reaching out. I am currently managing a team and looking for similar hands on technical Engineering Manager opportunities. (backend development focused)
+
+Please let me know if that aligns. PFA my resume.
+
+Thanks,
+Vishal
+
+
+Hello, 
+
+I was just wondering if there is a comp range for the role you can share, and is company okay with H1B visa transfer. 
+
+Thanks,
+Vishal
+
+
+-----------------------------------------------------------------------------------------------
+
+Avalara:
+Level 3 Eng mngr
+223K base, 10% bonus,
+$200K RSU
+
+85K sign on year 1
+50K sign on year 2
+- 10% Bonus calendar year: March of 23 first bonus 
+- 401 K : 50% up until 6%, 3 year vesting (100% at the end of 3 years)
+- ESPP: Feb1 and Aug1, 15% discount, 
+
+223800 + (223800 * 0.1) + (202800 * 0.2) = 286740 + 85000 = 371740
+223800 + (223800 * 0.1) + (202800 * 0.2) = 286740 + 50000 = 336740
+223800 + (223800 * 0.1) + (202800 * 0.2) = 286740
+223800 + (223800 * 0.1) + (202800 * 0.4) = 327300
+
+135K / 3 = 45K
+
+
+EasyPost:
+--------------------
+Software Engineering Manager (Core Infrastructure)
+
+Josh Horowitz - Director of Engineering, Platform - EasyPost
+
+David Chernay - Sr. Technical Program Manager - easypost
+Robert Armstrong (He/Him)  Staff Software Engineer at Easypost
+Mikhail Delos Trinos - Senior Infrastructure Engineer - EasyPost
+Gloria Chen - Software Engineer, Infrastructure - EasyPost
+David Wu - Senior Software Engineer - EasyPost - Apollo.io
+Danilo Caballero - Software Engineer - EasyPost | LinkedIn
+
+
+
+----Final Offer----
+220K base + 10K options  (one time 30K sign on bonus)
+--------------------
+
+Option1: 200K base + 10K stocks options ()
+Option2: 210K base + 9500 Options
+
+Strike rate: $3.07, Stock valuation: $55
+1yr 25% and then monthly.
+
+Series-B just raised
+
+0.035% company
+
+28 Million outstanding share
+
+Juneteenth holiday
+401K Matching: January
+Udemy: 
+
+- Josh Horowitz (Director), joshwitz@easypost.com
+- Jing-ta Chow (CTO)
+- Ben Wong (Recruiter)
+- Josh Lane, Manager, Software Engineering
+- Jake Epstein, technical product manager, infra team 
+- david and gloria
+
+Team structure:
+David and gloria, one new hire, sr engineer, mid level, 1 junior
+
+Liverperson
+----------------------
+Total: 250-300
+Base: 200
+
+Shipt: 
+----------------------
+Final Offer: Eng Manager:- 215K base + 10% Bonus + LTI RSU
+250K base + bonus + 40K worth of stocks
+
+- 3 engineers (1 sr, 2 se's)
+
+OG (Original Gangster) -> NG (New Gangster)
+- Microservices 
+    - Onboarding ranking 
+    - Image upload, receipt pictures
+    - internal admin tool
+
+    - Moving from AWS -> GCP 
+    - Postgres, redis
+    - Golang, Python data science integrations
+    - Kubernitis, docker
+
+- Narayan 
+    - bundling (7-8 people)
+    - offering (5-6)
+    - 3rd team -> Vishal 
+    - 4th team, New Marketplace intelligence team, yet to build. 
+    - 2 Principal Engineers 
+
+---------------------------------------------
+
+- Cooper Filby (Eng Manager, offering system)
+- Dan Tidwell (Principal Engineer)
+- Brindha Raman
+- Andrew Santoro
+
+Position 
+- OG to NG Services
+- Monolith to Microservices
+
+- Narayan (Hiring Manager), fulfillment 
+    - Cooper 
+    - Dan
+    
+- 1200 People 
+- 250 Engineering
+
+- 4 orgs
+    - Marketplace
+    - shopper and driver (Shmrita VP)
+        - FE, BE, Datascience
+        - Narayan (Operations)
+            - offering squad
+            - Scheduling 
+            - Platforms team
+            - Bundling
+        - Andrew (Logistics)
+            - Shopping experience 
+            - pay based model
+            - appliance pay
+            - geo-location, eta models
+            - Communications between folks
+
+    - Partner org  (Brindha)
+    - Infrastructure 
+        - dev ops, SRE, etc. 
+
+OCI
+-------
+
+base: 210-230K
+RSUs: 8K-11K RSU (11k * 96 = 1056000 over 4 years = 264k Annually)
+annual stock allotments: $35-40K range
+
+Enigma
+-------
+Base: 230-250
+Bonus:
+Equity Package:
