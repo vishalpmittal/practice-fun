@@ -25,6 +25,7 @@
 **/.classpath
 **/.class
 **/.project
+**/*.ftl
 .project
 funNLearn/bin
 mongodb-101j/final/final_q4/final-problem4/target
