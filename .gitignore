@@ -7,6 +7,7 @@
 *.o
 *.so
 *.pyc
+*.project
 
 # IDE/env files #
 #############
@@ -22,6 +23,8 @@
 .settings
 .classpath
 **/.classpath
+**/.class
+**/.project
 .project
 funNLearn/bin
 mongodb-101j/final/final_q4/final-problem4/target
